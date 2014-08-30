@@ -64,29 +64,49 @@ if ($row[0] == 0)
 <div id="joinbg">Join</div>
 
 <div id="section group">
-    <div class="col span_2_of_12"></div>
-    <div class="col span_2_of_12">
-<div id="jsliders">
-    <div id="jred"></div>
-    <div id="jgreen"></div> 
-    <div id="jblue"></div>
-</div>
+    <div id="joingroup">
+        <div class="col span_1_of_3">
+            <div id="jsliders">
+                <div class="jset">
+                    <div id="jsetm">
+                <div id="jred"></div>
+                <div id="jgreen"></div> 
+                <div id="jblue"></div>
+        </div>
+                    </div>
+            </div>
         </div>
     
-        <div class="col span_2_of_12"></div>
+        
     
-        <div class="col span_2_of_12">
+        <div class="col span_1_of_3">
             <div id="joinbars">
-        <div class="jbars" id="b1"></div>
-        <div class="jbars" id="b2"></div>
+                <div class="jset">
+                    <div id="jsetm">
+                <div class="jbars" id="b1"></div>
+                <div class="jbars" id="b2"></div>
                 <div class="jbars" id="b3"></div>
                 <div class="jbars" id="b4"></div>
                 <div class="jbars" id="b5"></div>
+                        </div>
         </div>
+                </div>
+            </div>
+            
+           
+            <div class="col span_1_of_3">
+            <div id="joindots">
+                <div class="jset">
+                    <div id="jsetm">
+                <div class="jdot" id="d1"></div>
+                <div class="jdot" id="d2"></div>
+                <div class="jdot" id="d3"></div>
+                </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        
-        <div class="col span_4_of_12"></div>
+  </div>
 
 </div>
     

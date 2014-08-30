@@ -53,12 +53,7 @@ margin:20px 0 50px 0;
    width:100%;
 }
 
-#jsliders{
-    display:block;
-margin:250px 0 0 0;
-    align-content:center;
-   width:100%;
-}
+
 
 #titledesc{
     display:block;
@@ -156,11 +151,42 @@ padding-top:60px;
      width:300px;
 }
 
-#joinbars{
+#joingroup{
+    margin:250px 0 0 0;
+}
+
+#jsliders{
+     position:relative;
      display:block;
-margin:250px 0 0 0;
-    align-content:center;
-   width:100%;
+   width:60%;
+    background-color:RGBA(0, 0, 0, .05);
+    border-radius: 50%;
+     margin:0 0 0 40%;
+}
+
+#jsliders:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+#joinbars{
+    position:relative;
+     display:block;
+   width:60%;
+    background-color:RGBA(0, 0, 0, .05);
+    border-radius: 50%;
+    margin:0 20% 0 20%;
+}
+
+#joinbars:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+#jsetm{
+    margin:38% 10% 0 10%;  
 }
 
 .jbars{
@@ -201,6 +227,39 @@ margin:250px 0 0 0;
     height:8px;
     
 }
+
+#joindots{
+    position:relative;
+     display:block;
+   width:60%;
+    background-color:RGBA(0, 0, 0, .05);
+    border-radius: 50%;
+     margin:0 40% 0 0;
+}
+
+#joindots:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.jset{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;   
+}
+
+.jdot{
+     margin:5px 0 5px 45%;
+    width:20px;
+    height:20px;
+    background-color:#fff;
+    border-radius: 50%;
+}
+
+
 
 .trackSI {
     position:relative;
@@ -556,10 +615,10 @@ Color Picker Slider
 }
 
 .ui-slider-handle {
-  width: 2rem !important;
-  height: 2rem !important;
+  width: 25px !important;
+  height: 25px !important;
 
-  margin-top: -0.2rem;
+  margin-top: -0.25px;
 }
 
 .ui-slider-range {

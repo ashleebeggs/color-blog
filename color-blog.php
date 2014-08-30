@@ -223,9 +223,9 @@ $(function() {
     slide: refreshjoin,
     change: refreshjoin
   });
-  $( "#jred" ).slider( "value", 115 );
-  $( "#jgreen" ).slider( "value", 59 );
-  $( "#jblue" ).slider( "value", 172 );
+  $( "#jred" ).slider( "value", 26 );
+  $( "#jgreen" ).slider( "value", 183 );
+  $( "#jblue" ).slider( "value", 234 );
 });
      
   
