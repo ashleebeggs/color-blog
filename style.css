@@ -12,6 +12,8 @@ body{
  margin-top:40px;   
 }
 
+
+
 h1{
     font-family: 'Raleway', sans-serif;
 }
@@ -36,6 +38,7 @@ h1{
     position:relative;
     margin-left:0px;
     
+    
 }
 .dow a{
     color:#ffffff;
@@ -46,6 +49,13 @@ h1{
 #csliders{
     display:block;
 margin:20px 0 50px 0;
+    align-content:center;
+   width:100%;
+}
+
+#jsliders{
+    display:block;
+margin:250px 0 0 0;
     align-content:center;
    width:100%;
 }
@@ -146,6 +156,51 @@ padding-top:60px;
      width:300px;
 }
 
+#joinbars{
+     display:block;
+margin:250px 0 0 0;
+    align-content:center;
+   width:100%;
+}
+
+.jbars{
+ margin:5px 0 5px 0;   
+}
+
+#b1{
+ width:50%;
+    background-color:#FF6165;
+    height:8px;
+    
+}
+
+#b2{
+ width:20%;
+    background-color:#D65155;
+    height:8px;
+    
+}
+
+#b3{
+ width:70%;
+    background-color:#14719C;
+    height:8px;
+    
+}
+
+#b4{
+ width:50%;
+    background-color:#2A9C79;
+    height:8px;
+    
+}
+
+#b5{
+ width:10%;
+    background-color:#4DF2BD;
+    height:8px;
+    
+}
 
 .trackSI {
     position:relative;
@@ -478,6 +533,25 @@ Color Picker Slider
 }
 
 #blue .ui-slider-range {
+  background: #729fcf;
+}
+
+
+#jred, #jgreen, #jblue {
+  clear: left;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+#jred .ui-slider-range {
+  background: #ef2929;
+}
+
+#jgreen .ui-slider-range {
+  background: #8ae234;
+}
+
+#jblue .ui-slider-range {
   background: #729fcf;
 }
 

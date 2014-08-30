@@ -58,7 +58,39 @@ if ($row[0] == 0)
 
 {
 
-   echo "No days posted yet.&nbsp;&nbsp;\n";
+  ?>
+
+
+<div id="joinbg">Join</div>
+
+<div id="section group">
+    <div class="col span_2_of_12"></div>
+    <div class="col span_2_of_12">
+<div id="jsliders">
+    <div id="jred"></div>
+    <div id="jgreen"></div> 
+    <div id="jblue"></div>
+</div>
+        </div>
+    
+        <div class="col span_2_of_12"></div>
+    
+        <div class="col span_2_of_12">
+            <div id="joinbars">
+        <div class="jbars" id="b1"></div>
+        <div class="jbars" id="b2"></div>
+                <div class="jbars" id="b3"></div>
+                <div class="jbars" id="b4"></div>
+                <div class="jbars" id="b5"></div>
+        </div>
+        </div>
+        
+        
+        <div class="col span_4_of_12"></div>
+
+</div>
+    
+<?php
 
 }else{
 
@@ -145,7 +177,7 @@ $totpages = ceil($totrecords / $recordsperpage);
 
 
      
-<div class="day" style="color: <?php echo $colortext ?>; background-color: <?php echo $colorhex ?>; position: relative">
+<div class="day" style="color: <?php echo $colortext ?>; background-color: #<?php echo $colorhex ?>; position: relative">
 <div class="content">
 <div class="bars">
   <ul>
@@ -383,9 +415,7 @@ $totpages = ceil($totrecords / $recordsperpage);
 <?php
 
    }
-}
-
-?>
+    ?>
 <div id="paging">
 <?php
    if ($thispage > 1)
@@ -485,8 +515,11 @@ $totpages = ceil($totrecords / $recordsperpage);
 
 }
 }
-?>
-  
+
+}
+
+
+?>  
 
 
 </div>

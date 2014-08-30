@@ -147,8 +147,7 @@ function hexFromRGB(r, g, b) {
   });
   return hex.join( "" ).toUpperCase();
 }
-        
-        
+
         
 function refreshSwatch() {
     TweenMax.to("#red", 1, {borderRadius:"25px"});
@@ -160,12 +159,16 @@ function refreshSwatch() {
       green = $( "#green" ).slider( "value" ),
       blue = $( "#blue" ).slider( "value" ),
       hex = hexFromRGB( red, green, blue );
-    
+   
   $( "body" ).css( "background-color", "#" + hex );
      document.getElementById('coloredvalue').value = hex;
 }
         
-        
+   function refreshNum() {     
+    var hexnum = document.getElementsByClassName('slider-input').value;
+       var num = document.getElementsByClassName('num').text = hexnum;
+       console.log(num);
+   }
         
 $(function() {
   $( "#red, #green, #blue" ).slider({
@@ -182,3 +185,15 @@ $(function() {
   $( "#blue" ).slider( "value", 172 );
 });
 
+
+
+ 
+
+
+$(function() {
+  $( ".slider-input" ).slider({
+    slide: refreshNum,
+    change: refreshNum
+  });
+  
+});

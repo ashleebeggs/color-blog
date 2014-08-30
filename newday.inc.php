@@ -52,7 +52,7 @@ console.log("logged in");
     
 <div class="section group"> 
     <div class="col span_1_of_4">
-<div class="title">Suicidal Ideation:</div><input id="slider-input" class="slider-input" name="trackSI" type="range" min="0" value="0" max="10">
+<div class="title">Suicidal Ideation:<div class="num"></div></div><input id="slider-input" class="slider-input" name="trackSI" type="range" min="0" value="0" max="10">
      </div>
     <div class="col span_1_of_4">
     <select name="skillSI">

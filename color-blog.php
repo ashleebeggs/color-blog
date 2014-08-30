@@ -3,12 +3,6 @@
   
 
 ?>
-<script>
-console.log("session starting");
-    
-    
-</script>
-
 
 
 
@@ -25,6 +19,7 @@ console.log("session starting");
     
     
  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.css">
   <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="html5reset.css">
     <link rel="stylesheet" href="css/col.css" media="all">
@@ -49,7 +44,7 @@ console.log("session starting");
     <script src="modernizr-2.5.3-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
     
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 </head>
 
@@ -188,9 +183,52 @@ function trackbars() {
     
    
      }
+    
+    function hexFromRGB(r, g, b) {
+  var hex = [
+    r.toString( 16 ),
+    g.toString( 16 ),
+    b.toString( 16 )
+  ];
+  $.each( hex, function( nr, val ) {
+    if ( val.length === 1 ) {
+      hex[ nr ] = "0" + val;
+    }
+  });
+  return hex.join( "" ).toUpperCase();
+}
+    
+    
+ function refreshjoin() {
+    TweenMax.to("#jred", 1, {borderRadius:"25px"});
+    TweenMax.to("#jgreen", 1, {borderRadius:"25px"});
+    TweenMax.to("#jblue", 1, {borderRadius:"25px"});
+    TweenMax.to(".ui-slider-handle", .1, {borderRadius:"50%"});
+    
+  var red = $( "#jred" ).slider( "value" ),
+      green = $( "#jgreen" ).slider( "value" ),
+      blue = $( "#jblue" ).slider( "value" ),
+      hex = hexFromRGB( red, green, blue );
+   
+  $( "body" ).css( "background-color", "#" + hex );       
+ }
 
-
-
+$(function() {
+  $( "#jred, #jgreen, #jblue" ).slider({
+    orientation: "horizontal",
+    range: "min",
+    min: 50,
+    max: 190,
+    value: 127,
+    slide: refreshjoin,
+    change: refreshjoin
+  });
+  $( "#jred" ).slider( "value", 115 );
+  $( "#jgreen" ).slider( "value", 59 );
+  $( "#jblue" ).slider( "value", 172 );
+});
+     
+  
 $('#slider-input').change( function() {
     var val = $(this).val();
     var valRounded = Math.round( val * 10 ) / 10;
