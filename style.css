@@ -113,17 +113,7 @@ padding-top:60px;
     top:0;
 }
 
-.backdrop {
-    background-color: #000;
-    bottom: 0;
-    display: none;
-    left: 0;
-    opacity: 0.3;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
+
 
 #paging{
     font-family: 'Raleway', sans-serif;
@@ -151,8 +141,34 @@ padding-top:60px;
      width:300px;
 }
 
+#joinhead{
+    font-size:30px;
+    text-align:center;
+    color:#fff;
+    margin:100px 0 0 0;
+}
+
 #joingroup{
-    margin:250px 0 0 0;
+    margin:100px 0 0 0;
+}
+
+.jtext{
+ text-align:center;  
+    width:60%; 
+    color:#fff;
+    font-size:14px;
+}
+
+#jt1{
+ margin: 20px 0 0 40%;   
+}
+
+#jt2{
+ margin:  20px 20% 0 20%;   
+}
+
+#jt3{
+ margin: 20px 40% 0 0;   
 }
 
 #jsliders{
@@ -251,6 +267,11 @@ padding-top:60px;
     bottom:0;   
 }
 
+.dhit{
+ width:100%;
+    height:20px;
+}
+
 .jdot{
      margin:5px 0 5px 45%;
     width:20px;
@@ -259,7 +280,13 @@ padding-top:60px;
     border-radius: 50%;
 }
 
-
+.jskill{
+    margin:2px 0 0 30px;
+    position:absolute;
+    color:#fff;
+    font-size:14px;
+    opacity:0;
+}
 
 .trackSI {
     position:relative;

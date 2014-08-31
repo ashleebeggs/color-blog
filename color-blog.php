@@ -42,8 +42,8 @@
     <script src="responsivegridsystem.js"></script>
     <script src="selectivizr-min.js"></script>
     <script src="modernizr-2.5.3-min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
-    
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 </head>
