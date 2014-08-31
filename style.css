@@ -78,18 +78,14 @@ margin:20px;
 
 
 #loginform{
-    position:absolute;
     height:100%;
-    width:100%;
-    background-color:#e1e1e1;
  font-family: 'Raleway', sans-serif;
     text-decoration:none;
-    text-align:center;
-    margin-top:-40px;
+  
 }
 
 #loginsheet{
-padding-top:60px;   
+  
 }
 
 #colorform{
@@ -507,6 +503,17 @@ margin: 0 0 10px 0;
 				border-top: 2px solid #eee;
 				border-bottom: 2px solid #ccc;
 			}
+
+#joinmenu {
+                position:fixed;
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				
+			}
 			.item{
 				float: left;
                 
@@ -520,8 +527,20 @@ margin: 0 0 10px 0;
 			}
 			
 			#menu_wrapper ul {margin-left:0;}
-			#menu_wrapper {padding: 0 16px 0 0; background: url(images/grey.png) no-repeat right;}
-			#menu_wrapper div {float: left; height: 44px; width: 12px;}
+			#menu_wrapper {padding: 0 16px 0 0;}
+			#menu_wrapper div {float: left; height: 44px;}
+	
+#joinmenu li a {
+				text-decoration: none;
+				display: block;
+				padding: 0 20px;
+				line-height: 40px;
+				color: #666;
+			}
+			
+			#joinmenu_wrapper ul {margin-left:0;}
+			#joinmenu_wrapper {padding: 0 16px 0 0; }
+			#joinmenu_wrapper div {float: left; height: 44px;}
 	
 /*==============================================
 Demo Styles
@@ -714,6 +733,7 @@ Color Picker Slider
     border:none;
 }
 
+
 .subutton:hover{
  width:100%;
     height:40px;
@@ -725,6 +745,7 @@ Color Picker Slider
 	
     border:none;
 }
+
 
 
 .dot{

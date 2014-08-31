@@ -59,11 +59,9 @@
 
 <div id="main">
 
-
-
-
-
-       <?php
+<?php
+    
+ 
 
                if (!isset($_REQUEST['content']))
 
