@@ -29,7 +29,7 @@ if (isset($_SESSION['valid_color_user']))
             <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a class="newday" href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
+                            <li class="newday"><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
                            
                                 <li id="navbar1" onclick="myday()"><a href="#">Day</a></li>
                                 <li onclick="myweek()"><a href="#">Week</a></li>

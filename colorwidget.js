@@ -133,67 +133,40 @@ $(function() {
 });
 
 */
+function setColor(){
 
-function hexFromRGB(r, g, b) {
-  var hex = [
-    r.toString( 16 ),
-    g.toString( 16 ),
-    b.toString( 16 )
-  ];
-  $.each( hex, function( nr, val ) {
-    if ( val.length === 1 ) {
-      hex[ nr ] = "0" + val;
-    }
-  });
-  return hex.join( "" ).toUpperCase();
-}
+	// Get the slider values,
+	// stick them together.
+	var color = 'rgb(' +
+		$("#red").val() + ',' +
+		$("#green").val() + ',' +
+		$("#blue").val() + ')';
 
-        
-function refreshSwatch() {
-    TweenMax.to("#red", 1, {borderRadius:"25px"});
-    TweenMax.to("#green", 1, {borderRadius:"25px"});
-    TweenMax.to("#blue", 1, {borderRadius:"25px"});
-    TweenMax.to(".ui-slider-handle", .1, {borderRadius:"50%"});
-    
-  var red = $( "#red" ).slider( "value" ),
-      green = $( "#green" ).slider( "value" ),
-      blue = $( "#blue" ).slider( "value" ),
-      hex = hexFromRGB( red, green, blue );
-   
-  $( "body" ).css( "background-color", "#" + hex );
-     document.getElementById('coloredvalue').value = hex;
+	// Fill the color box.
+	$(".result").css({
+		background: color,
+		color: color
+	});
 }
-        
-   function refreshNum() {     
-    var hexnum = document.getElementsByClassName('slider-input').value;
-       var num = document.getElementsByClassName('num').text = hexnum;
-       console.log(num);
-   }
-        
-$(function() {
-  $( "#red, #green, #blue" ).slider({
-    orientation: "horizontal",
-    range: "min",
-    min: 50,
-    max: 190,
-    value: 127,
-    slide: refreshSwatch,
-    change: refreshSwatch
-  });
-  $( "#red" ).slider( "value", 115 );
-  $( "#green" ).slider( "value", 59 );
-  $( "#blue" ).slider( "value", 172 );
+            
+            
+            $.getJSON('nouislider.jquery.json', function(data) {
+                
+    console.log("working");
+    $('.sliders').noUiSlider({
+	start: 127,
+	connect: "lower",
+	orientation: "vertical",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
 });
 
-
-
- 
-
-
-$(function() {
-  $( ".slider-input" ).slider({
-    slide: refreshNum,
-    change: refreshNum
-  });
-  
+// Bind the color changing function
+// to the slide event.
+$('.sliders').on('slide', setColor);
 });

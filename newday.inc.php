@@ -22,17 +22,19 @@ console.log("logged in");
  
 </div>
 -->
-
-<div style="font-size:30px; font-family:'Raleway', 'sans-serif'; text-align:center; margin: 80px 0 0 0">Today's a new day</div><br>
+<div id="newcont">
+<div style="font-size:30px; font-family:'Raleway', 'sans-serif'; text-align:center; padding: 80px 0 0 0">Today's a new day</div><br>
 
 <div class="row">
     
     <div class="col-md-1"></div>
     <div class="col-md-5">
-<div id="csliders">
-    <div id="red"></div>
-    <div id="green"></div> 
-    <div id="blue"></div>
+ <div id="colorpicker">
+	<div class="sliders sliderr" id="red" value="" style="height:15px; background-color:rgba(255, 0, 0, 1);"></div>
+	<div class="sliders sliderg" id="green" value="" style="height:15px; background-color:rgba(0, 255, 0, 1);"></div>
+	<div class="sliders sliderb" id="blue" value="" style="height:15px; background-color:rgba(0, 0, 255, 1);"></div>
+
+	<div class="result" style="height:100px; width:100px"></div>
 </div>
 </div>
 
@@ -51,7 +53,8 @@ console.log("logged in");
     
 <div class="row"> 
     <div class="col-md-3 col-md-offset-1">
-<div class="title">Suicidal Ideation:<div class="num"></div></div><input id="slider-input" class="slider-input" name="trackSI" type="range" min="0" value="0" max="10">
+        
+<div class="title">Suicidal Ideation:<div class="num"></div></div><div class="slider-step" id="SIval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
      </div>
     <div class="col-md-2">
            <div class="title">Skill Used:</div>
@@ -100,7 +103,7 @@ console.log("logged in");
         </select>
     </div>
     <div class="col-md-3">
-<div class="title">Self Harm:</div><input id="slider-input" class="slider-input" name="trackSH" type="range" min="0" value="0" max="10">
+<div class="title">Self Harm:<div class="num"></div></div><div class="slider-step" id="SHval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
    </div>
      <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -152,7 +155,7 @@ console.log("logged in");
     
     <div class="row">
     <div class="col-md-3 col-md-offset-1">
-<div class="title">Self Destruction:</div><input id="slider-input" class="slider-input" name="trackSD" type="range" min="0" value="0" max="10">
+<div class="title">Self Destruction:<div class="num"></div></div><div class="slider-step" id="SDval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
     </div>
      <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -202,7 +205,7 @@ console.log("logged in");
     </div>
  
         <div class="col-md-3">
-<div class="title">Isolation:</div><input id="slider-input" class="slider-input" name="trackISO" type="range" min="0" value="0" max="10">
+<div class="title">Isolation:<div class="num"></div></div><div class="slider-step" id="ISOval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
     </div>
         
      <div class="col-md-2">
@@ -255,7 +258,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Anxiety/Fear:</div><input id="slider-input" class="slider-input" name="trackANX" type="range" min="0" value="0" max="10">
+<div class="title">Anxiety/Fear:<div class="num"></div></div><div class="slider-step" id="ANXval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
     </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -305,7 +308,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Sadness:</div><input id="slider-input" class="slider-input" name="trackSAD" type="range" min="0" value="0" max="10">
+<div class="title">Sadness:<div class="num"></div></div><div class="slider-step" id="SADval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
     </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -357,7 +360,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Anger:</div><input id="slider-input" class="slider-input" name="trackANG" type="range" min="0" value="0" max="10">
+<div class="title">Anger:<div class="num"></div></div><div class="slider-step" id="ANGval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
     </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -407,7 +410,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Guilt/Shame:</div><input id="slider-input" class="slider-input" name="trackGSH" type="range" min="0" value="0" max="10">
+<div class="title">Guilt/Shame:<div class="num"></div></div><div class="slider-step" id="GSHval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -459,7 +462,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Hopeless/Helpless:</div><input id="slider-input" class="slider-input" name="trackHH" type="range" min="0" value="0" max="10">
+<div class="title">Hopeless/Helpless:<div class="num"></div></div><div class="slider-step" id="HHval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -509,7 +512,8 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Insecure:</div><input id="slider-input" class="slider-input" name="trackINS" type="range" min="0" value="0" max="10"> </div>
+<div class="title">Insecure:<div class="num"></div></div><div class="slider-step" id="INSval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
+            </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
     <select class="form-control" name="skillINS">
@@ -560,7 +564,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1 ">
-<div class="title">Lonely:</div><input id="slider-input" class="slider-input" name="trackLON" type="range" min="0" value="0" max="10">
+<div class="title">Lonely:<div class="num"></div></div><div class="slider-step" id="LONval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
         </div>
         <div class="col-md-2 ">
                <div class="title">Skill Used:</div>
@@ -610,7 +614,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Joy:</div><input id="slider-input" class="slider-input" name="trackJOY" type="range" min="0" value="0" max="10">
+<div class="title">Joy:<div class="num"></div></div><div class="slider-step" id="JOYval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -662,7 +666,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Self Critical:</div><input id="slider-input" class="slider-input" name="trackSC" type="range" min="0" value="0" max="10">
+<div class="title">Self Critical:<div class="num"></div></div><div class="slider-step" id="SCval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -712,7 +716,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Not Worthy:</div><input id="slider-input" class="slider-input" name="trackNW" type="range" min="0" value="0" max="10">
+<div class="title">Not Worthy:<div class="num"></div></div><div class="slider-step" id="NWval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
         </div>
         <div class="col-md-2">
                <div class="title">Skill Used:</div>
@@ -764,7 +768,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Negative Beliefs:</div><input id="slider-input" class="slider-input" name="trackNB" type="range" min="0" value="0" max="10">
+<div class="title">Negative Beliefs:<div class="num"></div></div><div class="slider-step" id="NBval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
         </div>
         <div class="col-md-2 ">
             <div class="title">Skill Used:</div>
@@ -814,7 +818,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Ruminating:</div><input id="slider-input" class="slider-input" name="trackRUM" type="range" min="0" value="0" max="10">
+<div class="title">Ruminating:<div class="num"></div></div><div class="slider-step" id="RUMval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -866,7 +870,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Powerless:</div><input id="slider-input" class="slider-input" name="trackPOW" type="range" min="0" value="0" max="10">
+<div class="title">Powerless:<div class="num"></div></div><div class="slider-step" id="POWval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -916,7 +920,7 @@ console.log("logged in");
     </div>
         
         <div class="col-md-3">
-<div class="title">Racing Thoughts:</div><input id="slider-input" class="slider-input" name="trackRT" type="range" min="0" value="0" max="10">
+<div class="title">Racing Thoughts:<div class="num"></div></div><div class="slider-step" id="RTval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
             </div>
         <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -968,7 +972,7 @@ console.log("logged in");
     
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-<div class="title">Obsessions:</div><input id="slider-input" class="slider-input" name="trackOB" type="range" min="0" value="0" max="10">
+<div class="title">Obsessions:<div class="num"></div></div><div class="slider-step" id="OBval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
       </div>
         <div class="col-md-2">
             <div class="title">Skill Used:</div>
@@ -1019,6 +1023,25 @@ console.log("logged in");
         </div>
 
 <input id ="coloredvalue" type="hidden" size="7" name="colorhex" value="">
+     <input type="hidden" id="trackSI" name="trackSI" value="">
+    <input type="hidden" id="trackSH" name="trackSH" value="">
+    <input type="hidden" id="trackSD" name="trackSD" value="">
+    <input type="hidden" id="trackISO" name="trackISO" value="">
+    <input type="hidden" id="trackANX" name="trackANX" value="">
+    <input type="hidden" id="trackSAD" name="trackSAD" value="">
+    <input type="hidden" id="trackANG" name="trackANG" value="">
+    <input type="hidden" id="trackGSH" name="trackGSH" value="">
+    <input type="hidden" id="trackHH" name="trackHH" value="">
+    <input type="hidden" id="trackINS" name="trackINS" value="">
+    <input type="hidden" id="trackLON" name="trackLON" value="">
+    <input type="hidden" id="trackJOY" name="trackJOY" value="">
+    <input type="hidden" id="trackSC" name="trackSC" value="">
+    <input type="hidden" id="trackNW" name="trackNW" value="">
+    <input type="hidden" id="trackNB" name="trackNB" value="">
+    <input type="hidden" id="trackRUM" name="trackRUM" value="">
+    <input type="hidden" id="trackPOW" name="trackPOW" value="">
+    <input type="hidden" id="trackRT" name="trackRT" value="">
+    <input type="hidden" id="trackOB" name="trackOB" value="">
 <div class="row">
     <div class="col-md-10"></div>
     <div class="col-md-1">
@@ -1028,8 +1051,9 @@ console.log("logged in");
     </div>
 <input type="hidden" name="username" value="$userid">
 <input type="hidden" name="content" value="addday">
+   
 
 
 </form>
-
+</div>
 <?php } ?>

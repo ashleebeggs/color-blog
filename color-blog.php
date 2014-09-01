@@ -19,16 +19,15 @@
     
     
  <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="jquery-ui.css">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,300,900' rel='stylesheet' type='text/css'>
+   
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="jquery.nouislider.full.min.js"></script>
+      <link rel="stylesheet" href="jquery.nouislider.css">
     
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="colorwidget.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -82,6 +81,8 @@
  var bars = document.getElementsByClassName('bars');
     var bar = document.getElementsByClassName('bar');
     var dot = document.getElementsByClassName('dot');
+    var num = document.getElementsByClassName('num');
+    var sliderstep = document.getElementById('slider-step');
  
 var currwidth = $('.day').width();
     var currheight = $('.day').height();
@@ -167,7 +168,7 @@ function trackbars() {
    
      }
     
-    function hexFromRGB(r, g, b) {
+ /*   function hexFromRGB(r, g, b) {
   var hex = [
     r.toString( 16 ),
     g.toString( 16 ),
@@ -217,7 +218,7 @@ $('#slider-input').change( function() {
     var valRounded = Math.round( val * 10 ) / 10;
     var mid = $(this).attr('max')/2;
    
-});
+});*/
     
     function checkwidth(){
 var prevWidth = $('.day').width(); 
@@ -226,6 +227,111 @@ var prevWidth = $('.day').width();
         currheight = prevHeight;
         console.log(currwidth, currheight);
 }
+    
+    function hexFromRGB(r, g, b) {
+  var hex = [
+    r.toString( 16 ),
+    g.toString( 16 ),
+    b.toString( 16 )
+  ];
+  $.each( hex, function( nr, val ) {
+    if ( val.length === 1 ) {
+      hex[ nr ] = "0" + val;
+    }
+  });
+  return hex.join( "" ).toUpperCase();
+        console.log(hex);
+}
+
+//alert( rgbToHex(0, 51, 255) ); // #0033ff
+    
+    function hexFromRGB(r, g, b) {
+  var rgb = b | (g << 8) | (r << 16);
+        return (0x1000000 | rgb).toString(16).substring(1);
+        
+        
+        console.log(rgb);
+}
+    
+   
+function setColor(){
+       
+    var rr =  $('.sliderr').val(),
+    gg =  $('.sliderg').val(),
+    bb =  $('.sliderb').val(),
+    hex = hexFromRGB( rr, gg, bb );  
+    
+    
+   console.log(hex); 
+	// Fill the color box.
+	$("#newcont").css({
+		backgroundColor: "#" + hex
+	});
+    
+    document.getElementById('coloredvalue').value = hex;
+    
+}
+    
+    function setValue(){
+        $("#SIval").Link('lower').to($('#trackSI'));
+         $("#SHval").Link('lower').to($('#trackSH'));
+         $("#SDval").Link('lower').to($('#trackSD'));
+         $("#ISOval").Link('lower').to($('#trackISO'));
+        $("#ANXval").Link('lower').to($('#trackANX'));
+         $("#SADval").Link('lower').to($('#trackSAD'));
+         $("#ANGval").Link('lower').to($('#trackANG'));
+         $("#GSHval").Link('lower').to($('#trackGSH'));
+        $("#HHval").Link('lower').to($('#trackHH'));
+         $("#INSval").Link('lower').to($('#trackINS'));
+         $("#LONval").Link('lower').to($('#trackLON'));
+         $("#JOYval").Link('lower').to($('#trackJOY'));
+        $("#SCval").Link('lower').to($('#trackSC'));
+         $("#NWval").Link('lower').to($('#trackNW'));
+         $("#NBval").Link('lower').to($('#trackNB'));
+         $("#RUMval").Link('lower').to($('#trackRUM'));
+        $("#POWval").Link('lower').to($('#trackPOW'));
+         $("#RTval").Link('lower').to($('#trackRT'));
+         $("#OBval").Link('lower').to($('#trackOB'));
+    }
+            
+            
+    $.getJSON('nouislider.jquery.json', function(data) {
+                
+    console.log("working");
+        
+
+        
+});
+    
+    $('.sliders').noUiSlider({
+	start: 127,
+	connect: "lower",
+	orientation: "horizontal",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+// Bind the color changing function
+// to the slide event.
+$('.sliders').on('slide', setColor);
+        
+        $('.slider-step').noUiSlider({
+	start: [ 0 ],
+    connect: "lower",
+	step: 1,
+	range: {
+		'min': [  0 ],
+		'max': [ 10 ]
+	}
+});
+        $('.slider-step').on('slide', setValue);
+        
+        
     </script>
 
 </body>

@@ -1,4 +1,0 @@
-color-blog
-==========
-
-color blog

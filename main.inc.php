@@ -71,7 +71,7 @@ if ($row[0] == 0)
 <?php
 
 }else{
-
+    
 $totrecords = $row[0];
 
 
@@ -151,8 +151,6 @@ $totpages = ceil($totrecords / $recordsperpage);
      $skillRT = $row['skillRT'];
      $skillOB = $row['skillOB'];
 ?>
-
-
 
      
 <div class="day" style="color: <?php echo $colortext ?>; background-color: #<?php echo $colorhex ?>; position: relative">

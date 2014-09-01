@@ -88,7 +88,8 @@ $username = "$session";
     if ($result)
 
 
-       echo "<h2>Day posted</h2>\n";
+      header("Location: color-blog.php"); // redirects
+
 
 
     else

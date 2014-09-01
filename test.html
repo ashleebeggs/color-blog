@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A day in the life with color</title>
+<!--<script src="wNumb.js"></script>
+    <script src="jquery.liblink.js"></script>
+    <script src="nouislider.jquery.json"></script>-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+    <script src="jquery.nouislider.full.min.js"></script>
+      <link rel="stylesheet" href="jquery.nouislider.css">
+
+    
+    </head>
+    <body>
+        
+     <div id="colorpicker">
+	<div class="sliders" id="red" style="height:100px;"></div>
+	<div class="sliders" id="green" style="height:100px;"></div>
+	<div class="sliders" id="blue" style="height:100px;"></div>
+
+	<div class="result" style="height:100px; width:100px"></div>
+</div>
+        <script>
+            
+function setColor(){
+
+	// Get the slider values,
+	// stick them together.
+	var color = 'rgb(' +
+		$("#red").val() + ',' +
+		$("#green").val() + ',' +
+		$("#blue").val() + ')';
+
+	// Fill the color box.
+	$(".result").css({
+		background: color,
+		color: color
+	});
+}
+            
+            
+            $.getJSON('nouislider.jquery.json', function(data) {
+                
+    console.log("working");
+    $('.sliders').noUiSlider({
+	start: 127,
+	connect: "lower",
+	orientation: "vertical",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+// Bind the color changing function
+// to the slide event.
+$('.sliders').on('slide', setColor);
+});
+            
+            
+    
+            
+  
+
+        </script>
+    </body>
+    
+    </html>
