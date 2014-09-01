@@ -60,9 +60,13 @@ if ($row[0] == 0)
 
   ?>
 
-
-<div id="joinhead">Nothing posted yet</div>
-
+<div id="emptycont">
+   
+    <div class="row">
+<div id="joinhead" class="col-md-12" style="margin-top:40px;">Nothing posted yet</div>
+        </div>
+        
+    </div>
 
 <?php
 

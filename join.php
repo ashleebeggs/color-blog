@@ -1,6 +1,8 @@
-<div id="joinhead">A visual way to track your day</div>
+<div class="row">
+    <div id="joinhead" class="col-md-12">A visual way to track your day</div>
+</div>
 
-<div id="row">
+<div class="row">
     <div id="joingroup">
         <div class="col-md-4">
             <div id="jsliders">

@@ -49,34 +49,25 @@ if (isset($_SESSION['valid_color_user']))
     else
     {
                 ?>
-            <div class="row">
-                <div class="col-md-8"></div>
-                <div class="col-md-4">      
-                    <div id="joinmenu_wrapper">
-                        <ul id="joinmenu">
+
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">  </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <form class="navbar-form navbar-right" action="color-blog.php" method="post" target="_self">
+                                <div class="form-group">
+                                    <input type="text" size="20" name="userid" placeholder="Username">
+                                    <input type="password" size="20" name="password" placeholder="Password">
+                                    <input type="hidden" value="validate" name="content">
+                                </div>
+                                <button type="submit" class="btn btn-default" value="Login">Login</button>
+                            </form>
                             <li>
-                                <div id="loginform">
-                                <form id="loginsheet" action="color-blog.php" method="post" target="_self">
-                                <div id="usern">
-                                <input type="text" size="20" name="userid" placeholder="Username"><br>
-                                </div>
-
-                                <div id="userp">
-                                <input type="password" size="20" name="password" placeholder="Password">
-                                </div>
-                                
-                                <div id="usersub">
-                                <input type="submit" value="Login">
-                                </div>
-
-                                <input type="hidden" value="validate" name="content">
-                                </form>
-                                </div>
-                            </li>
+                               
                         </ul>
-                    </div><!--join wrapper-->
-                </div><!--col-->
-                </div><!--section-->
+                    </div><!--collapse-->
+               
+                </nav>
             
                 <?php
     }

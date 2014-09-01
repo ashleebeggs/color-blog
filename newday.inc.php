@@ -25,37 +25,37 @@ console.log("logged in");
 
 <div style="font-size:30px; font-family:'Raleway', 'sans-serif'; text-align:center; margin: 80px 0 0 0">Today's a new day</div><br>
 
-<div id="section group">
-    <div class="col span_1_of_3"></div>
-    <div class="col span_1_of_3">
+<div class="row">
+    
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
 <div id="csliders">
     <div id="red"></div>
     <div id="green"></div> 
     <div id="blue"></div>
 </div>
-        <div class="col span_1_of_3"></div>
-
 </div>
 
-<form id="headerform" action="color-blog.php" method="post">
-    <div class="section group">
-        <div class="col span_1_of_12"></div>
-        <div class="col span_8_of_12">
+    <form id="headerform" action="color-blog.php" method="post">
+   
+        
+        <div class="col-md-4">
     <textarea style="width:100%" rows="5" cols="50" name="shortdesc" placeholder="Short Description"></textarea><br>
             </div>
-        <div class="col span_3_of_12">
+        <div class="col-md-2">
     <div style="padding: 0 0 10px 0;">Color of Text</div>
     <input class="radials title" type="radio" name="colortext" value="black">Black<br>
     <input class="radials title" type="radio" name="colortext" value="white">White<br>
     </div>
     </div>
     
-<div class="section group"> 
-    <div class="col span_1_of_4">
+<div class="row"> 
+    <div class="col-md-3 col-md-offset-1">
 <div class="title">Suicidal Ideation:<div class="num"></div></div><input id="slider-input" class="slider-input" name="trackSI" type="range" min="0" value="0" max="10">
      </div>
-    <div class="col span_1_of_4">
-    <select name="skillSI">
+    <div class="col-md-2">
+           <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillSI">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -99,11 +99,12 @@ console.log("logged in");
         <option value="FAST">FAST</option>
         </select>
     </div>
-    <div class="col span_1_of_4">
+    <div class="col-md-3">
 <div class="title">Self Harm:</div><input id="slider-input" class="slider-input" name="trackSH" type="range" min="0" value="0" max="10">
    </div>
-     <div class="col span_1_of_4">
-    <select name="skillSH">
+     <div class="col-md-2">
+            <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillSH">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -149,12 +150,13 @@ console.log("logged in");
     </div>
     </div>
     
-    <div class="section group">
-    <div class="col span_1_of_4">
+    <div class="row">
+    <div class="col-md-3 col-md-offset-1">
 <div class="title">Self Destruction:</div><input id="slider-input" class="slider-input" name="trackSD" type="range" min="0" value="0" max="10">
     </div>
-     <div class="col span_1_of_4">
-    <select name="skillSD">
+     <div class="col-md-2">
+            <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillSD">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -199,12 +201,13 @@ console.log("logged in");
         </select>
     </div>
  
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Isolation:</div><input id="slider-input" class="slider-input" name="trackISO" type="range" min="0" value="0" max="10">
     </div>
         
-     <div class="col span_1_of_4">
-    <select name="skillISO">
+     <div class="col-md-2">
+            <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillISO">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -250,12 +253,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Anxiety/Fear:</div><input id="slider-input" class="slider-input" name="trackANX" type="range" min="0" value="0" max="10">
     </div>
-        <div class="col span_1_of_4">
-    <select name="skillANX">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillANX">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -300,11 +304,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Sadness:</div><input id="slider-input" class="slider-input" name="trackSAD" type="range" min="0" value="0" max="10">
     </div>
-        <div class="col span_1_of_4">
-    <select name="skillSAD">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillSAD">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -350,12 +355,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Anger:</div><input id="slider-input" class="slider-input" name="trackANG" type="range" min="0" value="0" max="10">
     </div>
-        <div class="col span_1_of_4">
-    <select name="skillANG">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillANG">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -400,11 +406,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Guilt/Shame:</div><input id="slider-input" class="slider-input" name="trackGSH" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
-    <select name="skillGSH">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillGSH">
        <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -450,12 +457,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Hopeless/Helpless:</div><input id="slider-input" class="slider-input" name="trackHH" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
-    <select name="skillHH">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select  class="form-control" name="skillHH">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -500,10 +508,11 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Insecure:</div><input id="slider-input" class="slider-input" name="trackINS" type="range" min="0" value="0" max="10"> </div>
-        <div class="col span_1_of_4">
-    <select name="skillINS">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillINS">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -549,12 +558,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1 ">
 <div class="title">Lonely:</div><input id="slider-input" class="slider-input" name="trackLON" type="range" min="0" value="0" max="10">
         </div>
-        <div class="col span_1_of_4">
-    <select name="skillLON">
+        <div class="col-md-2 ">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillLON">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -599,11 +609,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Joy:</div><input id="slider-input" class="slider-input" name="trackJOY" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
-    <select name="skillJOY">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillJOY">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -649,12 +660,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Self Critical:</div><input id="slider-input" class="slider-input" name="trackSC" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
-    <select name="skillSC">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillSC">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -699,11 +711,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Not Worthy:</div><input id="slider-input" class="slider-input" name="trackNW" type="range" min="0" value="0" max="10">
         </div>
-        <div class="col span_1_of_4">
-    <select name="skillNW">
+        <div class="col-md-2">
+               <div class="title">Skill Used:</div>
+    <select class="form-control" name="skillNW">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -749,13 +762,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Negative Beliefs:</div><input id="slider-input" class="slider-input" name="trackNB" type="range" min="0" value="0" max="10">
         </div>
-        <div class="col span_1_of_4">
+        <div class="col-md-2 ">
             <div class="title">Skill Used:</div>
-    <select name="skillNB">
+    <select class="form-control" name="skillNB">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -800,12 +813,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Ruminating:</div><input id="slider-input" class="slider-input" name="trackRUM" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
+        <div class="col-md-2">
             <div class="title">Skill Used:</div>
-    <select name="skillRUM">
+    <select class="form-control" name="skillRUM">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -851,13 +864,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Powerless:</div><input id="slider-input" class="slider-input" name="trackPOW" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
+        <div class="col-md-2">
             <div class="title">Skill Used:</div>
-    <select name="skillPOW">
+    <select class="form-control" name="skillPOW">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -902,12 +915,12 @@ console.log("logged in");
         </select>
     </div>
         
-        <div class="col span_1_of_4">
+        <div class="col-md-3">
 <div class="title">Racing Thoughts:</div><input id="slider-input" class="slider-input" name="trackRT" type="range" min="0" value="0" max="10">
             </div>
-        <div class="col span_1_of_4">
+        <div class="col-md-2">
             <div class="title">Skill Used:</div>
-    <select name="skillRT">
+    <select class="form-control" name="skillRT">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -953,13 +966,13 @@ console.log("logged in");
     </div>
         </div>
     
-    <div class="section group">
-        <div class="col span_1_of_4">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
 <div class="title">Obsessions:</div><input id="slider-input" class="slider-input" name="trackOB" type="range" min="0" value="0" max="10">
       </div>
-        <div class="col span_1_of_4">
+        <div class="col-md-2">
             <div class="title">Skill Used:</div>
-    <select name="skillOB">
+    <select class="form-control" name="skillOB">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -1006,12 +1019,12 @@ console.log("logged in");
         </div>
 
 <input id ="coloredvalue" type="hidden" size="7" name="colorhex" value="">
-<div class="section group">
-    <div class="col span_10_of_12"></div>
-    <div class="col span_1_of_12">
+<div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-1">
 <input class="subutton" type="submit" value="Submit">
     </div>
-      <div class="col span_1_of_12"></div>
+      <div class="col-md-1"></div>
     </div>
 <input type="hidden" name="username" value="$userid">
 <input type="hidden" name="content" value="addday">
