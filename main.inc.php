@@ -154,117 +154,126 @@ $totpages = ceil($totrecords / $recordsperpage);
 <div class="day" style="color: <?php echo $colortext ?>; background-color: #<?php echo $colorhex ?>; position: relative">
 <div class="content">
 <div class="bars">
-  <ul>
-<div class="containter animate">
-    <div class="trackSI bar" style="width: <?php echo $trackSI ?>0%;">
-            <div class="labels">SI</div>
-        
-    </div> 
+  
+        <div class="containter animate">
+            <div class="trackSI bar" style="width: <?php echo $trackSI ?>0%;">
+                <div class="labels">SI</div>
+            </div> 
         <?php if ($skillSI != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSI ?>"><div class="skilllabels"><?php echo $skillSI ?></div></div>
         <?php
          }
-            else { } 
-    ?>
-      </div>
-  <div class="containter animate">   
-        <div  class="trackSH bar" style="width: <?php echo $trackSH ?>0%;">
-            <div class="labels">SH</div></div>
-       <?php if ($skillSH != ""){ ?>
+                else { } 
+        ?>
+        </div>
+        
+        <div class="containter animate">   
+            <div  class="trackSH bar" style="width: <?php echo $trackSH ?>0%;">
+                <div class="labels">SH</div>
+            </div>
+            <?php if ($skillSH != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSH ?>"><div class="skilllabels"><?php echo $skillSH ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-      </div>
+            <?php
+                                    }
+                else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div  class="trackSD bar" style="width: <?php echo $trackSD ?>0%;">
-            <div class="labels">Self Destruction</div></div>
-       <?php if ($skillSD != ""){ ?>
+        <div class="containter animate">      
+            <div  class="trackSD bar" style="width: <?php echo $trackSD ?>0%;">
+                <div class="labels">Self Destruction</div>
+            </div>
+            <?php if ($skillSD != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSD ?>"><div class="skilllabels"><?php echo $skillSD ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+            <?php
+                                    }
+                else { } 
+            ?>
+        </div>
       
-<div class="containter animate">
-    <div class="trackISO bar" style="width: <?php echo $trackISO ?>0%;">
-        <div class="labels">Isolation</div></div>
-       <?php if ($skillISO != ""){ ?>
-                <div class="dot" title= "<?php echo $skillISO ?>"><div class="skilllabels"><?php echo $skillISO ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">
+            <div class="trackISO bar" style="width: <?php echo $trackISO ?>0%;">
+                <div class="labels">Isolation</div>
+            </div>
+           <?php if ($skillISO != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillISO ?>"><div class="skilllabels"><?php echo $skillISO ?></div></div>
+            <?php
+                                        }
+                else { } 
+            ?>
+        </div>
       
-<div class="containter animate">
-    <div  class="trackANX bar" style="width: <?php echo $trackANX ?>0%;">
-        <div class="labels">Fear/Anxiety</div></div>
-       <?php if ($skillANX != ""){ ?>
-                <div class="dot" title= "<?php echo $skillANX ?>"><div class="skilllabels"><?php echo $skillANX ?></div></div>
-    <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">
+            <div  class="trackANX bar" style="width: <?php echo $trackANX ?>0%;">
+                <div class="labels">Fear/Anxiety</div>
+            </div>
+           <?php if ($skillANX != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillANX ?>"><div class="skilllabels"><?php echo $skillANX ?></div></div>
+            <?php
+                                        }
+            else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div class="trackSAD bar" style="width: <?php echo $trackSAD ?>0%;">
-        <div class="labels">Sadness</div></div>
-       <?php if ($skillSAD != ""){ ?>
-                <div class="dot" title= "<?php echo $skillSAD ?>"><div class="skilllabels"><?php echo $skillSAD ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">      
+            <div class="trackSAD bar" style="width: <?php echo $trackSAD ?>0%;">
+                <div class="labels">Sadness</div>
+            </div>
+           <?php if ($skillSAD != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillSAD ?>"><div class="skilllabels"><?php echo $skillSAD ?></div></div>
+            <?php
+                                    }
+            else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div  class="trackANG bar" style="width: <?php echo $trackANG ?>0%;">
-        <div class="labels">Anger</div></div>
-       <?php if ($skillANG != ""){ ?>
-                <div class="dot" title= "<?php echo $skillANG ?>"><div class="skilllabels"><?php echo $skillANG ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">      
+            <div  class="trackANG bar" style="width: <?php echo $trackANG ?>0%;">
+                <div class="labels">Anger</div>
+            </div>
+           <?php if ($skillANG != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillANG ?>"><div class="skilllabels"><?php echo $skillANG ?></div></div>
+            <?php
+                                    }
+            else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div class="trackGSH bar" style="width: <?php echo $trackGSH ?>0%;">
-        <div class="labels">Guilt/Shame</div></div>
-       <?php if ($skillGSH != ""){ ?>
-                <div class="dot" title= "<?php echo $skillGSH ?>"><div class="skilllabels"><?php echo $skillGSH ?></div></div>
-    <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">      
+            <div class="trackGSH bar" style="width: <?php echo $trackGSH ?>0%;">
+                <div class="labels">Guilt/Shame</div>
+            </div>
+           <?php if ($skillGSH != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillGSH ?>"><div class="skilllabels"><?php echo $skillGSH ?></div></div>
+            <?php
+                                    }
+            else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div class="trackHH bar" style="width: <?php echo $trackHH ?>0%;">
-        <div class="labels">Hopeless/Helpless</div></div>
-       <?php if ($skillHH != ""){ ?>
-                <div class="dot" title= "<?php echo $skillHH ?>"><div class="skilllabels"><?php echo $skillHH ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">      
+            <div class="trackHH bar" style="width: <?php echo $trackHH ?>0%;">
+                <div class="labels">Hopeless/Helpless</div>
+            </div>
+           <?php if ($skillHH != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillHH ?>"><div class="skilllabels"><?php echo $skillHH ?></div></div>
+            <?php
+                                        }
+            else { } 
+            ?>
+        </div>
       
-<div class="containter animate">      
-    <div  class="trackINS bar" style="width: <?php echo $trackINS ?>0%;">
-        <div class="labels">Insecure</div></div>
-      <?php if ($skillINS != ""){ ?>
-                <div class="dot" title= "<?php echo $skillINS ?>"><div class="skilllabels"><?php echo $skillINS ?></div></div>
-        <?php
-         }
-     else { } 
-    ?>
-    </div>
+        <div class="containter animate">      
+            <div  class="trackINS bar" style="width: <?php echo $trackINS ?>0%;">
+                <div class="labels">Insecure</div>
+            </div>
+          <?php if ($skillINS != ""){ ?>
+                    <div class="dot" title= "<?php echo $skillINS ?>"><div class="skilllabels"><?php echo $skillINS ?></div></div>
+            <?php
+                                    }
+            else { } 
+            ?>
+        </div>
       
 <div class="containter animate">      
     <div class="trackLON bar" style="width: <?php echo $trackLON ?>0%;">

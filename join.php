@@ -1,8 +1,8 @@
 <div id="joinhead">A visual way to track your day</div>
 
-<div id="section group">
+<div id="row">
     <div id="joingroup">
-        <div class="col span_1_of_3">
+        <div class="col-md-4">
             <div id="jsliders">
                 <div class="jset">
                     <div id="jsetm">
@@ -17,7 +17,7 @@
     
         
     
-        <div class="col span_1_of_3">
+        <div class="col-md-4">
             <div id="joinbars">
                 <div class="jset">
                     <div id="jsetm">
@@ -33,7 +33,7 @@
             </div>
             
            
-            <div class="col span_1_of_3">
+            <div class="col-md-4">
             <div id="joindots">
                 <div class="jset">
                     <div id="jsetm">
@@ -54,12 +54,12 @@
         
     
         </div>
-    <div class="section group">
-    <div class="col span_9_of_12"></div>
-      <div class="col span_1_of_12">
+    <div class="row">
+    <div class="col-md-9"></div>
+      <div class="col-md-1">
 <input class="subutton" style="margin:80px 0 0 0;"type="submit" value="JOIN">
     </div>
-    <div class="col span_2_of_12"></div>
+    <div class="col-md-2"></div>
   </div>
     </div>
 

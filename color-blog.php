@@ -20,32 +20,15 @@
     
  <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="jquery-ui.css">
-  <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="html5reset.css">
-    <link rel="stylesheet" href="css/col.css" media="all">
-	<link rel="stylesheet" href="css/2cols.css" media="all">
-	<link rel="stylesheet" href="css/3cols.css" media="all">
-	<link rel="stylesheet" href="css/4cols.css" media="all">
-	<link rel="stylesheet" href="css/5cols.css" media="all">
-	<link rel="stylesheet" href="css/6cols.css" media="all">
-	<link rel="stylesheet" href="css/7cols.css" media="all">
-	<link rel="stylesheet" href="css/8cols.css" media="all">
-	<link rel="stylesheet" href="css/9cols.css" media="all">
-	<link rel="stylesheet" href="css/10cols.css" media="all">
-	<link rel="stylesheet" href="css/11cols.css" media="all">
-	<link rel="stylesheet" href="css/12cols.css" media="all">
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,300,900' rel='stylesheet' type='text/css'>
     
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="colorwidget.js"></script>
-    <script src="responsivegridsystem.js"></script>
-    <script src="selectivizr-min.js"></script>
-    <script src="modernizr-2.5.3-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
-
-
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -112,6 +95,7 @@ function myday() {
 daywidth.play();
 TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
     TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
+    TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
 TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
 TweenLite.to(bars, 1,  {left:"4%"});
     TweenLite.to(days, 1,  {left:"4%"});
@@ -127,6 +111,7 @@ function myweek() {
      daywidth.play();
 daywidth.staggerTo(elems, 1, {width:"14.28%", ease:Power2.easeOut}, 0.2);
 TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+    TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
 TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
 TweenLite.to(bars, 1,  {left:"10%"});
 TweenLite.to(days, 1,  {left:"10%"});
@@ -148,7 +133,7 @@ TweenLite.to(days, 1,  {left:"10%"});
     height: "25px",
   },200 );
      $(this).find(dot).animate({
-        margin:"-18px 0 0 95%", 
+        right:"10%", 
      }, 200 );
      $(this).find(label).animate({
     opacity:1,
@@ -161,7 +146,7 @@ TweenLite.to(days, 1,  {left:"10%"});
     height: "8px",
   },200 );
      $(this).find(dot).animate({
-        margin:"-18px 0 0 100%", 
+        right:"2%", 
      }, 200 );
      $(this).find(label).animate({
     opacity:0,
