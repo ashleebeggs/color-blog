@@ -6,14 +6,17 @@
     <div id="joingroup">
         <div class="col-md-4">
             <div id="jsliders">
-                <div class="jset">
-                    <div id="jsetm">
-                <div id="jred"></div>
-                <div id="jgreen"></div> 
-                <div id="jblue"></div>
-        </div>
-                    </div>
+                 <div class="jset">
+            <div id="jsetm">
+            <div id="colorpicker">
+                <div class="sliders sliderr" id="red" value="" style="height:15px; background-color:rgba(255, 0, 0, 1);"></div>
+                <div class="sliders sliderg" id="green" value="" style="height:15px; background-color:rgba(0, 255, 0, 1);"></div>
+                <div class="sliders sliderb" id="blue" value="" style="height:15px; background-color:rgba(0, 0, 255, 1);"></div>
             </div>
+            </div>
+            </div>
+            </div>
+            
             <div class="jtext" id="jt1">A colorful way <br /> to analyze your mood</div>
         </div>
     

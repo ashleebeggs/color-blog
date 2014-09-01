@@ -81,8 +81,7 @@
  var bars = document.getElementsByClassName('bars');
     var bar = document.getElementsByClassName('bar');
     var dot = document.getElementsByClassName('dot');
-    var num = document.getElementsByClassName('num');
-    var sliderstep = document.getElementById('slider-step');
+    var sliderstep = document.getElementsByClassName('slider-step');
  
 var currwidth = $('.day').width();
     var currheight = $('.day').height();
@@ -228,34 +227,14 @@ var prevWidth = $('.day').width();
         console.log(currwidth, currheight);
 }
     
-    function hexFromRGB(r, g, b) {
-  var hex = [
-    r.toString( 16 ),
-    g.toString( 16 ),
-    b.toString( 16 )
-  ];
-  $.each( hex, function( nr, val ) {
-    if ( val.length === 1 ) {
-      hex[ nr ] = "0" + val;
-    }
-  });
-  return hex.join( "" ).toUpperCase();
-        console.log(hex);
-}
-
-//alert( rgbToHex(0, 51, 255) ); // #0033ff
-    
-    function hexFromRGB(r, g, b) {
-  var rgb = b | (g << 8) | (r << 16);
+   function hexFromRGB(r, g, b) {
+        var rgb = b | (g << 8) | (r << 16);
         return (0x1000000 | rgb).toString(16).substring(1);
-        
-        
         console.log(rgb);
 }
     
    
-function setColor(){
-       
+function setColor(){    
     var rr =  $('.sliderr').val(),
     gg =  $('.sliderg').val(),
     bb =  $('.sliderb').val(),
@@ -264,7 +243,7 @@ function setColor(){
     
    console.log(hex); 
 	// Fill the color box.
-	$("#newcont").css({
+	$("body").css({
 		backgroundColor: "#" + hex
 	});
     
@@ -272,26 +251,65 @@ function setColor(){
     
 }
     
-    function setValue(){
+    function setValue(event){
+        
         $("#SIval").Link('lower').to($('#trackSI'));
+         $("#SIval").Link('lower').to($('#numSI'));
+
          $("#SHval").Link('lower').to($('#trackSH'));
+        $("#SHval").Link('lower').to($('#numSH'));
+        
          $("#SDval").Link('lower').to($('#trackSD'));
+        $("#SDval").Link('lower').to($('#numSD'));
+        
          $("#ISOval").Link('lower').to($('#trackISO'));
+        $("#ISOval").Link('lower').to($('#numISO'));
+        
         $("#ANXval").Link('lower').to($('#trackANX'));
+        $("#ANXval").Link('lower').to($('#numANX'));
+        
          $("#SADval").Link('lower').to($('#trackSAD'));
+        $("#SADval").Link('lower').to($('#numSAD'));
+        
          $("#ANGval").Link('lower').to($('#trackANG'));
+        $("#ANGval").Link('lower').to($('#numANG'));
+        
          $("#GSHval").Link('lower').to($('#trackGSH'));
+        $("#GSHval").Link('lower').to($('#numGSH'));
+        
         $("#HHval").Link('lower').to($('#trackHH'));
+        $("#HHval").Link('lower').to($('#numHH'));
+        
          $("#INSval").Link('lower').to($('#trackINS'));
+        $("#INSval").Link('lower').to($('#numINS'));
+        
          $("#LONval").Link('lower').to($('#trackLON'));
+        $("#LONval").Link('lower').to($('#numLON'));
+        
          $("#JOYval").Link('lower').to($('#trackJOY'));
+        $("#JOYval").Link('lower').to($('#numJOY'));
+        
         $("#SCval").Link('lower').to($('#trackSC'));
+        $("#SCval").Link('lower').to($('#numSC'));
+        
          $("#NWval").Link('lower').to($('#trackNW'));
+         $("#NWval").Link('lower').to($('#numNW'));
+        
          $("#NBval").Link('lower').to($('#trackNB'));
+        $("#NBval").Link('lower').to($('#numNB'));
+        
          $("#RUMval").Link('lower').to($('#trackRUM'));
+        $("#RUMval").Link('lower').to($('#numRUM'));
+        
         $("#POWval").Link('lower').to($('#trackPOW'));
-         $("#RTval").Link('lower').to($('#trackRT'));
+        $("#POWval").Link('lower').to($('#numPOW'));
+        
+        $("#RTval").Link('lower').to($('#trackRT'));
+        $("#RTval").Link('lower').to($('#numRT'));
+        
          $("#OBval").Link('lower').to($('#trackOB'));
+        $("#OBval").Link('lower').to($('#numOB'));
+        
     }
             
             
