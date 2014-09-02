@@ -24,7 +24,7 @@ console.log("logged in");
 <?php
 
 
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
+$con = mysql_connect("ashleebee.ipowermysql.com", "ashleebeggs", "ayso13") or die('Sorry, could not connect to database server');  
 
     
 mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
@@ -60,7 +60,7 @@ if ($row[0] == 0)
 
   ?>
 
-<div id="emptycont">
+<div id="emptycont" class="container-fluid">
    
     <div class="row">
 <div id="joinhead" class="col-md-12" style="margin-top:40px;">Nothing posted yet</div>
