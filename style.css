@@ -18,6 +18,11 @@ body{
     color:#000;
 }
 
+#footer{
+ height:70px;
+    background-color:#fff;
+}
+
 #emptycont{
  background-color:#1ab7ea;  
     width:100%;

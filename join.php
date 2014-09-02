@@ -62,8 +62,8 @@
     <div class="row">
     <div class="col-md-9"></div>
       <div class="col-md-1">
-<input class="subutton" style="margin:80px 0 0 0;"type="submit" value="JOIN">
-    </div>
+<a href="color-blog.php?content=register" target="_blank"><button type="button" class="btn btn-default subutton" style="margin:80px 0 0 0;">Join</button></a>
+    
     <div class="col-md-2"></div>
   </div>
     </div>
@@ -102,5 +102,44 @@ $('.dhit').on('click', function () {
     opacity:0,
   },200 );
      
-})    
+})   
+
+ function hexFromRGB(r, g, b) {
+        var rgb = b | (g << 8) | (r << 16);
+        return (0x1000000 | rgb).toString(16).substring(1);
+        console.log(rgb);
+}
+    
+   
+function setColor(){    
+    var rr =  $('.sliderr').val(),
+    gg =  $('.sliderg').val(),
+    bb =  $('.sliderb').val(),
+    hex = hexFromRGB( rr, gg, bb );  
+    
+    
+   console.log(hex); 
+	// Fill the color box.
+	$("body").css({
+		backgroundColor: "#" + hex
+	});
+      
+}
+
+    $('.sliders').noUiSlider({
+	start: 127,
+	connect: "lower",
+	orientation: "horizontal",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+// Bind the color changing function
+// to the slide event.
+$('.sliders').on('slide', setColor);
 </script>

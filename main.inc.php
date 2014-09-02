@@ -401,7 +401,10 @@ $totpages = ceil($totrecords / $recordsperpage);
 
    }
     ?>
-<div id="paging">
+<div class="row" id="footer">
+  <div class="col-md-12">
+ 
+<ul class="pager"><li>
 <?php
    if ($thispage > 1)
 
@@ -477,9 +480,9 @@ $totpages = ceil($totrecords / $recordsperpage);
 
       $page = $thispage + 1;
 
-
+      
       $nextpage = " <a href=\"color-blog.php?page=$page\">Next</a>";
-
+      
 
    } else
 
@@ -506,6 +509,8 @@ $totpages = ceil($totrecords / $recordsperpage);
 
 ?>  
 
+</li>
+</ul>
 
+  </div>
 </div>
-<div class="backdrop"></div>

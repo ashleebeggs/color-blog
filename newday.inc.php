@@ -54,7 +54,7 @@ console.log("logged in");
 <div class="row"> 
     <div class="col-md-3 col-md-offset-1">
         
-<div class="title">Suicidal Ideation: <div class="num" id="numSI"></div></div><div class="slider-step" id="SIval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
+<div class="title">Suicidal Ideation: <div class="num" id="numSI"></div></div><div class="slider-step"  id="SIval" style="height:15px; background-color:rgba(255, 255, 0, 1);"></div>
      </div>
     <div class="col-md-2">
            <div class="title">Skill Used:</div>
@@ -1056,4 +1056,129 @@ console.log("logged in");
 
 </form>
 </div>
+
 <?php } ?>
+<script>
+ 
+   function hexFromRGB(r, g, b) {
+        var rgb = b | (g << 8) | (r << 16);
+        return (0x1000000 | rgb).toString(16).substring(1);
+        console.log(rgb);
+}
+    
+   
+function setColor(){    
+    var rr =  $('.sliderr').val(),
+    gg =  $('.sliderg').val(),
+    bb =  $('.sliderb').val(),
+    hex = hexFromRGB( rr, gg, bb );  
+    
+    
+   console.log(hex); 
+	// Fill the color box.
+	$("body").css({
+		backgroundColor: "#" + hex
+	});
+    
+    document.getElementById('coloredvalue').value = hex;
+    
+}
+    
+    function setValue(event){
+        
+        $("#SIval").Link('lower').to($('#trackSI'));
+         $("#SIval").Link('lower').to($('#numSI'));
+
+         $("#SHval").Link('lower').to($('#trackSH'));
+        $("#SHval").Link('lower').to($('#numSH'));
+        
+         $("#SDval").Link('lower').to($('#trackSD'));
+        $("#SDval").Link('lower').to($('#numSD'));
+        
+         $("#ISOval").Link('lower').to($('#trackISO'));
+        $("#ISOval").Link('lower').to($('#numISO'));
+        
+        $("#ANXval").Link('lower').to($('#trackANX'));
+        $("#ANXval").Link('lower').to($('#numANX'));
+        
+         $("#SADval").Link('lower').to($('#trackSAD'));
+        $("#SADval").Link('lower').to($('#numSAD'));
+        
+         $("#ANGval").Link('lower').to($('#trackANG'));
+        $("#ANGval").Link('lower').to($('#numANG'));
+        
+         $("#GSHval").Link('lower').to($('#trackGSH'));
+        $("#GSHval").Link('lower').to($('#numGSH'));
+        
+        $("#HHval").Link('lower').to($('#trackHH'));
+        $("#HHval").Link('lower').to($('#numHH'));
+        
+         $("#INSval").Link('lower').to($('#trackINS'));
+        $("#INSval").Link('lower').to($('#numINS'));
+        
+         $("#LONval").Link('lower').to($('#trackLON'));
+        $("#LONval").Link('lower').to($('#numLON'));
+        
+         $("#JOYval").Link('lower').to($('#trackJOY'));
+        $("#JOYval").Link('lower').to($('#numJOY'));
+        
+        $("#SCval").Link('lower').to($('#trackSC'));
+        $("#SCval").Link('lower').to($('#numSC'));
+        
+         $("#NWval").Link('lower').to($('#trackNW'));
+         $("#NWval").Link('lower').to($('#numNW'));
+        
+         $("#NBval").Link('lower').to($('#trackNB'));
+        $("#NBval").Link('lower').to($('#numNB'));
+        
+         $("#RUMval").Link('lower').to($('#trackRUM'));
+        $("#RUMval").Link('lower').to($('#numRUM'));
+        
+        $("#POWval").Link('lower').to($('#trackPOW'));
+        $("#POWval").Link('lower').to($('#numPOW'));
+        
+        $("#RTval").Link('lower').to($('#trackRT'));
+        $("#RTval").Link('lower').to($('#numRT'));
+        
+         $("#OBval").Link('lower').to($('#trackOB'));
+        $("#OBval").Link('lower').to($('#numOB'));
+        
+    }
+            
+            
+    $.getJSON('nouislider.jquery.json', function(data) {
+                
+    console.log("working");
+        
+
+        
+});
+    
+    $('.sliders').noUiSlider({
+	start: 127,
+	connect: "lower",
+	orientation: "horizontal",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+// Bind the color changing function
+// to the slide event.
+$('.sliders').on('slide', setColor);
+        
+        $('.slider-step').noUiSlider({
+	start: [ 0 ],
+    connect: "lower",
+	step: 1,
+	range: {
+		'min': [  0 ],
+		'max': [ 10 ]
+	}
+});
+        $('.slider-step').on('slide', setValue);
+</script>
