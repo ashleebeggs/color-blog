@@ -1,5 +1,6 @@
+<div class="container-fluid"> 
 <div class="row">
-    <div id="joinhead" class="col-md-12">A visual way to track your day</div>
+    <div class="heads" class="col-md-12">A visual way to track your day</div>
 </div>
 
 <div class="row">
@@ -62,7 +63,7 @@
     <div class="row">
     <div class="col-md-9"></div>
       <div class="col-md-1">
-<a href="color-blog.php?content=register" target="_blank"><button type="button" class="btn btn-default subutton" style="margin:80px 0 0 0;">Join</button></a>
+<a href="color-blog.php?content=register"><button type="button" class="btn btn-default subutton" style="margin:80px 0 0 0;">Join</button></a>
     
     <div class="col-md-2"></div>
   </div>
@@ -126,8 +127,32 @@ function setColor(){
       
 }
 
-    $('.sliders').noUiSlider({
-	start: 127,
+    $('.sliderr').noUiSlider({
+	start: 48,
+	connect: "lower",
+	orientation: "horizontal",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+    $('.sliderg').noUiSlider({
+	start: 183,
+	connect: "lower",
+	orientation: "horizontal",
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+    $('.sliderb').noUiSlider({
+	start: 234,
 	connect: "lower",
 	orientation: "horizontal",
 	range: {
@@ -143,3 +168,4 @@ function setColor(){
 // to the slide event.
 $('.sliders').on('slide', setColor);
 </script>
+    </div>

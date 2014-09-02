@@ -161,10 +161,7 @@ if ($baduser != 1)
       $_SESSION['valid_color_user'] = $userid;
 
 
-      echo "<h2>Your registration request has been approved and you are now logged in!</h2>\n";
-
-
-      echo "<a href=\"color-blog.php\">Return to Home</a>\n";
+      header("Location: color-blog.php");
 
 
       exit;

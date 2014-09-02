@@ -22,9 +22,9 @@ console.log("logged in");
  
 </div>
 -->
+<div class="container-fluid">
 <div id="newcont">
-<div style="font-size:30px; font-family:'Raleway', 'sans-serif'; text-align:center; padding: 80px 0 0 0">Today's a new day</div><br>
-
+<div class="heads">Today's a new day</div>
 <div class="row">
     
     <div class="col-md-1"></div>
@@ -1182,3 +1182,4 @@ $('.sliders').on('slide', setColor);
 });
         $('.slider-step').on('slide', setValue);
 </script>
+    </div>

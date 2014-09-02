@@ -3,13 +3,12 @@ html{
 }
 
 body{
-    background-color:rgba(127,127,127,1);
+    background-color:rgba(26,183,234,1);
  padding: 0;
     margin:0;
     font-family: 'Raleway', sans-serif;
   color:#000;
 }
-
 
 #main{
  margin-top:40px;  
@@ -167,6 +166,32 @@ margin:20px;
     text-align:center;
     color:#fff;
     margin:40px 0 80px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
+}
+
+.heads{
+    font-size:36px;
+    text-align:center;
+    color:#fff;
+    margin:40px 0 80px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
+}
+.subheads{
+    font-size:26px;
+    text-align:center;
+    color:#fff;
+    margin:0 0 80px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
+}
+
+.subheads2{
+    font-size:14px;
+    text-align:left;
+    color:#fff;
+    margin:0 0 10px 0;
     font-family: 'Raleway', sans-serif;
     font-weight:200;
 }
