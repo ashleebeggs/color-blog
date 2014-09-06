@@ -2,7 +2,7 @@
 
 
 
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');
+$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
 
 if (!$con)
 

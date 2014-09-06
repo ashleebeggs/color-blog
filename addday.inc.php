@@ -71,7 +71,7 @@ if (trim($colorhex) == "")
 
 {
 
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');    
+$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
     mysql_select_db("moods", $con) or die('Could not connect to database');
     
 $session = $_SESSION['valid_color_user'];    

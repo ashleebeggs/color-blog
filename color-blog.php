@@ -16,12 +16,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>A day in the life with color</title>
+   <script type="text/javascript" src="//use.typekit.net/nvl5jzc.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
-    
- <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,300,900' rel='stylesheet' type='text/css'>
-   
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>  
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <script src="jquery.nouislider.full.min.js"></script>
@@ -167,57 +166,7 @@ function trackbars() {
    
      }
     
- /*   function hexFromRGB(r, g, b) {
-  var hex = [
-    r.toString( 16 ),
-    g.toString( 16 ),
-    b.toString( 16 )
-  ];
-  $.each( hex, function( nr, val ) {
-    if ( val.length === 1 ) {
-      hex[ nr ] = "0" + val;
-    }
-  });
-  return hex.join( "" ).toUpperCase();
-}
-    
-    
- function refreshjoin() {
-    TweenMax.to("#jred", 1, {borderRadius:"25px"});
-    TweenMax.to("#jgreen", 1, {borderRadius:"25px"});
-    TweenMax.to("#jblue", 1, {borderRadius:"25px"});
-    TweenMax.to(".ui-slider-handle", .1, {borderRadius:"50%"});
-    
-  var red = $( "#jred" ).slider( "value" ),
-      green = $( "#jgreen" ).slider( "value" ),
-      blue = $( "#jblue" ).slider( "value" ),
-      hex = hexFromRGB( red, green, blue );
-   
-  $( "body" ).css( "background-color", "#" + hex );       
- }
-
-$(function() {
-  $( "#jred, #jgreen, #jblue" ).slider({
-    orientation: "horizontal",
-    range: "min",
-    min: 50,
-    max: 190,
-    value: 127,
-    slide: refreshjoin,
-    change: refreshjoin
-  });
-  $( "#jred" ).slider( "value", 26 );
-  $( "#jgreen" ).slider( "value", 183 );
-  $( "#jblue" ).slider( "value", 234 );
-});
-     
-  
-$('#slider-input').change( function() {
-    var val = $(this).val();
-    var valRounded = Math.round( val * 10 ) / 10;
-    var mid = $(this).attr('max')/2;
-   
-});*/
+ 
     
     function checkwidth(){
 var prevWidth = $('.day').width(); 

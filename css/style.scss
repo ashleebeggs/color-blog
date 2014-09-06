@@ -1,0 +1,694 @@
+$primary-color: #05baba;
+$ltgrey-color: #e1e1e1;
+$op-black: RGBA(0, 0, 0, .05);
+
+$font-stack: "museo-slab";
+$font-light: 300;
+$font-regular: 500;
+$font-semi: 700;
+$font-bold: 900;
+
+$text-med: 24px;
+$text-body: 14px;
+$text-lgbody:16px;
+$text-sub:18px;
+$text-h1: 30px;
+$text-header: 36px;
+
+
+
+body{
+    background-color:#fff;
+    padding: 0;
+    margin:0;
+    font-family: $font-stack;
+    color:#000;
+    font-weight: $font-regular;
+    font-size: $text-body;
+}
+
+#content{
+    overflow:hidden;
+}
+
+#main{ 
+    margin-top:40px;  
+    width:100%;
+    height:100%;
+    color:#000;
+    }
+
+#footer{
+    height:70px;
+    background-color:#fff;
+}
+
+#emptycont{
+    background-color: $primary-color;  
+    width:100%;
+    height:1024px;
+}
+
+#newcont{
+   background-color: $primary-color;  
+    color:#000;
+    margin-top:-40px;
+}
+
+#nav{
+ height:40px;
+    background-color: $ltgrey-color;
+    width:100%;
+    position:fixed;
+    top:0;
+}
+
+.navbar-nav{
+    font-family: $font-stack;
+    text-transform: uppercase;
+    font-weight: $font-semi;
+}
+
+.nav-btn{
+    height:40px;
+    text-decoration:none;
+    font-family: $primary-color;
+    display:inline;
+    font-size: $text-med;
+    width:100px;
+}
+#navbar1{
+ margin: 0 0 0 10px;   
+}
+.newday{
+
+    position:fixed;
+    width:50px;
+    height:50px;
+    background-color:#fff;
+     border-radius: 50%;
+    margin:20px 0 0 0;
+     box-shadow: inset 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+
+#plus{
+    text-align:center;
+    font-size: $text-med;
+}
+
+#menu {
+                position:fixed;
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				background-color: $ltgrey-color;
+				height: 40px;
+                width:100%;
+				border-top: 2px solid $ltgrey-color;
+				border-bottom: 2px solid #ccc;
+    
+    li a    {
+				text-decoration: none;
+				display: block;
+				padding: 0 20px;
+				line-height: 40px;
+				color: #666;
+			}
+
+			}
+
+#joinmenu {
+                position:fixed;
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+    
+    li a    {
+				text-decoration: none;
+				display: block;
+				padding: 0 20px;
+				line-height: 40px;
+				color: #666;
+			}	
+			}
+.item{
+				float: left;
+                
+			}
+
+			#menu_wrapper ul {margin-left:0;}
+			#menu_wrapper {padding: 0 16px 0 0;}
+			#menu_wrapper div {float: left; height: 44px;}
+
+			#joinmenu_wrapper ul {margin-left:0;}
+			#joinmenu_wrapper {padding: 0 16px 0 0; }
+			#joinmenu_wrapper div {float: left; height: 44px;}
+	
+
+/*#titledesc{
+    display:block;
+    margin:20px;
+    align-content:center;
+    width:100%;
+    font-size:14px;
+}
+#colorform{
+    font-family: "museo-slab";
+    text-align:center;
+    
+}
+
+.centermessage{
+    text-align:center;
+    padding-top: 40px;
+    text-decoration:none;
+}
+.labels li{
+    height:26px;
+    text-decoration:none;
+}
+.black{
+ background-color:#000000;
+    opacity:.4;
+    width:100%;
+    height:100%;
+    z-index:50;
+    position:relative;
+    margin-top: -230px;
+}
+
+*/
+
+
+//main
+.day {
+    width:100%;
+    height: 500px;
+    font-family: $font-stack;
+    text-decoration:none;
+    text-align:center;
+    position:relative;
+    margin-left:0px;   
+}
+
+.dow{
+    font-size: $text-h1;
+    text-align:left;
+    padding: 30px 0 0 0;
+    position:absolute;
+    left: 4%;
+a   {
+    color:#ffffff;
+    font-weight: $font-light;
+    text-decoration:none;
+    }
+
+}
+
+.desc{
+    margin: 30px 0 0 0; 
+    font-size: $text-lgbody;
+    text-align:right;
+    position:absolute;
+    width:300px;
+    right:3%;
+}
+
+
+.title{   
+  text-align:center;
+    font-size: $text-body;
+}
+
+#joinhead{
+    font-size: $text-header;
+    text-align:center;
+    color:#fff;
+    margin:40px 0 80px 0;
+    font-weight: $font-semi;
+}
+
+.trackSI {
+    position:relative;
+	background-color:#FF6165;
+	height: 8px;
+    margin: 0 0 10px 0;
+    
+
+}
+
+.trackSH {
+    position:relative;
+	background-color:#EB595D;
+	height: 8px;
+    margin: 0 0 10px 0;
+}
+
+
+.trackSD {
+    position:relative;
+	background-color:#D65155;
+	margin: 0 0 10px 0;
+	height: 8px;
+ 
+}
+
+.trackISO {
+    position:relative;
+	background-color:#0F5575;
+    margin: 0 0 10px 0;
+	height: 8px;
+
+}
+
+.trackANX {
+	background-color:#115E82;
+	margin: 0 0 10px 0;
+height: 8px;
+ 
+}
+.trackSAD {
+	background-color:#12688F;
+   margin: 0 0 10px 0;
+	height: 8px;
+
+}
+
+.trackANG {
+	background-color:#14719C;
+	height: 8px;
+ margin: 0 0 10px 0;
+}
+.trackGSH {
+	background-color:#167AA8;
+	margin: 0 0 10px 0;
+	height: 8px;
+
+}
+
+.trackHH {
+	background-color:#1784B5;
+	margin: 0 0 10px 0;
+	height: 8px;
+
+}
+
+.trackINS {
+	background-color:#198DC2;
+	margin: 0 0 10px 0;
+height: 8px;
+ 
+}
+.trackLON {
+	background-color:#1A96CF;
+	margin: 0 0 10px 0;
+height: 8px;
+
+}
+
+.trackJOY {
+	background-color:#1C9FDB;
+height: 8px;
+ margin: 0 0 10px 0;
+}
+
+.trackSC {
+	background-color:#2A9C79;
+	margin: 0 0 10px 0;
+	height: 8px;
+
+}
+
+.trackNW {
+	background-color:#2EA883;
+	margin: 0 0 10px 0;
+height: 8px;
+ 
+}
+.trackNB {
+	background-color:#33BA91;
+height: 8px;
+    margin: 0 0 10px 0;
+}
+
+.trackRUM {
+	background-color:#37CC9F;
+height: 8px;
+ margin: 0 0 10px 0;
+}
+
+.trackPOW {
+	background-color:#45D9A9;
+height: 8px;
+margin: 0 0 10px 0;
+}
+
+.trackRT {
+	background-color:#49E5B3;
+height: 8px;
+ margin: 0 0 10px 0;
+}
+.trackOB {
+	background-color:#4DF2BD;
+height: 8px;
+margin: 0 0 10px 0;
+}
+.labels{
+    z-index:100;
+	width: 150px;
+    text-align:left;   
+    position:relative;
+    color:#fff;
+    opacity:0;
+   padding: 1px 0 0 3px;
+    height:30px;
+    left:15px;
+    top: 6px;
+    font-size:10px;
+}
+.skilllabels{
+    z-index:100;
+	width: 150px;
+    text-align:left;   
+    position:absolute;
+    color:#fff;
+    opacity:0;
+   margin: -7px 0 0 3px;
+    height:30px;
+    left:15px;
+    top: 6px;
+    font-size:10px;
+}
+
+.bars {
+    z-index:5;
+    display:none;
+    margin:100px 0 0 0;
+	width: 95%;
+    text-align:left;
+    position:absolute;
+    display:block;
+    left:4%;
+  }
+.dot{
+    width:10px;
+    height:10px;
+    background-color:#fff;
+    float:right;
+    position:absolute;
+     border-radius: 50%;
+    margin:-20px 0 0 0;
+    opacity:1;
+    right:2%
+}
+
+select{
+background-color: darken( $primary-color, 5% ); 
+    border:none;
+ width:100%;   
+}
+
+
+//new day
+.num{
+ display:inline;
+}
+
+#headerform{
+  padding: 4px;
+}
+
+#loginform{
+    height:100%;
+    text-decoration:none;
+}
+#descarea{
+   background-color: darken( $primary-color, 5% ); 
+    width:100%;
+    border: none;
+    color:#fff;
+}
+
+.skillcont{
+    background-color: darken( $primary-color, 5% ); 
+    width:100%;
+    height:34px;
+}
+
+
+
+//register
+.subheads{
+    font-size: $text-sub;
+    text-align:center;
+    color:#fff;
+    margin:0 0 80px 0;
+}
+.subheads2{
+    font-size: $text-body;
+    text-align:left;
+    color:#fff;
+    margin:0 0 10px 0;
+}
+
+
+//join
+.heads{
+    font-family: $font-stack;
+    font-size: $text-header;
+    text-align:center;
+    color:#fff;
+    margin:80px 0 80px 0;
+    font-weight: $font-semi;
+}
+
+.jtext{
+ text-align:center;  
+    width:60%; 
+    color:#fff;
+    font-size: $text-body;
+}
+
+#jt1{
+ margin: 20px 0 0 40%;   
+}
+
+#jt2{
+ margin:  20px 20% 0 20%;   
+}
+
+#jt3{
+ margin: 20px 40% 0 0;   
+}
+#jsliders{
+     position:relative;
+     display:block;
+    width:60%;
+    background-color: $op-black;
+    border-radius: 50%;
+    margin:0 0 0 40%;
+}
+
+#jsliders:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+#joinbars{
+    position:relative;
+     display:block;
+   width:60%;
+    background-color:$op-black;
+    border-radius: 50%;
+    margin:0 20% 0 20%;
+}
+
+#joinbars:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+#jsetm{
+    margin:38% 10% 0 10%;  
+}
+
+.jbars{
+ margin:5px 0 5px 0;   
+}
+
+#b1{
+    width:50%;
+    background-color:#FF6165;
+    height:8px;
+    
+}
+
+#b2{
+ width:20%;
+    background-color:#D65155;
+    height:8px;
+    
+}
+
+#b3{
+ width:70%;
+    background-color:#14719C;
+    height:8px;
+    
+}
+
+#b4{
+ width:50%;
+    background-color:#2A9C79;
+    height:8px;
+    
+}
+
+#b5{
+ width:10%;
+    background-color:#4DF2BD;
+    height:8px;
+    
+}
+
+#joindots{
+    position:relative;
+     display:block;
+    width:60%;
+    background-color: $op-black;
+    border-radius: 50%;
+     margin:0 40% 0 0;
+}
+
+#joindots:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.jset{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;   
+}
+.dhit{
+    width:100%;
+    height:20px;
+}
+
+.jdot{
+     margin:5px 0 5px 45%;
+    width:20px;
+    height:20px;
+    background-color:#fff;
+    border-radius: 50%;
+}
+
+.jskill{
+    margin:2px 0 0 30px;
+    position:absolute;
+    color:#fff;
+    font-size: $text-body;
+    opacity:0;
+}
+
+
+
+//pagination
+#paging{
+    text-align:center;
+    padding-top: 40px;
+    text-decoration:none;
+}
+
+
+//color picker
+.slider-step{
+    margin:10px 0 20px 0 ;
+}
+
+#red, #green, #blue {
+  clear: left;
+  width: 100%;
+  margin: 15px 0 15px 0;
+}
+
+#newred, #newgreen, #newblue{
+  margin: 30px 0 30px 0; 
+    .noUi-background {
+	background-color: #fff;
+        }
+    .noUi-handle {
+	width: 30px;
+	height: 30px;
+	left: -17px;
+	top: -6px;
+        }
+}
+
+#colorpicker{
+    width:100%;
+    margin-top:-5%;
+}
+
+#subbtn{
+ position:absolute;
+    margin: 20px 0 0 45px;
+}
+
+.subutton{
+    width:100%;
+    height:40px;
+    text-transform: uppercase;
+    background: #fff;
+	color: #000;
+	border-radius: 7px;
+	box-shadow: 0 5px $ltgrey-color;
+    border:none;
+}
+
+
+.subutton:hover{
+    width:100%;
+    height:40px;
+    text-transform: uppercase;
+    background: $ltgrey-color;
+	color: #000;
+	border-radius: 7px;
+	box-shadow: 0 5px #fff;
+    border:none;
+}
+
+.noUi-handle {
+	border-radius: 50%;
+	background: darken( $primary-color, 10% );
+	cursor: default;
+}
+
+
+.noUi-handle {
+	border-radius: 50%;
+	background: darken( $primary-color, 10% );
+	cursor: default;
+}
+
+.noUi-background {
+	background: darken( $primary-color, 5% );
+}
+.noUi-connect {
+	background: #FFF;
+-webkit-transition: background 450ms;
+	transition: background 450ms;
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 30px;
+	height: 30px;
+	left: -17px;
+	top: -12px;
+}

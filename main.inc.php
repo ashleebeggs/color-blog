@@ -24,7 +24,7 @@ console.log("logged in");
 <?php
 
 
-$con = mysql_connect("ashleebee.ipowermysql.com", "ashleebeggs", "ayso13") or die('Sorry, could not connect to database server');  
+$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
 
     
 mysql_select_db("moods", $con) or die('Sorry, could not connect to database');

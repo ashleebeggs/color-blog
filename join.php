@@ -128,7 +128,7 @@ function setColor(){
 }
 
     $('.sliderr').noUiSlider({
-	start: 48,
+	start: 5,
 	connect: "lower",
 	orientation: "horizontal",
 	range: {
@@ -140,7 +140,7 @@ function setColor(){
 	})
 });
     $('.sliderg').noUiSlider({
-	start: 183,
+	start: 186,
 	connect: "lower",
 	orientation: "horizontal",
 	range: {
@@ -152,7 +152,7 @@ function setColor(){
 	})
 });
     $('.sliderb').noUiSlider({
-	start: 234,
+	start: 186,
 	connect: "lower",
 	orientation: "horizontal",
 	range: {

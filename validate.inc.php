@@ -49,9 +49,9 @@ console.log("working before session");
 ?>
 
 <script>
-    
+  console.log("working after session");  
     window.location.reload()
-console.log("working after session");
+
     
 </script>
 <?php

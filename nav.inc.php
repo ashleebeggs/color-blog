@@ -4,8 +4,8 @@
 if (isset($_SESSION['valid_color_user']))
    
 {
-    $con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');
-    mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
+  $con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
+ mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
         $session = $_SESSION['valid_color_user'];    
             $userid = "$session";
             $query = "SELECT userid from users where userid = '$userid'";
