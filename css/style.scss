@@ -16,7 +16,6 @@ $text-h1: 30px;
 $text-header: 36px;
 
 
-
 body{
     background-color:#fff;
     padding: 0;
@@ -61,6 +60,7 @@ body{
     width:100%;
     position:fixed;
     top:0;
+    z-index:100;
 }
 
 .navbar-nav{
@@ -219,7 +219,6 @@ a   {
 
 
 .title{   
-  text-align:center;
     font-size: $text-body;
 }
 
@@ -419,6 +418,7 @@ background-color: darken( $primary-color, 5% );
 
 #headerform{
   padding: 4px;
+    margin-top:30px;
 }
 
 #loginform{
@@ -436,9 +436,15 @@ background-color: darken( $primary-color, 5% );
     background-color: darken( $primary-color, 5% ); 
     width:100%;
     height:34px;
+    margin: -15px 0 20px 0;
 }
 
-
+.subheads3{
+    font-size: $text-body;
+    text-align:center;
+    color:darken( $primary-color, 5% );
+    margin:0 0 10px 0;
+}
 
 //register
 .subheads{
@@ -455,13 +461,15 @@ background-color: darken( $primary-color, 5% );
 }
 
 
+
+
 //join
 .heads{
     font-family: $font-stack;
     font-size: $text-header;
     text-align:center;
     color:#fff;
-    margin:80px 0 80px 0;
+    margin:80px 0 50px 0;
     font-weight: $font-semi;
 }
 
@@ -643,13 +651,12 @@ background-color: darken( $primary-color, 5% );
 
 .subutton{
     width:100%;
-    height:40px;
+    height:60px;
     text-transform: uppercase;
-    background: #fff;
-	color: #000;
-	border-radius: 7px;
-	box-shadow: 0 5px $ltgrey-color;
+    background: #05384f;
+	color: #fff;
     border:none;
+    margin-top: 40px;
 }
 
 
@@ -665,13 +672,7 @@ background-color: darken( $primary-color, 5% );
 }
 
 .noUi-handle {
-	border-radius: 50%;
-	background: darken( $primary-color, 10% );
-	cursor: default;
-}
-
-
-.noUi-handle {
+    z-index:5;
 	border-radius: 50%;
 	background: darken( $primary-color, 10% );
 	cursor: default;
@@ -691,4 +692,19 @@ background-color: darken( $primary-color, 5% );
 	height: 30px;
 	left: -17px;
 	top: -12px;
+}
+
+.changecol{
+    z-index:10;
+}
+
+.newform{
+ width:50%;
+    float:right;
+    margin:-27px 0 0 0;
+}
+
+.slidertitle{
+ padding: 7px 0 0 10px;
+    color: darken( $primary-color, 15% );
 }
