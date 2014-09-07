@@ -71,6 +71,12 @@ if (trim($colorhex) == "")
 
 {
 
+if (get_magic_quotes_gpc())
+   {
+      $shortdesc = stripslashes($shortdesc);
+   }
+$shortdescval = mysql_real_escape_string($shortdesc);
+    
 $con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
     mysql_select_db("moods", $con) or die('Could not connect to database');
     
@@ -79,7 +85,7 @@ $username = "$session";
 
     $query = "INSERT INTO color ( colorhex, shortdesc, colordate, colortext, trackSI, trackSH, trackSD, trackISO, trackANX, trackSAD, trackANG, trackGSH, trackHH, trackINS, trackLON, trackJOY, trackSC, trackNW, trackNB, trackRUM, trackPOW, trackRT, trackOB, username, skillSI, skillSH, skillSD, skillISO, skillANX, skillSAD, skillANG, skillGSH, skillHH, skillINS, skillLON, skillJOY, skillSC, skillNW, skillNB, skillRUM, skillPOW, skillRT, skillOB) " .
 
-" VALUES ('$colorhex', '$shortdesc', '$colordate',  '$colortext', '$trackSI', '$trackSH', '$trackSD', '$trackISO', '$trackANX', '$trackSAD', '$trackANG', '$trackGSH', '$trackHH', '$trackINS', '$trackLON', '$trackJOY', '$trackSC', '$trackNW', '$trackNB', '$trackRUM', '$trackPOW', '$trackRT', '$trackOB', '$username', '$skillSI', '$skillSH', '$skillSD', '$skillISO', '$skillANX', '$skillSAD', '$skillANG', '$skillGSH', '$skillHH', '$skillINS', '$skillLON', '$skillJOY', '$skillSC', '$skillNW', '$skillNB', '$skillRUM', '$skillPOW', '$skillRT', '$skillOB')";
+" VALUES ('$colorhex', '$shortdescval', '$colordate',  '$colortext', '$trackSI', '$trackSH', '$trackSD', '$trackISO', '$trackANX', '$trackSAD', '$trackANG', '$trackGSH', '$trackHH', '$trackINS', '$trackLON', '$trackJOY', '$trackSC', '$trackNW', '$trackNB', '$trackRUM', '$trackPOW', '$trackRT', '$trackOB', '$username', '$skillSI', '$skillSH', '$skillSD', '$skillISO', '$skillANX', '$skillSAD', '$skillANG', '$skillGSH', '$skillHH', '$skillINS', '$skillLON', '$skillJOY', '$skillSC', '$skillNW', '$skillNB', '$skillRUM', '$skillPOW', '$skillRT', '$skillOB')";
 
 
     $result = mysql_query($query) or die('Sorry, we could not post your day to the database at this time');

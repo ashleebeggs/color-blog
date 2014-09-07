@@ -1,6 +1,7 @@
 $primary-color: #05baba;
 $ltgrey-color: #e1e1e1;
 $op-black: RGBA(0, 0, 0, .05);
+$button: #05384f;
 
 $font-stack: "museo-slab";
 $font-light: 300;
@@ -26,6 +27,15 @@ body{
     font-size: $text-body;
 }
 
+.letter{
+     fill: $primary-color; 
+}
+
+.logo{
+ width:150px;
+    height: 35px;
+    top:5px;
+}
 #content{
     overflow:hidden;
 }
@@ -43,6 +53,11 @@ body{
 }
 
 #emptycont{
+    background-color: $primary-color;  
+    width:100%;
+    height:1024px;
+}
+#joincont{
     background-color: $primary-color;  
     width:100%;
     height:1024px;
@@ -430,6 +445,7 @@ background-color: darken( $primary-color, 5% );
     width:100%;
     border: none;
     color:#fff;
+    height:55px;
 }
 
 .skillcont{
@@ -494,10 +510,9 @@ background-color: darken( $primary-color, 5% );
 #jsliders{
      position:relative;
      display:block;
-    width:60%;
+    width:100%;
     background-color: $op-black;
     border-radius: 50%;
-    margin:0 0 0 40%;
 }
 
 #jsliders:before{
@@ -508,10 +523,10 @@ background-color: darken( $primary-color, 5% );
 #joinbars{
     position:relative;
      display:block;
-   width:60%;
+   width:100%;
     background-color:$op-black;
     border-radius: 50%;
-    margin:0 20% 0 20%;
+
 }
 
 #joinbars:before{
@@ -565,10 +580,9 @@ background-color: darken( $primary-color, 5% );
 #joindots{
     position:relative;
      display:block;
-    width:60%;
+    width:100%;
     background-color: $op-black;
     border-radius: 50%;
-     margin:0 40% 0 0;
 }
 
 #joindots:before{
@@ -624,6 +638,21 @@ background-color: darken( $primary-color, 5% );
   clear: left;
   width: 100%;
   margin: 15px 0 15px 0;
+    .noUi-background {
+	background-color: #fff;
+        }
+
+.noUi-handle {
+     width: 25px;
+	   height: 25px;
+	   left: -5px;
+	   top: -7px;
+    z-index:5;
+	border-radius: 50%;
+	background: #c8c8c8;
+	cursor: default;
+}
+
 }
 
 #newred, #newgreen, #newblue{
@@ -653,7 +682,7 @@ background-color: darken( $primary-color, 5% );
     width:100%;
     height:60px;
     text-transform: uppercase;
-    background: #05384f;
+    background: $button;
 	color: #fff;
     border:none;
     margin-top: 40px;
@@ -661,14 +690,13 @@ background-color: darken( $primary-color, 5% );
 
 
 .subutton:hover{
-    width:100%;
-    height:40px;
+     width:100%;
+    height:60px;
     text-transform: uppercase;
-    background: $ltgrey-color;
-	color: #000;
-	border-radius: 7px;
-	box-shadow: 0 5px #fff;
+    background: lighten( $button, 10%);
+	color: #fff;
     border:none;
+    margin-top: 40px;
 }
 
 .noUi-handle {

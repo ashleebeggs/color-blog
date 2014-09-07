@@ -24,7 +24,6 @@ if (!$con)
 
 mysql_select_db("moods", $con) or die('Could not connect to the database');
 
-
 $userid = $_POST['userid'];
 
 
@@ -39,6 +38,20 @@ $fullname = $_POST['fullname'];
 
 $email = $_POST['email'];
 
+
+
+if (get_magic_quotes_gpc())
+   {
+    $userid = stripslashes($userid);
+    $fullname = stripslashes($fullname);
+    $email = stripslashes($email);
+}
+ $userid = mysql_real_escape_string($userid);
+$fullname = mysql_real_escape_string($fullname);
+$email = mysql_real_escape_string($email);
+
+ $thumbnail = getThumb($_FILES['picture']);
+   $thumbnail = mysql_real_escape_string($thumbnail);
 
 $baduser = 0;
 
@@ -146,7 +159,7 @@ if ($baduser != 1)
    //Everything passed, enter userid in database
 
 
-   $query = "INSERT into users VALUES ('$userid', PASSWORD('$password'), '$fullname', '$email')";
+   $query = "INSERT into users (userid, password, fullname, email, picture)"." VALUES ('$userid', PASSWORD('$password'), '$fullname', '$email', '$thumbnail')";
 
 
    $result = mysql_query($query) or die('Sorry, we are unable to process your request.');

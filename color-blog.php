@@ -34,7 +34,8 @@
 
 <div id="nav"  style="z-index:100; top:0; position:fixed">
 
-     <?php include("nav.inc.php"); ?>
+     <?php include("nav.php");
+    include("getThumb.php");?>
    
 </div>
 

@@ -1,18 +1,19 @@
+<div id="joincont">
 <div class="container-fluid"> 
 <div class="row">
-    <div class="heads" class="col-md-12">A visual way to track your day</div>
+    <div class="heads" id="joinhead" class="col-md-12">A visual way to track your day</div>
 </div>
 
 <div class="row">
     <div id="joingroup">
-        <div class="col-md-4">
+        <div class="col-md-3 col-md-offset-.5">
             <div id="jsliders">
                  <div class="jset">
             <div id="jsetm">
             <div id="colorpicker">
-                <div class="sliders sliderr" id="red" value="" style="height:15px; background-color:rgba(255, 0, 0, 1);"></div>
-                <div class="sliders sliderg" id="green" value="" style="height:15px; background-color:rgba(0, 255, 0, 1);"></div>
-                <div class="sliders sliderb" id="blue" value="" style="height:15px; background-color:rgba(0, 0, 255, 1);"></div>
+                <div class="sliders sliderr" id="red" value="" style="height:10px; background-color:rgba(255, 0, 0, 1);"></div>
+                <div class="sliders sliderg" id="green" value="" style="height:10px; background-color:rgba(0, 255, 0, 1);"></div>
+                <div class="sliders sliderb" id="blue" value="" style="height:10px; background-color:rgba(0, 0, 255, 1);"></div>
             </div>
             </div>
             </div>
@@ -23,7 +24,7 @@
     
         
     
-        <div class="col-md-4">
+        <div class="col-md-3 col-md-offset-1">
             <div id="joinbars">
                 <div class="jset">
                     <div id="jsetm">
@@ -39,7 +40,7 @@
             </div>
             
            
-            <div class="col-md-4">
+            <div class="col-md-3 col-md-offset-1">
             <div id="joindots">
                 <div class="jset">
                     <div id="jsetm">
@@ -61,11 +62,9 @@
     
         </div>
     <div class="row">
-    <div class="col-md-9"></div>
-      <div class="col-md-1">
-<a href="color-blog.php?content=register"><button type="button" class="btn btn-default subutton" style="margin:80px 0 0 0;">Join</button></a>
-    
-    <div class="col-md-2"></div>
+      <div class="col-md-2 col-md-offset-5">
+<a href="color-blog.php?content=register"><button type="button" class="subutton" style="margin:80px 0 0 0;">Join</button></a>
+
   </div>
     </div>
 
@@ -118,12 +117,54 @@ function setColor(){
     bb =  $('.sliderb').val(),
     hex = hexFromRGB( rr, gg, bb );  
     
+     var hsll = rgbToHsl(rr, gg, bb);
     
    console.log(hex); 
 	// Fill the color box.
-	$("body").css({
+	$("#joincont").css({
 		backgroundColor: "#" + hex
 	});
+     $(".letter").css({
+		fill: "#" + hex
+	   });
+      
+if (hsll > 0.60){
+      $("#joinhead").css({
+		color: "#000"
+	});
+     $(".jtext").css({
+		color: "#000"
+	});
+    }
+    else {
+   $("#joinhead").css({
+		color: "#fff"
+	});
+         $(".jtext").css({
+		color: "#fff"
+	});
+    }
+}
+
+function rgbToHsl(r, g, b){
+    r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+
+    if(max == min){
+        h = s = 0; // achromatic
+    }else{
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch(max){
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+    console.log(l);
+    return [l];
       
 }
 
@@ -167,5 +208,9 @@ function setColor(){
 // Bind the color changing function
 // to the slide event.
 $('.sliders').on('slide', setColor);
+    
+    
+    
 </script>
+    </div>
     </div>

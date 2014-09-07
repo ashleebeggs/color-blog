@@ -6,7 +6,9 @@
 </div>
   </div>
 
-<form action="color-blog.php" method="post" role="form">
+<form action="color-blog.php" enctype="multipart/form-data" method="post" role="form">
+<input type="hidden" name="MAX_FILE_SIZE" value="1024000">
+<input type="file" name="picture">  
     
     <div class="row">
     <div class="col-md-6 col-md-offset-3">
