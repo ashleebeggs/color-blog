@@ -29,7 +29,7 @@ if (isset($_SESSION['valid_color_user']))
             <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                          <ul class="nav navbar-nav navbar"> 
-                             <li class="logo"><?php include("logo.php"); ?></li>
+                            <a href="color-blog.php"><li class="logo"><?php include("logo.php"); ?></li></a>
                              </ul>
                      <ul class="nav navbar-nav navbar-right">   
                           <li><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>

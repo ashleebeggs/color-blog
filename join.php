@@ -6,7 +6,7 @@
 
 <div class="row">
     <div id="joingroup">
-        <div class="col-md-3 col-md-offset-.5">
+        <div class="col-md-3 col-md-offset-1" id="col1">
             <div id="jsliders">
                  <div class="jset">
             <div id="jsetm">
@@ -24,7 +24,7 @@
     
         
     
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-1" id="col2">
             <div id="joinbars">
                 <div class="jset">
                     <div id="jsetm">
@@ -40,7 +40,7 @@
             </div>
             
            
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-3 col-md-offset-1" id="col3">
             <div id="joindots">
                 <div class="jset">
                     <div id="jsetm">
@@ -61,6 +61,7 @@
         
     
         </div>
+    </div>
     <div class="row">
       <div class="col-md-2 col-md-offset-5">
 <a href="color-blog.php?content=register"><button type="button" class="subutton" style="margin:80px 0 0 0;">Join</button></a>

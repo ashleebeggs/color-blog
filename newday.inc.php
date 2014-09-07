@@ -1014,7 +1014,7 @@ console.log("logged in");
     <input type="hidden" id="trackRT" name="trackRT" value="">
     <input type="hidden" id="trackOB" name="trackOB" value="">
 <div class="row">
-    <div class="col-md-2 col-md-offset-9">
+    <div class="col-md-2 col-md-offset-5">
         <input class="subutton" type="submit" value="Submit">
     </div>
     </div>
