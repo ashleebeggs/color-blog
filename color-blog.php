@@ -35,14 +35,14 @@
 <div id="nav"  style="z-index:100; top:0; position:fixed">
 
      <?php include("nav.php");
-    include("getThumb.php");?>
+   ?>
    
 </div>
 
 <div id="main">
-
+ 
 <?php
-    
+    include("getThumb.php");
  
 
                if (!isset($_REQUEST['content']))
@@ -113,7 +113,7 @@ daywidth.staggerTo(elems, 1, {width:"14.28%", ease:Power2.easeOut}, 0.2);
 TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
     TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
 TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
-TweenLite.to(bars, 1,  {left:"10%"});
+TweenLite.to(bars, 1,  {left:"0%"});
 TweenLite.to(days, 1,  {left:"10%"});
     TweenLite.to(elems, 1,  {marginLeft:"-4px"});
  $(days).css('font-size', '18px');    

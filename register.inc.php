@@ -65,3 +65,9 @@
 
 </form>
     </div>
+<script>
+$("#navbottom").css({
+		display: 'none'
+	});
+
+</script>

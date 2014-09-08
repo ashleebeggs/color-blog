@@ -63,7 +63,7 @@
         </div>
     </div>
     <div class="row">
-      <div class="col-md-2 col-md-offset-5">
+      <div class="col-md-2 col-md-offset-5 sr-only-hidden" id="joinbtn">
 <a href="color-blog.php?content=register"><button type="button" class="subutton" style="margin:80px 0 0 0;">Join</button></a>
 
   </div>
@@ -211,6 +211,11 @@ function rgbToHsl(r, g, b){
 $('.sliders').on('slide', setColor);
     
     
+$("#navbottom").css({
+		display: 'block'
+	});
+
+
     
 </script>
     </div>

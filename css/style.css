@@ -11,9 +11,22 @@ body {
   fill: #05baba; }
 
 .logo {
-  width: 150px;
-  height: 35px;
   margin-top: 5px; }
+  @media only screen and (max-width: 320px) {
+    .logo {
+      width: 100px;
+      height: 25px;
+      margin-left: 30px; } }
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    .logo {
+      width: 150px;
+      height: 35px;
+      margin-left: 0; } }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      width: 150px;
+      height: 35px;
+      margin-left: 0; } }
 
 #content {
   overflow: hidden; }
@@ -177,7 +190,6 @@ body {
   margin-left: 0px; }
 
 .dow {
-  font-size: 30px;
   text-align: left;
   padding: 30px 0 0 0;
   position: absolute;
@@ -186,6 +198,15 @@ body {
     color: #ffffff;
     font-weight: 300;
     text-decoration: none; }
+  @media only screen and (max-width: 320px) {
+    .dow {
+      font-size: 20px; } }
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    .dow {
+      font-size: 26px; } }
+  @media only screen and (min-width: 768px) {
+    .dow {
+      font-size: 30px; } }
 
 .desc {
   margin: 30px 0 0 0;
@@ -194,6 +215,18 @@ body {
   position: absolute;
   width: 300px;
   right: 3%; }
+  @media only screen and (max-width: 320px) {
+    .desc {
+      margin: 60px 0 0 0;
+      text-align: left; } }
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    .desc {
+      margin: 60px 0 0 0;
+      text-align: left; } }
+  @media only screen and (min-width: 768px) {
+    .desc {
+      margin: 30px 0 0 0;
+      text-align: right; } }
 
 .title {
   font-size: 14px; }
@@ -398,8 +431,28 @@ select {
   color: #fff;
   margin: 0 0 10px 0; }
 
-#col2, #col3 {
-  margin: 0 0 0 40px; }
+#navbottom {
+  background-color: #05384f; }
+
+@media only screen and (max-width: 320px) {
+  #joinbtn {
+    opacity: 0; } }
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  #joinbtn {
+    opacity: 1; } }
+@media only screen and (min-width: 768px) {
+  #joinbtn {
+    opacity: 1; } }
+
+@media only screen and (max-width: 320px) {
+  #col2, #col3 {
+    margin: 30px 0 0 0; } }
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  #col2, #col3 {
+    margin: 0 0 0 40px; } }
+@media only screen and (min-width: 768px) {
+  #col2, #col3 {
+    margin: 0 0 0 40px; } }
 
 .heads {
   font-family: "museo-slab";
@@ -555,21 +608,38 @@ select {
 
 .subutton {
   width: 100%;
-  height: 60px;
   text-transform: uppercase;
   background: #05384f;
   color: #fff;
-  border: none;
-  margin-top: 40px; }
+  border: none; }
+  @media only screen and (max-width: 320px) {
+    .subutton {
+      height: 80px; } }
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    .subutton {
+      margin-top: 40px;
+      height: 60px; } }
+  @media only screen and (min-width: 768px) {
+    .subutton {
+      margin-top: 40px;
+      height: 60px; } }
 
 .subutton:hover {
-  width: 100%;
-  height: 60px;
   text-transform: uppercase;
   background: #085a7f;
   color: #fff;
-  border: none;
-  margin-top: 40px; }
+  border: none; }
+  @media only screen and (max-width: 320px) {
+    .subutton:hover {
+      height: 80px; } }
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    .subutton:hover {
+      margin-top: 40px;
+      height: 60px; } }
+  @media only screen and (min-width: 768px) {
+    .subutton:hover {
+      margin-top: 40px;
+      height: 60px; } }
 
 .noUi-handle {
   z-index: 5;

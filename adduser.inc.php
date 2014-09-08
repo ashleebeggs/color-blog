@@ -172,11 +172,13 @@ if ($baduser != 1)
 
 
       $_SESSION['valid_color_user'] = $userid;
+?>
 
-
-      header("Location: color-blog.php");
-
-
+     <script>
+  console.log("working adding");  
+    window.location.reload('color.blog');
+</script>
+<?php
       exit;
 
 
