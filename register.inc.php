@@ -1,73 +1,77 @@
+<div id="regcont">
 <div class="container-fluid"> 
 <div class="row">
 <div class="col-md-12">
-<div class="heads">Hello, Hi, Hey there<div class="subheads">Register to create your own profile</div></div>
+<div class="heads">A little bit about you</div>
 
 </div>
   </div>
 
 <form action="color-blog.php" enctype="multipart/form-data" method="post" role="form">
+    
 <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
-<input type="file" name="picture">  
+    
+
     
     <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-  <div class="form-group ">
-    <div class="subheads2">Real Name</div>
-    <input type="text" name="fullname" class="form-control" id="exampleInputname1" placeholder="Jane Smith">
-  </div>
+    <div class="col-md-4 col-md-offset-2 form-group">
+     <div  class="loginsub">Username</div>
+    <input type="text" style="width:100%;" name="userid" class="form-control" >
         </div>
-        </div>
+<input class="col-md-4" type="file" name="picture">  
+    </div>
+
+    
     <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-  <div class="form-group">
-     <div class="subheads2">Username</div>
-    <input type="text" name="userid" class="form-control" id="exampleInputuser1" placeholder="Username">
-  </div>
-</div>
-        </div>
-    <div class="row">
-    <div class="col-md-3 col-md-offset-3">
-        
-    <div class="form-group"> 
-     <div class="subheads2">Password</div>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
-  </div>
+    <div class="col-md-4 col-md-offset-2 form-group">
+     <div  class="loginsub">Password</div>
+    <input type="password" style="width:100%;" name="password" class="form-control">  
         </div>
      
-        <div class="col-md-3">
-<div class="form-group">
-     <div class="subheads2">Confirm</div>
-    <input type="password" name="password2" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
-  </div>
-</div>
+        <div class="col-md-4 form-group">
+     <div  class="loginsub">Confirm</div>
+    <input type="password" style="width:100%;" name="password2" class="form-control">
         </div>
- 
+        </div>
+    
     <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-<div class="form-group">
-     <div class="subheads2">Email address</div>
-    <input type="text" size="50" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
+    <div class="col-md-4 col-md-offset-2 form-group">
+    <div  class="loginsub">Real Name</div>
+    <input type="text" style="width:100%;" name="fullname" class="form-control">
+        </div>
+  
+ 
+  
+    <div class="col-md-4 form-group">
+     <div  class="loginsub">Email address</div>
+    <input type="text" style="width:100%;" size="50" name="email" class="form-control">
         </div>
         </div>
+    
     <button type="button" class="btn btn-default">
         <span class="glyphicon glyphicon-star"></span> Forgot Password?
     </button>
-<input type="submit" value="Submit">
+    
+     <div class="row navbar-fixed-bottom hidden-sm hidden-md hidden-lg" id="navbottom">
+          <div class="col-xs-12">                
+             <button type="submit" class="subutton" value="Submit">Submit</button>
+           </div>             
+    </div>
+    
+    <div class="row">
+      <div class=" col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5 hidden-xs">                
+             <button type="submit" class="subutton" value="Submit">Submit</button>
+           </div>  
+        </div>
+
 
 
 <input type="hidden" class="btn btn-default" name="content" value="adduser">
 
 
-<hr size="1" noshade="noshade">
+
 
 
 </form>
     </div>
-<script>
-$("#navbottom").css({
-		display: 'none'
-	});
-
-</script>
+    </div>

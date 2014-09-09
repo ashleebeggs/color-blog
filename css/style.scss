@@ -44,11 +44,11 @@ body{
 }
 
 .logo{
-    margin-top:5px;
-    
-    @include respond-to(handhelds) { width:100px; height:25px; margin-left:30px;}
-    @include respond-to(medium-screens) {  width:150px; height:35px; margin-left:0; }
-    @include respond-to(wide-screens) {  width:150px; height:35px; margin-left:0;}
+   margin-left:0;
+    list-style:none;
+    @include respond-to(handhelds) { width:100px; height:25px;  margin-top:15px;}
+    @include respond-to(medium-screens) {  width:100px; height:25px;   margin-top:15px;}
+    @include respond-to(wide-screens) {  width:150px; height:35px;   margin-top:5px;}
 }
 #content{
     overflow:hidden;
@@ -66,6 +66,12 @@ body{
     background-color:#fff;
 }
 
+#regcont
+{
+    background-color: $primary-color;  
+    width:100%;
+  height:1024px;
+}
 #emptycont{
     background-color: $primary-color;  
     width:100%;
@@ -75,6 +81,15 @@ body{
     background-color: $primary-color;  
     width:100%;
     min-height:1024px;
+    padding-bottom:120px;
+}
+
+#logincont{
+    background-color: $primary-color;  
+    width:100%;
+   @include respond-to(handhelds) { height:568px; margin:-34px 0 0 0;}
+    @include respond-to(medium-screens) { min-height:1024px; }
+    @include respond-to(wide-screens) {min-height:1024px;}
 }
 
 #newcont{
@@ -108,6 +123,11 @@ body{
 }
 #navbar1{
  margin: 0 0 0 10px;   
+}
+
+.profilepic{
+ border-radius:50%;
+    margin-top:2px;
 }
 .newday{
 
@@ -459,9 +479,26 @@ background-color: darken( $primary-color, 5% );
 }
 
 #loginform{
-    height:100%;
+ 
+    text-align:center;
     text-decoration:none;
 }
+
+.headspadding{
+    font-family: $font-stack;
+    font-size: $text-header;
+    text-align:center;
+    color:#fff;
+    padding:80px 0 50px 0;
+    font-weight: $font-semi;
+}
+
+.loginsub{
+   color: darken( $primary-color, 10% );
+    font-weight: $font-regular;
+    font-size: $text-body;
+}
+
 #descarea{
    background-color: darken( $primary-color, 5% ); 
     width:100%;
@@ -527,6 +564,7 @@ background-color:$button;
     margin:80px 0 50px 0;
     font-weight: $font-semi;
 }
+
 
 .jtext{
  text-align:center;  
@@ -761,6 +799,7 @@ background-color:$button;
  width:50%;
     float:right;
     margin:-27px 0 0 0;
+    -webkit-appearance: none;
 }
 
 .slidertitle{

@@ -5,6 +5,7 @@ if (isset($_SESSION['valid_color_user']))
    
 {
   $con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
+
  mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
         $session = $_SESSION['valid_color_user'];    
             $userid = "$session";
@@ -14,23 +15,25 @@ if (isset($_SESSION['valid_color_user']))
    {
       $userid = $row['userid'];    
                 ?>
-            <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
 
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                    <ul>
+                 <a href="color-blog.php"><li class="logo"><?php include("logo.php"); ?></li></a>
+                        </ul>
+                </div>
+    
             <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                         <ul class="nav navbar-nav navbar"> 
-                            <a href="color-blog.php"><li class="logo"><?php include("logo.php"); ?></li></a>
-                             </ul>
+                        
                      <ul class="nav navbar-nav navbar-right">   
                           <li><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
                            
@@ -38,9 +41,13 @@ if (isset($_SESSION['valid_color_user']))
                                 <li onclick="myweek()"><a href="#">Week</a></li>
                                 <li onclick="myweek()"><a href="#">Month</a></li>
                                 <li><a href="autho.php?">Details</a></li>
-                                <li><a href="color-blog.php?content=logout"><?php echo $userid ?> LOGOUT</a></li>
-                         <li><img src="showimage.php?id=$userid" width="80" height="60"></li>
-                     </ul>
+                        <li><div class="dropdown hidden-xs hidden-sm">
+                            <?php echo "<img src=\"showimage.php?id=$userid\" width=\"40\" height=\"40\" class='profilepic dropdown-toggle' data-toggle='dropdown'>"; ?><span class="caret"></span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="color-blog.php?content=logout">logout</a>                                </li></ul></div>
+                        </li><!--dropdown li-->
+                         <li class="hidden-md hidden-lg hidden-xl"> <a href="color-blog.php?content=logout">logout</a>          </li>
+                </ul><!--navbar right-->
                         <div class="profilepic">
                     
                         </div>
@@ -53,28 +60,17 @@ if (isset($_SESSION['valid_color_user']))
     else
     {
                 ?>
-
-            <nav class="navbar navbar-default" role="navigation">
-                    <div class="container"> 
-                 <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <ul class="nav navbar-nav navbar">
-                        <a href="color-blog.php"><li class="logo"><?php include("logo.php"); ?></li></a>
-                            </ul>
-                        <div class="row navbar-fixed-bottom" id="navbottom">
-                          
-                            <div class="col-xs-6">
-                            <a href="color-blog.php?content=login">
-                                    <button type="button" class="subutton">Login</button></a>
-                            </div>  
-                            <div class="col-xs-6">
-                                <a href="color-blog.php?content=register">
-                                    <button type="button" class="subutton">Join</button></a>
-                              
-                            </div>
+<nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
                  
-                        </div>
+                    <ul class="hidden-sm hidden-md hidden-lg">
+                 <a href="color-blog.php"><li class="logo "><?php include("logo.php"); ?></li></a>
+                        </ul>
                 </div>
+        
+               
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar">
                     <a href="color-blog.php"><li class="logo"><?php include("logo.php"); ?></li></a>

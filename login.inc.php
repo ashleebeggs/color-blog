@@ -1,38 +1,43 @@
-<br />
+<div id="logincont">
 
 <div id="loginform">
-
+<div class="headspadding">Good to see you again!</div>
 
 
 <form id="loginsheet" action="color-blog.php" method="post" target="_self">
 
-
-<b>User Name:</b><br>
-
-
-<input type="text" size="20" name="userid"><br>
-
-
-<br />
-
-
-<b>Password:</b><br><input type="password" size="20" name="password"><br>
-
-
-<br />
-
-
-<input type="submit" value="Login">
+<div class="row" style="padding-bottom:30px">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
+<div class="loginsub">User Name:</div>
+<input style="width:100%;" type="text" size="20" name="userid"><br>
+</div>
+    </div>
+    
+    <div class="row" style="padding-bottom:30px">
+<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
+<div class="loginsub">Password</div>
+    <input style="width:100%;" type="password" size="20" name="password"><br>
+</div>
+</div>
 
 
+  <div class="row navbar-fixed-bottom hidden-sm hidden-md hidden-lg" id="navbottom">
+          <div class="col-xs-12">                
+             <button type="submit" class="subutton" value="Login">Login</button>
+           </div>             
+    </div>
+    
+    <div class="row">
+      <div class=" col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5 hidden-xs">                
+             <button type="submit" class="subutton" value="Login">Login</button>
+           </div>  
+        </div>
 <input type="hidden" value="validate" name="content">
 
 
 </form>
+    
+  
 </div>
-<script>
-$("#navbottom").css({
-		display: 'none'
-	});
 
-</script>
+    </div>

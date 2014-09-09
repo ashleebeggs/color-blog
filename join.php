@@ -62,12 +62,23 @@
     
         </div>
     </div>
+     <div class="row navbar-fixed-bottom hidden-sm hidden-md hidden-lg" id="navbottom">
+                            <div class="col-xs-6">
+                            <a href="color-blog.php?content=login">
+                                    <button type="button" class="subutton">Login</button></a>
+                            </div>  
+                            <div class="col-xs-6">
+                                <a href="color-blog.php?content=register">
+                                    <button type="button" class="subutton">Join</button></a>
+                            </div>
+    </div>
+    </div>
     <div class="row">
-      <div class="col-md-2 col-md-offset-5 sr-only-hidden" id="joinbtn">
+      <div class="col-md-2 col-md-offset-5 hidden-sm hidden-xs" id="joinbtn">
 <a href="color-blog.php?content=register"><button type="button" class="subutton" style="margin:80px 0 0 0;">Join</button></a>
 
   </div>
-    </div>
+    
 
 <script>
 var tl = new TimelineMax({repeat:11, repeatDelay:.8});
