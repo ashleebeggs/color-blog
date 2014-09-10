@@ -92,20 +92,26 @@ $username = "$session";
 
 
     if ($result)
+    {
+
+     ?>
+
+     <script>
+  console.log("working adding");  
+    window.location.reload('color-blog');
+</script>
+
+<?php
 
 
-      header("Location: color-blog.php"); // redirects
-
-
-
-    else
+    } else{
 
 
        echo "<h2>Sorry, there was a problem posting this day</h2>\n";
 
 
 }
-
+}
 
 ?>
 

@@ -176,7 +176,7 @@ if ($baduser != 1)
 
      <script>
   console.log("working adding");  
-    window.location.reload('color.blog');
+    window.location.reload('color-blog');
 </script>
 <?php
       exit;

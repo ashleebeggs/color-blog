@@ -2,8 +2,11 @@
   @if $media == handhelds {
     @media only screen and (max-width: 320px) { @content; }
   }
+    @else if $media == small-screens {
+    @media only screen and (min-width: 321px) and (max-width: 640px) { @content; }
+  }
   @else if $media == medium-screens {
-    @media only screen and (min-width: 321px) and (max-width: 768px) { @content; }
+    @media only screen and (min-width: 641px) and (max-width: 768px) { @content; }
   }
   @else if $media == wide-screens {
     @media only screen and (min-width: 768px) { @content; }
@@ -47,6 +50,7 @@ body{
    margin-left:0;
     list-style:none;
     @include respond-to(handhelds) { width:100px; height:25px;  margin-top:15px;}
+@include respond-to(small-screens) { width:100px; height:25px;  margin-top:15px;}
     @include respond-to(medium-screens) {  width:100px; height:25px;   margin-top:15px;}
     @include respond-to(wide-screens) {  width:150px; height:35px;   margin-top:5px;}
 }
@@ -121,9 +125,7 @@ body{
     font-size: $text-med;
     width:100px;
 }
-#navbar1{
- margin: 0 0 0 10px;   
-}
+
 
 .profilepic{
  border-radius:50%;
@@ -142,7 +144,6 @@ body{
 
 
 #plus{
-    text-align:center;
     font-size: $text-med;
 }
 
@@ -242,7 +243,7 @@ body{
     position:relative;
     margin-left:0px;  
     
-    
+    overflow:hidden;
 }
 
 .dow{
@@ -257,6 +258,7 @@ a   {
     }
 
     @include respond-to(handhelds) { font-size: 20px ;}
+ @include respond-to(small-screens) { font-size: 20px; }
     @include respond-to(medium-screens) { font-size: 26px; }
     @include respond-to(wide-screens) { font-size: $text-h1; }
 
@@ -265,13 +267,12 @@ a   {
 .desc{
     margin: 30px 0 0 0; 
     font-size: $text-lgbody;
-    text-align:right;
     position:absolute;
     width:300px;
-    right:3%;
-    @include respond-to(handhelds) { margin: 60px 0 0 0; text-align:left ;}
-    @include respond-to(medium-screens) { margin: 60px 0 0 0; text-align:left; }
-    @include respond-to(wide-screens) { margin: 30px 0 0 0; text-align:right; }
+    @include respond-to(handhelds) { margin: 60px 0 0 0; text-align:left ; left: 4%;}
+ @include respond-to(small-screens) { margin: 60px 0 0 0; text-align:left ; left: 4%;}
+    @include respond-to(medium-screens) { margin: 60px 0 0 0; text-align:left; left: 4%;}
+    @include respond-to(wide-screens) { margin: 30px 0 0 0; text-align:right; right:3%; }
 }
 
 

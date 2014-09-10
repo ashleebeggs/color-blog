@@ -35,11 +35,12 @@ if (isset($_SESSION['valid_color_user']))
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         
                      <ul class="nav navbar-nav navbar-right">   
-                          <li><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
+                          <li class="hidden-xs hidden-sm"><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
+                          <li class="hidden-md hidden-lg"><a href="color-blog.php?content=newday">Add a day</a></li>
                            
-                                <li id="navbar1" onclick="myday()"><a href="#">Day</a></li>
-                                <li onclick="myweek()"><a href="#">Week</a></li>
-                                <li onclick="myweek()"><a href="#">Month</a></li>
+                                <li class="hidden-xs hidden-sm" onclick="myday()"><a href="#">Day</a></li>
+                                <li class="hidden-xs hidden-sm" onclick="myweek()"><a href="#">Week</a></li>
+                                <li class="hidden-xs hidden-sm" onclick="myweek()"><a href="#">Month</a></li>
                                 <li><a href="autho.php?">Details</a></li>
                         <li><div class="dropdown hidden-xs hidden-sm">
                             <?php echo "<img src=\"showimage.php?id=$userid\" width=\"40\" height=\"40\" class='profilepic dropdown-toggle' data-toggle='dropdown'>"; ?><span class="caret"></span>

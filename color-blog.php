@@ -69,7 +69,7 @@
     
 <script>
     
-    
+    var screenwidth = $(window).width();
     console.log("running");
     
    var label = document.getElementsByClassName('labels');
@@ -83,7 +83,7 @@
     var dot = document.getElementsByClassName('dot');
     var sliderstep = document.getElementsByClassName('slider-step');
  
-var currwidth = $('.day').width();
+    var currwidth = $('.day').width();
     var currheight = $('.day').height();
 
     TweenLite.defaultEase = Power1.easeInOut;
@@ -129,7 +129,16 @@ TweenLite.to(days, 1,  {left:"10%"});
     }   
     
  $('.animate').on('click', function () {
+     if (screenwidth >= 321 && screenwidth <= 767){
   $(this).find(bar).animate({
+    height: "25px",
+  },200 );
+     $(this).find(label).animate({
+    opacity:1,
+  },200 );    
+     }
+     else{
+         $(this).find(bar).animate({
     height: "25px",
   },200 );
      $(this).find(dot).animate({
@@ -141,8 +150,19 @@ TweenLite.to(days, 1,  {left:"10%"});
       $(this).find(skilllabel).animate({
     opacity:1,
   },200 );
+     }
+     
 }).on('mouseout', function () {
+      if (screenwidth >= 321 && screenwidth <= 767){
    $(this).find(bar).animate({
+    height: "8px",
+  },200 );
+     $(this).find(label).animate({
+    opacity:0,
+  },200 );
+      }
+     else{
+         $(this).find(bar).animate({
     height: "8px",
   },200 );
      $(this).find(dot).animate({
@@ -154,9 +174,11 @@ TweenLite.to(days, 1,  {left:"10%"});
       $(this).find(skilllabel).animate({
     opacity:0,
   },200 );
+     }
 })
  
  
+
  
 
     
