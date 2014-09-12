@@ -71,9 +71,9 @@
 
         // Initializing the simple_xml object using API response 
         $xml = json_decode($response);
-        $jso = $_GET[$baseUrl . "/1/user/-/sleep/minutesAsleep/date/2014-08-14/2014-08-27.json"];
+        
         var_dump($xml);
-        var_dump($jso);
+        
     } 
     catch( OAuthException $E ) 
     {

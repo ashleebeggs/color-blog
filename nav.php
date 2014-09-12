@@ -1,13 +1,9 @@
 
-                
-                <?php
+<?php 
 if (isset($_SESSION['valid_color_user']))
-   
 {
-  $con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
 
- mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
-        $session = $_SESSION['valid_color_user'];    
+     $session = $_SESSION['valid_color_user'];    
             $userid = "$session";
             $query = "SELECT userid from users where userid = '$userid'";
             $result = mysql_query($query);
@@ -40,7 +36,7 @@ if (isset($_SESSION['valid_color_user']))
                            
                                 <li class="hidden-xs hidden-sm" onclick="myday()"><a href="#">Day</a></li>
                                 <li class="hidden-xs hidden-sm" onclick="myweek()"><a href="#">Week</a></li>
-                                <li class="hidden-xs hidden-sm" onclick="myweek()"><a href="#">Month</a></li>
+                                <li class="hidden-xs hidden-sm" onclick="mymonth()"><a href="#">Month</a></li>
                                 <li><a href="autho.php?">Details</a></li>
                         <li><div class="dropdown hidden-xs hidden-sm">
                             <?php echo "<img src=\"showimage.php?id=$userid\" width=\"40\" height=\"40\" class='profilepic dropdown-toggle' data-toggle='dropdown'>"; ?><span class="caret"></span>
@@ -56,8 +52,9 @@ if (isset($_SESSION['valid_color_user']))
                         </div>
                 </nav>
                 <?php
-    }
-} 
+    
+}
+}
     else
     {
                 ?>

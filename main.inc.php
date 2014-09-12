@@ -1,16 +1,5 @@
 <?php
 
-if (!isset($_SESSION['valid_color_user']))
-
-
-{
-    include_once("join.php");
-
-} else
-
-
-{
-    
 
     $userid = $_SESSION['valid_color_user'];
     
@@ -24,8 +13,8 @@ console.log("logged in");
 <?php
 
 
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
-
+$con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
+   
     
 mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
     
@@ -504,7 +493,7 @@ $totpages = ceil($totrecords / $recordsperpage);
 }
 }
 
-}
+
 
 
 ?>  

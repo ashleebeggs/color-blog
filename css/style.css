@@ -2,7 +2,7 @@ body {
   background-color: #fff;
   padding: 0;
   margin: 0;
-  font-family: "museo-slab";
+  font-family: "museo slab", sans-serif;
   color: #000;
   font-weight: 500;
   font-size: 14px; }
@@ -70,6 +70,10 @@ body {
     #logincont {
       height: 568px;
       margin: -34px 0 0 0; } }
+  @media only screen and (max-width: 320px) {
+    #logincont {
+      height: 640px;
+      margin: -34px 0 0 0; } }
   @media only screen and (min-width: 641px) and (max-width: 768px) {
     #logincont {
       min-height: 1024px; } }
@@ -91,9 +95,9 @@ body {
   z-index: 100; }
 
 .navbar-nav {
-  font-family: "museo-slab";
+  font-family: "museo slab", sans-serif;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 500; }
 
 .nav-btn {
   height: 40px;
@@ -209,7 +213,7 @@ body {
 .day {
   width: 100%;
   height: 500px;
-  font-family: "museo-slab";
+  font-family: "museo slab", sans-serif;
   text-decoration: none;
   text-align: center;
   position: relative;
@@ -220,14 +224,15 @@ body {
   text-align: left;
   padding: 30px 0 0 0;
   position: absolute;
-  left: 4%; }
+  left: 4%;
+  font-weight: 300; }
   .dow a {
     color: #ffffff;
     font-weight: 300;
     text-decoration: none; }
   @media only screen and (max-width: 320px) {
     .dow {
-      font-size: 20px; } }
+      font-size: 18px; } }
   @media only screen and (min-width: 321px) and (max-width: 640px) {
     .dow {
       font-size: 20px; } }
@@ -241,15 +246,18 @@ body {
 .desc {
   margin: 30px 0 0 0;
   font-size: 16px;
+  font-weight: 300;
   position: absolute;
-  width: 300px; }
+  width: 400px; }
   @media only screen and (max-width: 320px) {
     .desc {
+      width: 95%;
       margin: 60px 0 0 0;
       text-align: left;
       left: 4%; } }
   @media only screen and (min-width: 321px) and (max-width: 640px) {
     .desc {
+      width: 95%;
       margin: 60px 0 0 0;
       text-align: left;
       left: 4%; } }
@@ -425,6 +433,12 @@ select {
   border: none;
   width: 100%; }
 
+#descarea::-webkit-input-placeholder {
+  color: #037070; }
+
+#newform::-webkit-input {
+  color: #037070; }
+
 .num {
   display: inline; }
 
@@ -437,7 +451,7 @@ select {
   text-decoration: none; }
 
 .headspadding {
-  font-family: "museo-slab";
+  font-family: "museo slab", sans-serif;
   font-size: 36px;
   text-align: center;
   color: #fff;
@@ -496,6 +510,9 @@ select {
 @media only screen and (max-width: 320px) {
   #col2, #col3 {
     margin: 30px 0 0 0; } }
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  #col2, #col3 {
+    margin: 30px 0 0 0; } }
 @media only screen and (min-width: 641px) and (max-width: 768px) {
   #col2, #col3 {
     margin: 0 0 0 40px; } }
@@ -504,7 +521,7 @@ select {
     margin: 0 0 0 40px; } }
 
 .heads {
-  font-family: "museo-slab";
+  font-family: "museo slab", sans-serif;
   font-size: 36px;
   text-align: center;
   color: #fff;
@@ -664,6 +681,9 @@ select {
   @media only screen and (max-width: 320px) {
     .subutton {
       height: 80px; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    .subutton {
+      height: 80px; } }
   @media only screen and (min-width: 641px) and (max-width: 768px) {
     .subutton {
       margin-top: 40px;
@@ -716,9 +736,22 @@ select {
 .newform {
   width: 50%;
   float: right;
-  margin: -27px 0 0 0;
+  margin: -26px 0 0 0;
   -webkit-appearance: none; }
+  @media only screen and (max-width: 320px) {
+    .newform {
+      margin: -24px 0 0 0; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    .newform {
+      margin: -24px 0 0 0; } }
+  @media only screen and (min-width: 641px) and (max-width: 768px) {
+    .newform {
+      margin: -26px 0 0 0; } }
+  @media only screen and (min-width: 768px) {
+    .newform {
+      margin: -26px 0 0 0; } }
 
 .slidertitle {
   padding: 7px 0 0 10px;
-  color: #037070; }
+  color: #037070;
+  font-size: 12px; }

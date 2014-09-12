@@ -77,9 +77,8 @@ if (get_magic_quotes_gpc())
    }
 $shortdescval = mysql_real_escape_string($shortdesc);
     
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
-    mysql_select_db("moods", $con) or die('Could not connect to database');
-    
+ if (isset($_SESSION['valid_color_user']))
+   {
 $session = $_SESSION['valid_color_user'];    
 $username = "$session";
 
@@ -110,6 +109,7 @@ $username = "$session";
        echo "<h2>Sorry, there was a problem posting this day</h2>\n";
 
 
+}
 }
 }
 

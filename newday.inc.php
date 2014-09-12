@@ -39,6 +39,7 @@ console.log("logged in");
     
     <form id="headerform" action="color-blog.php" method="post">
    <div class="subheads3">Enter in the specifics</div>
+      
 <div class="row">  
         <div class="col-md-5 col-md-offset-1">
             <textarea id="descarea" rows="5" cols="50" name="shortdesc" placeholder="Short Description"></textarea><br>
@@ -1264,6 +1265,7 @@ $('.sliders').on('slide', setColor);
 	}
 });
         $('.slider-step').on('slide', setValue);
+
 </script>
     
     </div>

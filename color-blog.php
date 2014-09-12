@@ -20,7 +20,7 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
  <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>  
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <script src="jquery.nouislider.full.min.js"></script>
@@ -34,7 +34,10 @@
 
 <div id="nav"  style="z-index:100; top:0; position:fixed">
 
-     <?php include("nav.php");
+     <?php 
+    include("mylibrary/loginall.php");
+   login();
+include("nav.inc.php");
    ?>
    
 </div>
@@ -45,10 +48,12 @@
     include("getThumb.php");
  
 
-               if (!isset($_REQUEST['content']))
-
-                   include("main.inc.php");
-                
+               if (!isset($_REQUEST['content'])){
+                   if (!isset($_SESSION['valid_color_user']))
+                      include("join.php");
+                   else
+                      include("main.inc.php");
+               }
                else
 
                {
@@ -125,8 +130,20 @@ TweenLite.to(days, 1,  {left:"10%"});
     
     
     function mymonth() {
-   
+    daywidth.play();
+daywidth.staggerTo(elems, 1, {width:"14.28%", ease:Power2.easeOut}, 0.2);
+TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+    TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
+TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
+TweenLite.to(bars, 1,  {left:"0%", height:"150px"});
+TweenLite.to(days, 1,  {opacity:0, ease:Power2.easeOut});
+    TweenLite.to(elems, 1,  {marginLeft:"-4px", height:"150px" });
+ $(days).css('font-size', '18px');   
     }   
+    
+    
+    
+    
     
  $('.animate').on('click', function () {
      if (screenwidth >= 321 && screenwidth <= 767){
@@ -153,7 +170,7 @@ TweenLite.to(days, 1,  {left:"10%"});
      }
      
 }).on('mouseout', function () {
-      if (screenwidth >= 321 && screenwidth <= 767){
+      if ( screenwidth >= 321 && screenwidth <= 767){
    $(this).find(bar).animate({
     height: "8px",
   },200 );
@@ -161,6 +178,15 @@ TweenLite.to(days, 1,  {left:"10%"});
     opacity:0,
   },200 );
       }
+     else if (screenwidth < 321){
+       $(this).find(bar).animate({
+    height: "8px",
+  },200 );
+     $(this).find(label).animate({
+    opacity:0,
+  },200 );    
+         
+     }
      else{
          $(this).find(bar).animate({
     height: "8px",

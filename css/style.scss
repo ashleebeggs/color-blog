@@ -18,7 +18,7 @@ $ltgrey-color: #e1e1e1;
 $op-black: RGBA(0, 0, 0, .05);
 $button: #05384f;
 
-$font-stack: "museo-slab";
+$font-stack: 'museo slab', sans-serif;
 $font-light: 300;
 $font-regular: 500;
 $font-semi: 700;
@@ -92,6 +92,7 @@ body{
     background-color: $primary-color;  
     width:100%;
    @include respond-to(handhelds) { height:568px; margin:-34px 0 0 0;}
+@include respond-to(handhelds) { height:640px; margin:-34px 0 0 0;}
     @include respond-to(medium-screens) { min-height:1024px; }
     @include respond-to(wide-screens) {min-height:1024px;}
 }
@@ -114,7 +115,7 @@ body{
 .navbar-nav{
     font-family: $font-stack;
     text-transform: uppercase;
-    font-weight: $font-semi;
+    font-weight: $font-regular;
 }
 
 .nav-btn{
@@ -140,6 +141,7 @@ body{
      border-radius: 50%;
     margin:20px 0 0 0;
      box-shadow: inset 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.1);
+    
 }
 
 
@@ -251,13 +253,14 @@ body{
     padding: 30px 0 0 0;
     position:absolute;
     left: 4%;
+    font-weight: $font-light;
 a   {
     color:#ffffff;
     font-weight: $font-light;
     text-decoration:none;
     }
 
-    @include respond-to(handhelds) { font-size: 20px ;}
+    @include respond-to(handhelds) { font-size: 18px ;}
  @include respond-to(small-screens) { font-size: 20px; }
     @include respond-to(medium-screens) { font-size: 26px; }
     @include respond-to(wide-screens) { font-size: $text-h1; }
@@ -267,10 +270,11 @@ a   {
 .desc{
     margin: 30px 0 0 0; 
     font-size: $text-lgbody;
+    font-weight: $font-light;
     position:absolute;
-    width:300px;
-    @include respond-to(handhelds) { margin: 60px 0 0 0; text-align:left ; left: 4%;}
- @include respond-to(small-screens) { margin: 60px 0 0 0; text-align:left ; left: 4%;}
+    width:400px;
+    @include respond-to(handhelds) { width:95%; margin: 60px 0 0 0; text-align:left ; left: 4%;}
+ @include respond-to(small-screens) {width:95%; margin: 60px 0 0 0; text-align:left ; left: 4%;}
     @include respond-to(medium-screens) { margin: 60px 0 0 0; text-align:left; left: 4%;}
     @include respond-to(wide-screens) { margin: 30px 0 0 0; text-align:right; right:3%; }
 }
@@ -470,6 +474,14 @@ background-color: darken( $primary-color, 5% );
 
 
 //new day
+#descarea::-webkit-input-placeholder {
+    color: darken( $primary-color, 15% );
+}
+
+#newform::-webkit-input {
+    color: darken( $primary-color, 15% );
+}
+
 .num{
  display:inline;
 }
@@ -554,6 +566,7 @@ background-color:$button;
 #col2, #col3 {
 
      @include respond-to(handhelds) { margin: 30px 0 0 0;}
+@include respond-to(small-screens) {  margin: 30px 0 0 0;}
     @include respond-to(medium-screens) {  margin: 0 0 0 40px;}
     @include respond-to(wide-screens) { margin: 0 0 0 40px; }
 }
@@ -754,6 +767,7 @@ background-color:$button;
 	color: #fff;
     border:none;
     @include respond-to(handhelds) { height:80px;}
+    @include respond-to(small-screens) { height:80px;}
     @include respond-to(medium-screens) { margin-top: 40px; height:60px;}
     @include respond-to(wide-screens) {  margin-top: 40px;  height:60px;}
 }
@@ -799,11 +813,16 @@ background-color:$button;
 .newform{
  width:50%;
     float:right;
-    margin:-27px 0 0 0;
+    margin:-26px 0 0 0;
     -webkit-appearance: none;
+    @include respond-to(handhelds) { margin:-24px 0 0 0;}
+    @include respond-to(small-screens) { margin:-24px 0 0 0;}
+    @include respond-to(medium-screens) { margin:-26px 0 0 0;}
+    @include respond-to(wide-screens) {margin:-26px 0 0 0;}
 }
 
 .slidertitle{
  padding: 7px 0 0 10px;
     color: darken( $primary-color, 15% );
+    font-size:12px;
 }

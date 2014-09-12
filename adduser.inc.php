@@ -2,27 +2,9 @@
 
 
 
-$con = mysql_connect("localhost", "root", "") or die('Sorry, could not connect to database server');  
-
-if (!$con)
-
-
+if (!isset($_SESSION['valid_color_user']))
 {
 
-
-   echo "<h2>Sorry, we cannot process your request at this time, please try again later</h2>\n";
-
-
-   echo "<a href=\"color-blog.php?content=register\">Try again</a><br>\n";
-
-
-   exit;
-
-
-}
-
-
-mysql_select_db("moods", $con) or die('Could not connect to the database');
 
 $userid = $_POST['userid'];
 
@@ -200,6 +182,6 @@ if ($baduser != 1)
 
 }
 
-
+}
 ?>
 
