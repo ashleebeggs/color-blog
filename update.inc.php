@@ -1,6 +1,7 @@
 <?php
 
-
+ $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
+        mysql_select_db("moods", $con) or die('Could not connect to database');
 
 
 $userid = $_POST['userid'];
@@ -11,20 +12,9 @@ $password = $_POST['password'];
 
 $password2 = $_POST['password2'];
 
-
 $email = $_POST['email'];
 
 
-
-if (get_magic_quotes_gpc())
-   {
-    $userid = stripslashes($userid);
-    $fullname = stripslashes($fullname);
-    $email = stripslashes($email);
-}
- $userid = mysql_real_escape_string($userid);
-$fullname = mysql_real_escape_string($fullname);
-$email = mysql_real_escape_string($email);
 
  
 $baduser = 0;
@@ -95,47 +85,49 @@ if ($password != $password2)
 
    //Everything passed, enter userid in database
 
-
-   $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
-
-
-   $result = mysql_query($query) or die('Sorry, we are unable to process your request.');
+ if ($baduser != 1)
 
 
-   if ($result)
+{
+  $query = "SELECT userid from users where userid = '$userid' and email = '$email'";
 
 
-   {
+$result = mysql_query($query);
 
 
-      $_SESSION['valid_color_user'] = $userid;
+if (mysql_num_rows($result) == 0)
+
+
+{
+
+
+    echo "<h2 class='centermessage'>Sorry, your user account was not validated.</h2><br>\n";
+
+
+    echo "<a href=\"color-blog.php?content=login\">Try again</a><br>\n";
+
+
+
+} else
+
+{
+    $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
+    $result = mysql_query($query);
+
+   
 ?>
 
-     <script>
-  console.log("working adding");  
-    window.location.reload('color-blog');
-</script>
-<?php
-      exit;
 
 
-   } else
-
-
-   {
-
-
-      echo "<h2>Sorry, there was a problem processing your change</h2><br>\n";
-
+<script>
+  console.log("working after session");  
+    window.location.reload()
 
     
-
-
-
-   }
-
-
-
+</script>
+<?php
+ }
+}
 
 
 ?>
