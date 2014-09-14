@@ -15,7 +15,7 @@ $colorhex = $_POST['colorhex'];
 
 $shortdesc = htmlspecialchars($_POST['shortdesc']);
 
-$colordate = date('l F jS Y');
+$colordate = date('l M jS Y');
 
 $colortext = $_POST['colortext']; 
 $trackSI = $_POST['trackSI'];

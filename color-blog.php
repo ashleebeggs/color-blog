@@ -119,7 +119,7 @@ TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
     TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
 TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
 TweenLite.to(bars, 1,  {left:"0%"});
-TweenLite.to(days, 1,  {left:"10%"});
+TweenLite.to(days, 1,  {left:"5%"});
     TweenLite.to(elems, 1,  {marginLeft:"-4px"});
  $(days).css('font-size', '18px');    
     

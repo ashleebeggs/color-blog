@@ -148,7 +148,7 @@ $totpages = ceil($totrecords / $recordsperpage);
   
         <div class="containter animate">
             <div class="trackSI bar" style="width: <?php echo $trackSI ?>0%;">
-                <div class="labels">SI</div>
+                <div class="labels">SI - <?php echo $trackSI ?></div>
             </div> 
         <?php if ($skillSI != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSI ?>"><div class="skilllabels"><?php echo $skillSI ?></div></div>
@@ -160,7 +160,7 @@ $totpages = ceil($totrecords / $recordsperpage);
         
         <div class="containter animate">   
             <div  class="trackSH bar" style="width: <?php echo $trackSH ?>0%;">
-                <div class="labels">SH</div>
+                <div class="labels">SH - <?php echo $trackSH ?></div>
             </div>
             <?php if ($skillSH != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSH ?>"><div class="skilllabels"><?php echo $skillSH ?></div></div>
@@ -172,7 +172,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div  class="trackSD bar" style="width: <?php echo $trackSD ?>0%;">
-                <div class="labels">Self Destruction</div>
+                <div class="labels">Self Destruction - <?php echo $trackSD ?></div>
             </div>
             <?php if ($skillSD != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSD ?>"><div class="skilllabels"><?php echo $skillSD ?></div></div>
@@ -184,7 +184,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">
             <div class="trackISO bar" style="width: <?php echo $trackISO ?>0%;">
-                <div class="labels">Isolation</div>
+                <div class="labels">Isolation - <?php echo $trackISO ?></div>
             </div>
            <?php if ($skillISO != ""){ ?>
                     <div class="dot" title= "<?php echo $skillISO ?>"><div class="skilllabels"><?php echo $skillISO ?></div></div>
@@ -196,7 +196,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">
             <div  class="trackANX bar" style="width: <?php echo $trackANX ?>0%;">
-                <div class="labels">Fear/Anxiety</div>
+                <div class="labels">Fear/Anxiety - <?php echo $trackANX ?></div>
             </div>
            <?php if ($skillANX != ""){ ?>
                     <div class="dot" title= "<?php echo $skillANX ?>"><div class="skilllabels"><?php echo $skillANX ?></div></div>
@@ -208,7 +208,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div class="trackSAD bar" style="width: <?php echo $trackSAD ?>0%;">
-                <div class="labels">Sadness</div>
+                <div class="labels">Sadness - <?php echo $trackSAD ?></div>
             </div>
            <?php if ($skillSAD != ""){ ?>
                     <div class="dot" title= "<?php echo $skillSAD ?>"><div class="skilllabels"><?php echo $skillSAD ?></div></div>
@@ -220,7 +220,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div  class="trackANG bar" style="width: <?php echo $trackANG ?>0%;">
-                <div class="labels">Anger</div>
+                <div class="labels">Anger - <?php echo $trackANG ?></div>
             </div>
            <?php if ($skillANG != ""){ ?>
                     <div class="dot" title= "<?php echo $skillANG ?>"><div class="skilllabels"><?php echo $skillANG ?></div></div>
@@ -232,7 +232,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div class="trackGSH bar" style="width: <?php echo $trackGSH ?>0%;">
-                <div class="labels">Guilt/Shame</div>
+                <div class="labels">Guilt/Shame - <?php echo $trackGSH ?></div>
             </div>
            <?php if ($skillGSH != ""){ ?>
                     <div class="dot" title= "<?php echo $skillGSH ?>"><div class="skilllabels"><?php echo $skillGSH ?></div></div>
@@ -244,7 +244,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div class="trackHH bar" style="width: <?php echo $trackHH ?>0%;">
-                <div class="labels">Hopeless/Helpless</div>
+                <div class="labels">Hopeless/Helpless - <?php echo $trackHH ?></div>
             </div>
            <?php if ($skillHH != ""){ ?>
                     <div class="dot" title= "<?php echo $skillHH ?>"><div class="skilllabels"><?php echo $skillHH ?></div></div>
@@ -256,7 +256,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
         <div class="containter animate">      
             <div  class="trackINS bar" style="width: <?php echo $trackINS ?>0%;">
-                <div class="labels">Insecure</div>
+                <div class="labels">Insecure - <?php echo $trackINS ?></div>
             </div>
           <?php if ($skillINS != ""){ ?>
                     <div class="dot" title= "<?php echo $skillINS ?>"><div class="skilllabels"><?php echo $skillINS ?></div></div>
@@ -268,7 +268,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div class="trackLON bar" style="width: <?php echo $trackLON ?>0%;">
-        <div class="labels">Lonely</div></div>
+        <div class="labels">Lonely - <?php echo $trackLON ?></div></div>
       <?php if ($skillLON != ""){ ?>
                 <div class="dot" title= "<?php echo $skillLON ?>"><div class="skilllabels"><?php echo $skillLON ?></div></div>
         <?php
@@ -279,7 +279,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div  class="trackJOY bar" style="width: <?php echo $trackJOY ?>0%;">
-        <div class="labels">Joyful</div></div>
+        <div class="labels">Joyful - <?php echo $trackJOY ?></div></div>
       <?php if ($skillJOY != ""){ ?>
                 <div class="dot" title= "<?php echo $skillJOY ?>"><div class="skilllabels"><?php echo $skillJOY ?></div></div>
         <?php
@@ -290,7 +290,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div class="trackSC bar" style="width: <?php echo $trackSC ?>0%;">
-        <div class="labels">Self Critical</div></div>
+        <div class="labels">Self Critical - <?php echo $trackSC ?></div></div>
       <?php if ($skillSC != ""){ ?>
                 <div class="dot" title= "<?php echo $skillSC ?>"><div class="skilllabels"><?php echo $skillSC ?></div></div>
         <?php
@@ -301,7 +301,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div  class="trackNW bar" style="width: <?php echo $trackNW ?>0%;">
-        <div class="labels">Not Worthy</div></div>
+        <div class="labels">Not Worthy - <?php echo $trackNW ?></div></div>
       <?php if ($skillNW != ""){ ?>
                 <div class="dot" title= "<?php echo $skillNW ?>"><div class="skilllabels"><?php echo $skillNW ?></div></div>
         <?php
@@ -312,7 +312,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div class="trackNB bar" style="width: <?php echo $trackNB ?>0%;">
-        <div class="labels">Negative Beliefs</div></div>
+        <div class="labels">Negative Beliefs - <?php echo $trackNB ?></div></div>
       <?php if ($skillNB != ""){ ?>
                 <div class="dot" title= "<?php echo $skillNB ?>"><div class="skilllabels"><?php echo $skillNB ?></div></div>
         <?php
@@ -323,7 +323,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div  class="trackRUM bar" style="width: <?php echo $trackRUM ?>0%;">
-        <div class="labels">Ruminating</div></div>
+        <div class="labels">Ruminating - <?php echo $trackRUM ?></div></div>
       <?php if ($skillRUM != ""){ ?>
                 <div class="dot" title= "<?php echo $skillRUM ?>"><div class="skilllabels"><?php echo $skillRUM ?></div></div>
         <?php
@@ -334,7 +334,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div class="trackPOW bar" style="width: <?php echo $trackPOW ?>0%;">
-        <div class="labels">Powerless</div></div>
+        <div class="labels">Powerless - <?php echo $trackPOW ?></div></div>
       <?php if ($skillPOW != ""){ ?>
                 <div class="dot" title= "<?php echo $skillPOW ?>"><div class="skilllabels"><?php echo $skillPOW ?></div></div>
         <?php
@@ -345,7 +345,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div  class="trackRT bar" style="width: <?php echo $trackRT ?>0%;">
-        <div class="labels">Racing Thoughts</div></div>
+        <div class="labels">Racing Thoughts - <?php echo $trackRT ?></div></div>
       <?php if ($skillRT != ""){ ?>
                 <div class="dot" title= "<?php echo $skillRT ?>"><div class="skilllabels"><?php echo $skillRT ?></div></div>
         <?php
@@ -356,7 +356,7 @@ $totpages = ceil($totrecords / $recordsperpage);
       
 <div class="containter animate">      
     <div  class="trackOB bar" style="width: <?php echo $trackOB ?>0%;">
-        <div class="labels">Obsessions</div></div>
+        <div class="labels">Obsessions - <?php echo $trackOB ?></div></div>
       <?php if ($skillOB != ""){ ?>
                 <div class="dot" title= "<?php echo $skillOB ?>"><div class="skilllabels"><?php echo $skillOB ?></div></div>
         <?php
