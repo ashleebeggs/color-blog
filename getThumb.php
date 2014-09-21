@@ -25,12 +25,12 @@ function getThumb($Original)
          //create thumbnail
          $width = imageSX($SourceImage);
          $height = imageSY($SourceImage);
-         $newThumb = imagecreatetruecolor(80, 60);
+         $newThumb = imagecreatetruecolor(100, 120);
 
          //resize image to 80 x 60
          $result = imagecopyresampled($newThumb, $SourceImage, 
                                       0, 0, 0, 0,
-                                      80, 60, $width, $height);
+                                      100, 120, $width, $height);
 
          //move image to variable
          ob_start();

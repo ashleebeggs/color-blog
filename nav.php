@@ -77,8 +77,13 @@ if (isset($_SESSION['valid_color_user']))
                             <form class="navbar-form navbar-right" action="color-blog.php" method="post" target="_self">
                                 <div class="form-group">
                                     <input type="text" size="20" name="userid" placeholder="Username">
-                                    <input type="password" size="20" name="password" placeholder="Password">
-                                    <input type="hidden" value="validate" name="content">
+                                    
+                                    <div class="input-group input-group-sm">
+                                            <input type="password" size="20" name="password" placeholder="Password">
+                                                    <span class="input-group-btn">
+                                                            <a href="color-blog.php?content=changepass"><button style="height:25px; padding:3px 12px;" class="btn btn-default" type="button">?</button></a>
+                                                        
+                                 <input type="hidden" value="validate" name="content">
                                 </div>
                                 <button type="submit" class="btn btn-default" value="Login">Login</button>
                             </form>

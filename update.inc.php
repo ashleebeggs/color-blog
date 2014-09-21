@@ -1,7 +1,7 @@
 <?php
 
- $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
-        mysql_select_db("moods", $con) or die('Could not connect to database');
+   $con = mysql_connect("huuuecom.ipowermysql.com", "ashleebeggs", "ayso13") or die('Could not connect to server'.mysql_error());
+                  mysql_select_db("moods", $con) or die('Could not connect to database');
 
 
 $userid = $_POST['userid'];
@@ -15,8 +15,6 @@ $password2 = $_POST['password2'];
 $email = $_POST['email'];
 
 
-
- 
 $baduser = 0;
 
 
@@ -101,7 +99,7 @@ if (mysql_num_rows($result) == 0)
 {
 
 
-    echo "<h2 class='centermessage'>Sorry, your user account was not validated.</h2><br>\n";
+    echo "<h2 class='centermessage'>Sorry, your user credentials couldn't be validated.</h2><br>\n";
 
 
     echo "<a href=\"color-blog.php?content=login\">Try again</a><br>\n";
@@ -111,21 +109,31 @@ if (mysql_num_rows($result) == 0)
 } else
 
 {
-    $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
-    $result = mysql_query($query);
+    $PictName = $_FILES['picture']['name'];
 
+      if ($PictName)
+      {
+        $thumbnail = getThumb($_FILES['picture']);
+         $thumbnail = mysql_real_escape_string($thumbnail); 
+  $query = "UPDATE users SET password = PASSWORD('$password'), picture = '$thumbnail' WHERE userid = '$userid' and email = '$email'";
    
-?>
-
-
-
-<script>
-  console.log("working after session");  
-    window.location.reload()
-
-    
-</script>
+    }
+    else{
+        $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
+    }
+  
+    $result = mysql_query($query) or die(mysql_error());
+      if ($result)
+      {
+       ?>
+<script>  window.location.reload('color-blog');</script>
 <?php
+      }
+      else
+      {
+         echo "<h2>Sorry, your profile was not changed</h2>\n";
+      }
+
  }
 }
 

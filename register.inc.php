@@ -7,7 +7,7 @@
 </div>
   </div>
 
-<form action="color-blog.php" enctype="multipart/form-data" method="post" role="form">
+<form action="adduser.php" enctype="multipart/form-data" method="post" role="form">
     
 <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
     
@@ -48,10 +48,6 @@
         </div>
         </div>
     
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-star"></span> Forgot Password?
-    </button>
-    
      <div class="row navbar-fixed-bottom hidden-sm hidden-md hidden-lg" id="navbottom">
           <div class="col-xs-12">                
              <button type="submit" class="subutton" value="Submit">Submit</button>
@@ -63,15 +59,6 @@
              <button type="submit" class="subutton" value="Submit">Submit</button>
            </div>  
         </div>
-
-
-
-<input type="hidden" class="btn btn-default" name="content" value="adduser">
-
-
-
-
-
 </form>
     </div>
     </div>

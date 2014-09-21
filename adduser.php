@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-   include("mylibrary/login.php");
+   include("mylibrary/loginall.php");
    login();
 
 $userid = $_POST['userid'];
@@ -25,13 +25,13 @@ if (get_magic_quotes_gpc())
     $userid = stripslashes($userid);
     $fullname = stripslashes($fullname);
     $email = stripslashes($email);
-      $password1 = stripslashes($password1);
+      $password = stripslashes($password);
       $password2 = stripslashes($password2);
 }
  $userid = mysql_real_escape_string($userid);
 $fullname = mysql_real_escape_string($fullname);
 $email = mysql_real_escape_string($email);
-   $password1 = mysql_real_escape_string($password1);
+   $password = mysql_real_escape_string($password);
    $password2 = mysql_real_escape_string($password2);
 
  $thumbnail = getThumb($_FILES['picture']);

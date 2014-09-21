@@ -63,6 +63,12 @@ body {
   min-height: 1024px;
   padding-bottom: 120px; }
 
+#changecont {
+  background-color: #05baba;
+  width: 100%;
+  min-height: 1024px;
+  padding-bottom: 120px; }
+
 #logincont {
   background-color: #05baba;
   width: 100%; }
@@ -110,6 +116,10 @@ body {
 .profilepic {
   border-radius: 50%;
   margin-top: 2px; }
+
+.profilepicform {
+  border-radius: 50%;
+  margin: 2px 0 0 36%; }
 
 .newday {
   position: fixed;
