@@ -1,13 +1,14 @@
-<div id="regcont">
+
+<div id="skillcont">
 <div class="container-fluid"> 
 <div class="row">
 <div class="col-md-12">
-<div class="heads">A little bit about you</div>
+<div class="heads">Add a skill</div>
 
 </div>
   </div>
 
-<form action="color-blog.php" enctype="multipart/form-data" method="post" role="form">
+<form action="skill.php" enctype="multipart/form-data" method="post" role="form">
     
 <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
     
@@ -15,8 +16,8 @@
     
     <div class="row">
     <div class="col-md-4 col-md-offset-2 form-group">
-     <div  class="loginsub">Username</div>
-    <input type="text" style="width:100%;" name="userid" class="form-control" >
+     <div  class="loginsub">Skill name</div>
+    <input type="text" style="width:100%;" name="skillid" class="form-control" >
         </div>
 <input class="col-md-4" type="file" name="picture">  
     </div>
@@ -24,27 +25,21 @@
     
     <div class="row">
     <div class="col-md-4 col-md-offset-2 form-group">
-     <div  class="loginsub">Password</div>
-    <input type="password" style="width:100%;" name="password" class="form-control">  
-        </div>
-     
-        <div class="col-md-4 form-group">
-     <div  class="loginsub">Confirm</div>
-    <input type="password" style="width:100%;" name="password2" class="form-control">
+     <div  class="loginsub">Skill category</div>
+    <select class="form-control newform" name="skillcategory">
+        <option value="">Select...</option>
+        <option value="Interpersonal effectivness">Interpersonal effectivness</option>
+        <option value="Distress tolerance">Distress tolerance</option>
+        <option value="Emotion regulation">Emotion regulation</option>
+        <option value="Mindfullness">Mindfullness</option>
+        </select>
         </div>
         </div>
     
     <div class="row">
     <div class="col-md-4 col-md-offset-2 form-group">
-    <div  class="loginsub">Real Name</div>
-    <input type="text" style="width:100%;" name="fullname" class="form-control">
-        </div>
-  
- 
-  
-    <div class="col-md-4 form-group">
-     <div  class="loginsub">Email address</div>
-    <input type="text" style="width:100%;" size="50" name="email" class="form-control">
+    <div  class="skilldesc">Description</div>
+    <textarea id="descarea" rows="5" cols="50" name="skilldesc" placeholder="Skill Description"></textarea>
         </div>
         </div>
     
@@ -59,11 +54,6 @@
              <button type="submit" class="subutton" value="Submit">Submit</button>
            </div>  
         </div>
-
-
-
-<input type="hidden" class="btn btn-default" name="content" value="adduser">
-
 
 
 

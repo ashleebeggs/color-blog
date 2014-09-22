@@ -7,7 +7,7 @@ $userid = $_POST['userid'];
 $password = $_POST['password'];
 
 
-$query = "SELECT userid from users where userid = '$userid' and password = PASSWORD('$password')";
+$query = "SELECT userid from admin where userid = '$userid' and password = PASSWORD('$password')";
 
 
 $result = mysql_query($query);
@@ -38,13 +38,13 @@ console.log("working before session");
 <?php
 
     
-   $_SESSION['valid_color_user'] = $userid;
-   
+   $_SESSION['valid_admin'] = $userid;
+   header("Location: skill-section.php");
 ?>
 
 <script>
   console.log("working after session");  
-    window.location.reload('color-blog');  
+    
 </script>
 <?php
 

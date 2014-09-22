@@ -43,6 +43,90 @@ body {
   height: 100%;
   color: #000; }
 
+#skillmain {
+  padding-top: 80px;
+  background-color: #c0c6c9; }
+
+#skillmaincontent {
+  width: 100%;
+  height: 1024px; }
+  @media only screen and (max-width: 320px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10px; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10px; } }
+  @media only screen and (min-width: 641px) and (max-width: 768px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10%; } }
+  @media only screen and (min-width: 768px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10%; } }
+
+.skill {
+  color: #000;
+  position: relative;
+  font-family: "museo slab", sans-serif;
+  text-decoration: none;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  background-color: #edeff0; }
+  @media only screen and (max-width: 320px) {
+    .skill {
+      width: 90%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    .skill {
+      width: 90%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 641px) and (max-width: 768px) {
+    .skill {
+      width: 40%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 768px) {
+    .skill {
+      width: 40%;
+      margin: 10px 0 0 10px; } }
+
+.ip-singleskill {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 0;
+  border-left-style: solid;
+  border-left-width: 20px;
+  border-left-color: #1C9FDB; }
+
+.dt-singleskill {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 0;
+  border-left-style: solid;
+  border-left-width: 20px;
+  border-left-color: #FF6165; }
+
+.skillcopy {
+  padding: 10px; }
+
+.catlabel {
+  text-align: left;
+  position: relative;
+  color: #000;
+  height: 30px;
+  left: 15px;
+  font-size: 20px; }
+
+.skilllabel {
+  text-align: left;
+  position: relative;
+  color: #000;
+  left: 15px;
+  font-size: 16px; }
+
 #footer {
   height: 70px;
   background-color: #fff; }

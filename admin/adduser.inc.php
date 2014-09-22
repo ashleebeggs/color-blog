@@ -1,9 +1,6 @@
 <?php
-
-
-if (!isset($_SESSION['valid_color_user']))
+if (!isset($_SESSION['valid_admin']))
 {
-
 
 $userid = $_POST['userid'];
 
@@ -13,10 +10,6 @@ $password = $_POST['password'];
 
 $password2 = $_POST['password2'];
 
-
-$fullname = $_POST['fullname'];
-
-
 $email = $_POST['email'];
 
 
@@ -24,13 +17,11 @@ $email = $_POST['email'];
 if (get_magic_quotes_gpc())
    {
     $userid = stripslashes($userid);
-    $fullname = stripslashes($fullname);
     $email = stripslashes($email);
       $password = stripslashes($password);
       $password2 = stripslashes($password2);
 }
  $userid = mysql_real_escape_string($userid);
-$fullname = mysql_real_escape_string($fullname);
 $email = mysql_real_escape_string($email);
    $password = mysql_real_escape_string($password);
    $password2 = mysql_real_escape_string($password2);
@@ -38,7 +29,7 @@ $email = mysql_real_escape_string($email);
     $thumbnail = getThumb($_FILES['picture']);
    $thumbnail = mysql_real_escape_string($thumbnail);
 
-$query = "SELECT userid from users where userid = '$userid'";
+$query = "SELECT userid from admin where userid = '$userid'";
 $result = mysql_query($query)or die("could not get userid");
 $row = mysql_fetch_array($result, MYSQL_ASSOC);    
     
@@ -70,17 +61,17 @@ if ($rows != 0)
 
    if ($baduser == 0)
    {
-       $query = "INSERT into users (userid, password, fullname, email, picture)"." VALUES ('$userid', PASSWORD('$password'), '$fullname', '$email', '$thumbnail')";
+       $query = "INSERT into admin (userid, password, email, picture)"." VALUES ('$userid', PASSWORD('$password'), '$email', '$thumbnail')";
 
       $result=mysql_query($query);
 
       if ($result)
       {
-        $_SESSION['valid_color_user'] = $userid;
+        $_SESSION['valid_admin'] = $userid;
         ?>
             <script>
               console.log("working adding");  
-                window.location.reload('color-blog');
+                window.location.reload('skill-section.php');
             </script>
         <?php
       exit;
@@ -111,9 +102,9 @@ if ($rows != 0)
        }
        echo "<a href=\"color-blog.php?content=register\">Try again</a>\n";
    }
-}
-else{
-    echo ("You are already logged in"); 
+}else{
+    
+echo("You're already logged in");
 }
 
 ?>

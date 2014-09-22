@@ -63,8 +63,76 @@ body{
     width:100%;
     height:100%;
     color:#000;
+    
     }
+#skillmain{
+    padding-top:80px;
+    background-color:#c0c6c9;
+}
+#skillmaincontent{ 
+    width:100%;
+    height:1024px;;
+   @include respond-to(handhelds) {width:100%; margin:40px 0 0 10px;}
+@include respond-to(small-screens) {width:100%; margin:40px 0 0 10px;}
+    @include respond-to(medium-screens) {width:100%; margin:40px 0 0 10%;}
+    @include respond-to(wide-screens) { width:100%; margin:40px 0 0 10%;}
+}
+.skill{
+    color: #000; 
+    position: relative;
+    font-family: $font-stack;
+    text-decoration:none;
+    text-align:left;
+    position:relative;
+    
+    display:inline-block;
+    background-color:#edeff0;
+    @include respond-to(handhelds) {width:90%; margin:10px 0 0 10px;}
+@include respond-to(small-screens) {width:90%; margin:10px 0 0 10px;}
+    @include respond-to(medium-screens) {width:40%; margin:10px 0 0 10px;}
+    @include respond-to(wide-screens) { width:40%; margin:10px 0 0 10px;}
+    
+   
+}
 
+.ip-singleskill{
+    position:relative;
+	
+	height: 100%;
+    margin: 0 0 0 0;
+    border-left-style:solid;
+    border-left-width:20px;
+    border-left-color:#1C9FDB;
+}
+
+.dt-singleskill{
+    position:relative;
+	height: 100%;
+    margin: 0 0 0 0;
+    border-left-style:solid;
+    border-left-width:20px;
+    border-left-color:#FF6165;
+}
+
+.skillcopy{
+padding:10px;
+}
+
+.catlabel{
+    text-align:left;   
+    position:relative;
+    color:#000;
+    height:30px;
+    left:15px;
+    font-size:20px;
+}
+.skilllabel{
+    text-align:left;   
+    position:relative;
+    color:#000;
+    left:15px;
+    font-size:16px;
+}
 #footer{
     height:70px;
     background-color:#fff;

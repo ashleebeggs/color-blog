@@ -1,8 +1,6 @@
 <?php
-
-session_start();
-   include("mylibrary/loginall.php");
-   login();
+if (!isset($_SESSION['valid_color_user']))
+{
 
 $userid = $_POST['userid'];
 
@@ -34,7 +32,7 @@ $email = mysql_real_escape_string($email);
    $password = mysql_real_escape_string($password);
    $password2 = mysql_real_escape_string($password2);
 
- $thumbnail = getThumb($_FILES['picture']);
+    $thumbnail = getThumb($_FILES['picture']);
    $thumbnail = mysql_real_escape_string($thumbnail);
 
 $query = "SELECT userid from users where userid = '$userid'";
@@ -46,10 +44,10 @@ $row = mysql_fetch_array($result, MYSQL_ASSOC);
    if (trim($email) == '')
       $baduser = 1;
 
-   if (trim($password1) == '')
+   if (trim($password) == '')
       $baduser = 2;
 
-   if ($password1 != $password2)
+   if ($password != $password2)
       $baduser = 3;
     
     if (trim($userid == ''))
@@ -57,10 +55,15 @@ $row = mysql_fetch_array($result, MYSQL_ASSOC);
     
     if ($row['userid'] == $userid)
       $baduser = 5;
-
+    
+/*
+$query = "SELECT * from users where email = '$email'";
+   $result = mysql_query($query);
+   $rows = mysql_num_rows($result);
 
 if ($rows != 0)
       $baduser = 6;
+*/
 
    if ($baduser == 0)
    {
@@ -70,8 +73,14 @@ if ($rows != 0)
 
       if ($result)
       {
-         $_SESSION['valid_color_user'] = $userid;
-         header("Location: color-blog.php");
+        $_SESSION['valid_color_user'] = $userid;
+        ?>
+            <script>
+              console.log("working adding");  
+                window.location.reload('color-blog');
+            </script>
+        <?php
+      exit;
       }
       else
       {
@@ -94,11 +103,15 @@ if ($rows != 0)
             echo "<h2>Please enter a useranme.</h2>\n";
          case(5):
             echo "<h2>I'm sorry, that username is taken.</h2>\n";
-          case(6):
-            echo "<h2>I'm sorry, that email is taken.</h2>\n";
+         /* case(6):
+            echo "<h2>I'm sorry, that email is taken.</h2>\n";*/
        }
        echo "<a href=\"color-blog.php?content=register\">Try again</a>\n";
    }
+}else{
+    
+echo("You're already logged in");
+}
 
 ?>
 

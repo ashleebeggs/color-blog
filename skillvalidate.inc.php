@@ -38,13 +38,13 @@ console.log("working before session");
 <?php
 
     
-   $_SESSION['valid_color_user'] = $userid;
-   
+   $_SESSION['valid_admin'] = $userid;
+   header("Location: skill-section.php");
 ?>
 
 <script>
   console.log("working after session");  
-    window.location.reload('color-blog');  
+    
 </script>
 <?php
 

@@ -7,7 +7,7 @@
 </div>
   </div>
 
-<form action="color-blog.php" enctype="multipart/form-data" method="post" role="form">
+<form action="skill-section.php" enctype="multipart/form-data" method="post" role="form">
     
 <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
     
@@ -34,13 +34,7 @@
         </div>
         </div>
     
-    <div class="row">
-    <div class="col-md-4 col-md-offset-2 form-group">
-    <div  class="loginsub">Real Name</div>
-    <input type="text" style="width:100%;" name="fullname" class="form-control">
-        </div>
-  
- 
+    
   
     <div class="col-md-4 form-group">
      <div  class="loginsub">Email address</div>
