@@ -20,11 +20,13 @@ session_start();
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <script src="../jquery.nouislider.full.min.js"></script>
       <link rel="stylesheet" href="../jquery.nouislider.css">
+    <link rel="stylesheet" href="style.css">
     
-    <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.js"></script>
 </head>
 
-<body>
+<body class="index-page" data-page="index">
 <div id="content">
 
 <div id="nav"  style="z-index:100; top:0; position:fixed">
