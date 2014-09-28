@@ -1,7 +1,10 @@
 <?php
 function login()
 {
-    $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
-                 mysql_select_db("moods", $con) or die('Could not connect to database');
+    $mysqli = mysqli_connect("localhost", "root", "", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to database: " . mysqli_connect_error();
+}
+    
 }
 ?>

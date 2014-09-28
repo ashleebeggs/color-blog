@@ -29,7 +29,7 @@
         </div>
      
         <div class="col-md-4 form-group">
-     <div  class="loginsub">Confirm</div>
+     <div  class="loginsub">Confirm password</div>
     <input type="password" style="width:100%;" name="password2" class="form-control">
         </div>
         </div>

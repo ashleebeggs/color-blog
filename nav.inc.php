@@ -1,13 +1,18 @@
 
 <?php 
+$mysqli = mysqli_connect("localhost", "root", "", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
 if (isset($_SESSION['valid_color_user']))
 {
 
      $session = $_SESSION['valid_color_user'];    
             $userid = "$session";
-            $query = "SELECT userid from users where userid = '$userid'";
-            $result = mysql_query($query);
-        while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+    $res = mysqli_query($mysqli, "SELECT userid from users where userid = '$userid'");
+           
+        while($row = mysqli_fetch_assoc($res))
    {
       $userid = $row['userid'];    
                 ?>
@@ -32,12 +37,13 @@ if (isset($_SESSION['valid_color_user']))
                         
                      <ul class="nav navbar-nav navbar-right">   
                           <li class="hidden-xs hidden-sm"><a href="color-blog.php?content=newday"><div id="plus">+</div></a></li>
-                          <li class="hidden-md hidden-lg"><a href="color-blog.php?content=newday">Add a day</a></li>
+                          
                            
-                                <li class="hidden-xs hidden-sm" onclick="myday()"><a href="#">Day</a></li>
-                                <li class="hidden-xs hidden-sm" onclick="myweek()"><a href="#">Week</a></li>
+                                <li class="" onclick="myday()"><a href="#">Day</a></li>
+                                <li class="" onclick="myweek()"><a href="#">Week</a></li>
+                         <li class="hidden-md hidden-lg"><a href="color-blog.php?content=newday">Add a day</a></li>
                                 <!--<li class="hidden-xs hidden-sm" onclick="mymonth()"><a href="#">Month</a></li>-->
-                                <li><a href="autho.php?">Details</a></li>
+                                <!--<li><a href="autho.php?">Details</a></li>-->
                         <li><div class="dropdown hidden-xs hidden-sm">
                             <?php echo "<img src=\"showimage.php?id=$userid\" width=\"40\" height=\"40\" class='profilepic dropdown-toggle' data-toggle='dropdown'>"; ?><span class="caret"></span>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">

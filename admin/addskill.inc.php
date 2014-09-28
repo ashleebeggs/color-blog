@@ -3,7 +3,8 @@
 $skilldesc = htmlspecialchars($_POST['skilldesc']);
 $skillname = $_POST['skillname'];
 $skillcat = $_POST['skillcat'];
-if ($skilldesc == "" || $skillname == "" || $skillcat == "")
+$skilltags = $_POST['skilltags'];
+if ($skilldesc == "" || $skillname == "" || $skillcat == "" || $skilltags == "")
 
 
 {
@@ -17,7 +18,7 @@ if (get_magic_quotes_gpc())
     $skillname = stripslashes($skillname);
     $skillcat = stripslashes($skillcat);
    }
-$skilldescval = mysql_real_escape_string($skilldesc);
+    $skilldescval = mysql_real_escape_string($skilldesc);
     $skillnameval = mysql_real_escape_string($skillname);
     $skillcatval = mysql_real_escape_string($skillcat);
     
@@ -25,9 +26,9 @@ $skilldescval = mysql_real_escape_string($skilldesc);
    {
 $session = $_SESSION['valid_admin'];    
 
-    $query = "INSERT INTO skills ( skillname, skilldesc, skillcat) " .
+    $query = "INSERT INTO skills ( skillname, skilldesc, skillcat, skilltags) " .
 
-" VALUES ('$skillnameval', '$skilldescval', '$skillcatval')";
+" VALUES ('$skillnameval', '$skilldescval', '$skillcatval', '$skilltags')";
 
 
     $result = mysql_query($query) or die('The skill did not go through');

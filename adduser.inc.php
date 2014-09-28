@@ -37,11 +37,10 @@ $email = mysql_real_escape_string($email);
 
     $thumbnail = getThumb($_FILES['picture']);
    $thumbnail = mysql_real_escape_string($thumbnail);
-
-$query = "SELECT userid from users where userid = '$userid'";
-$result = mysql_query($query)or die("could not get userid");
-$row = mysql_fetch_array($result, MYSQL_ASSOC);    
     
+$res = mysqli_query($mysqli, "SELECT userid from users where userid = '$userid'");
+$row = mysqli_fetch_assoc($res);
+
     $baduser = 0;
 
    if (trim($email) == '')
@@ -70,11 +69,12 @@ if ($rows != 0)
 
    if ($baduser == 0)
    {
+       
        $query = "INSERT into users (userid, password, fullname, email, picture)"." VALUES ('$userid', PASSWORD('$password'), '$fullname', '$email', '$thumbnail')";
 
-      $result=mysql_query($query);
+       $res = mysqli_query($mysqli, $query);
 
-      if ($result)
+      if ($res)
       {
         $_SESSION['valid_color_user'] = $userid;
         ?>

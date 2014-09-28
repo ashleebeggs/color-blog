@@ -12,33 +12,20 @@ console.log("logged in");
 
 <?php
 
+$mysqli = mysqli_connect("localhost", "root", "", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-        $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
-           
-            
-        mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
-            
-            
-        
-        $query = "SELECT userid from users where userid = '$userid'";
-        
-        
-        $result = mysql_query($query);
-        
-        
-        $row = mysql_fetch_array($result, MYSQL_ASSOC);
-        
+$res = mysqli_query($mysqli, "SELECT userid from users where userid = '$userid'");
+$row = mysqli_fetch_assoc($res);
         
         if ($row['userid'] == $userid)
 {
 
-        $query = "SELECT count(colorid) from color where username = '$userid'";
-        
-        
-        $result = mysql_query($query);
-        
-        
-        $row=mysql_fetch_array($result);
+            $res = mysqli_query($mysqli, "SELECT count(colorid) from color where username = '$userid'");
+$row = mysqli_fetch_row($res);
+
 
 if ($row[0] == 0)
 {
@@ -57,7 +44,9 @@ if ($row[0] == 0)
 
 }else{
     
-        $totrecords = $row[0];
+        $totrecords  = $row[0];
+
+    
 if (!isset($_GET['page']))
      $thispage = 1;
 else
@@ -66,15 +55,14 @@ else
        $offset = ($thispage - 1) * $recordsperpage;
         $totpages = ceil($totrecords / $recordsperpage);
 
-    
          $user = "$userid";   
             
-          $query = "SELECT colorid, colordate, shortdesc, colorhex, colortext, trackSI, trackSH, trackSD, trackISO, trackANX, trackSAD, trackANG, trackGSH, trackHH, trackINS, trackISO, trackLON, trackJOY, trackSC, trackNW, trackNB, trackRUM, trackPOW, trackRT, trackOB, skillSI, skillSH, skillSD, skillISO, skillANX, skillSAD, skillANG, skillGSH, skillHH, skillINS, skillLON, skillJOY, skillSC, skillNW, skillNB, skillRUM, skillPOW, skillRT, skillOB from color where username = '$user' order by colorid desc limit $offset, $recordsperpage";
+          $res = mysqli_query($mysqli, "SELECT colorid, colordate, shortdesc, colorhex, colortext, trackSI, trackSH, trackSD, trackISO, trackANX, trackSAD, trackANG, trackGSH, trackHH, trackINS, trackISO, trackLON, trackJOY, trackSC, trackNW, trackNB, trackRUM, trackPOW, trackRT, trackOB, skillSI, skillSH, skillSD, skillISO, skillANX, skillSAD, skillANG, skillGSH, skillHH, skillINS, skillLON, skillJOY, skillSC, skillNW, skillNB, skillRUM, skillPOW, skillRT, skillOB from color where username = '$user' order by colorid desc limit $offset, $recordsperpage");
         
-           $result = mysql_query($query) or die('Could not retrieve comments: ' . mysql_error());
-
- while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+           
+ while($row = mysqli_fetch_assoc($res))
    {
+     
       $colorid = $row['colorid'];
       $colordate = $row['colordate'];
       $shortdesc = $row['shortdesc'];

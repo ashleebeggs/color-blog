@@ -48,7 +48,7 @@ ID.index = function() {
 
     $('#hero .sort-by').on( 'click', 'button', function() {
       var sortByValue = $(this).attr('data-sort-by');
-        if (sortByValue == 'symbol'){
+        if (sortByValue === 'symbol'){
             $container.isotope({ sortBy: 'symbol' });
         }else{
       $container.isotope({ sortBy: ['name', 'symbol'] });

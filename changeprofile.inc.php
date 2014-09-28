@@ -4,9 +4,9 @@ if (isset($_SESSION['valid_color_user']))
 
      $session = $_SESSION['valid_color_user'];    
             $userid = "$session";
-            $query = "SELECT userid, email from users where userid = '$userid'";
-            $result = mysql_query($query);
-        while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+     $res = mysqli_query($mysqli, "SELECT userid, email from users where userid = '$userid'");
+
+        while($row = mysqli_fetch_assoc($res))
    {
       $userid = $row['userid']; 
             $email = $row['email']; 

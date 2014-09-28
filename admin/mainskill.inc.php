@@ -46,7 +46,7 @@
         <div class="ip-singleskill">
            <div class="skillcopy">
                 <div class="skillnames"><div class="symbol"><?php echo "$skillname"?></div></div>
-                <div class="skilldesc"><?php echo "$skilldesc"?></div>
+                <div class="skilldesc"><?php echo nl2br("$skilldesc") ?></div>
                </div>
         </div>
 <?php }?><!--ip cat--> 
@@ -55,7 +55,7 @@
         <div class="dt-singleskill">
             <div class="skillcopy">
                 <div class="skillnames symbol"><?php echo "$skillname"?></div>
-                <div class="skilldesc"><?php echo "$skilldesc"?></div>
+                <div class="skilldesc"><?php echo nl2br("$skilldesc") ?></div>
                 </div>
         </div>
 <?php }?>
@@ -98,6 +98,8 @@
             var thiscatdata = $(this).find(thiscat);
             var modcat = $.trim($(thiscatdata).text());
             
+         
+            
             console.log(modcat);
             if (modcat == 'Interpersonal effectivness'){
                 $(".modal-header").css('background-color', '#04bab9');
@@ -109,10 +111,10 @@
                 console.log("not it");
             }
              var modtitle = $(thisdata).text();
-            var moddesc = $(thisdescdata).text();
+            var moddesc = $(thisdescdata).html();
                 
             $( ".modal-title" ).text( modtitle );
-             $( ".modal-body" ).text( moddesc );
+             $( ".modal-body" ).html( moddesc );
           
             $('#myModal').modal('show');
             console.log("showing");

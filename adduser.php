@@ -36,8 +36,9 @@ $email = mysql_real_escape_string($email);
    $thumbnail = mysql_real_escape_string($thumbnail);
 
 $query = "SELECT userid from users where userid = '$userid'";
-$result = mysql_query($query)or die("could not get userid");
-$row = mysql_fetch_array($result, MYSQL_ASSOC);    
+$result=mysqli_query($mysqli, $query);
+  //  $result = mysql_query($query)or die("could not get userid");
+$row = mysqli_fetch_assoc($result);
     
     $baduser = 0;
 
@@ -69,7 +70,7 @@ if ($rows != 0)
    {
        $query = "INSERT into users (userid, password, fullname, email, picture)"." VALUES ('$userid', PASSWORD('$password'), '$fullname', '$email', '$thumbnail')";
 
-      $result=mysql_query($query);
+      $result = mysqli_query($mysqli, $query);
 
       if ($result)
       {

@@ -15,14 +15,10 @@
      <div  class="loginsub">Skill name</div>
     <input type="text" style="width:100%;" name="skillname" class="form-control" >
         </div>
-
-    </div>
-
-    
-    <div class="row">
-    <div class="col-md-4 col-md-offset-2 form-group">
+   
+    <div class="col-md-4 form-group">
      <div  class="loginsub">Skill category</div>
-    <select class="form-control newform" name="skillcat">
+    <select class="form-control slidertitle" name="skillcat">
         <option value="">Select...</option>
         <option value="Interpersonal effectivness">Interpersonal effectivness</option>
         <option value="Distress tolerance">Distress tolerance</option>
@@ -33,9 +29,20 @@
         </div>
     
     <div class="row">
-    <div class="col-md-4 col-md-offset-2 form-group">
-    <div  class="shortdesc">Description</div>
-    <textarea id="descarea" rows="5" cols="50" name="skilldesc" placeholder="Skill Description"></textarea>
+    <div class="col-md-4 form-group">
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="Extremely" name="skilltags">Extremely
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="Somewhat" name="skilltags">Somewhat
+        </label>
+        </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-8 col-md-offset-2 form-group">
+    <div  class="shortdesc slidertitle">Description</div><br />
+    <textarea id="skillarea" rows="100" cols="500" name="skilldesc" placeholder="Skill Description"></textarea>
         </div>
         </div>
     
