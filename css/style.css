@@ -36,7 +36,7 @@ body {
   fill: #05baba; }
 
 .logo {
-  margin-left: 0;
+  margin-left: -15px;
   list-style: none; }
   @media only screen and (max-width: 320px) {
     .logo {

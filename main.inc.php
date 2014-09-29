@@ -64,7 +64,7 @@ else
    {
      
       $colorid = $row['colorid'];
-      $colordate = $row['colordate'];
+      $colordate = strtotime($row['colordate']);
       $shortdesc = $row['shortdesc'];
        $colorhex = $row['colorhex'];
       $colortext = $row['colortext'];
@@ -334,7 +334,8 @@ else
  
     <div class="dow" style="color: <?php echo $colortext ?>;">
         <?php
-       echo "$colordate</a><br>\n";
+            $formatcolordate = date("l M jS", $colordate);
+       echo "$formatcolordate</a><br>\n";
     
         ?>
     </div>

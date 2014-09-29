@@ -58,9 +58,9 @@
            </div>  
         </div>
 <input type="hidden" name="content" value="addskill">
-
-
-
+<script>
+ CKEDITOR.replace( 'skillarea' );
+</script>
 </form>
     </div>
     </div>

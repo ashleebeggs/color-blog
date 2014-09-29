@@ -46,7 +46,7 @@
         <div class="ip-singleskill">
            <div class="skillcopy">
                 <div class="skillnames"><div class="symbol"><?php echo "$skillname"?></div></div>
-                <div class="skilldesc"><?php echo nl2br("$skilldesc") ?></div>
+                <div class="skilldesc"><?php echo "$skilldesc" ?></div>
                </div>
         </div>
 <?php }?><!--ip cat--> 
@@ -111,7 +111,7 @@
                 console.log("not it");
             }
              var modtitle = $(thisdata).text();
-            var moddesc = $(thisdescdata).html();
+            var moddesc = $(thisdescdata).text();
                 
             $( ".modal-title" ).text( modtitle );
              $( ".modal-body" ).html( moddesc );

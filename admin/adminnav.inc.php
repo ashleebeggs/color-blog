@@ -1,14 +1,21 @@
 
 <?php 
+
+$mysqli = mysqli_connect("localhost", "root", "", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
 if (isset($_SESSION['valid_admin']))
 {
 
-    $session = $_SESSION['valid_admin'];    
+     $session = $_SESSION['valid_admin'];    
             $userid = "$session";
-            $query = "SELECT userid from admin where userid = '$userid'";
-            $result = mysql_query($query);
-        while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+    $res = mysqli_query($mysqli, "SELECT userid from admin where userid = '$userid'");
+           
+        while($row = mysqli_fetch_assoc($res))
    {
+
       $userid = $row['userid'];    
                 ?>
 

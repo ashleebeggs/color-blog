@@ -1,5 +1,8 @@
 <?php
-
+$mysqli = mysqli_connect("localhost", "root", "", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 $skilldesc = htmlspecialchars($_POST['skilldesc']);
 $skillname = $_POST['skillname'];
 $skillcat = $_POST['skillcat'];
@@ -31,7 +34,7 @@ $session = $_SESSION['valid_admin'];
 " VALUES ('$skillnameval', '$skilldescval', '$skillcatval', '$skilltags')";
 
 
-    $result = mysql_query($query) or die('The skill did not go through');
+    $result = mysqli_query($mysqli, $query);;
 
 
     if ($result)

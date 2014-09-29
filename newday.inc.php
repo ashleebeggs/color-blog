@@ -26,13 +26,7 @@ console.log("logged in");
 <div class="container-fluid">
 <div class="heads">How was your day?</div>
     <div class="subheads3">Pick a hue to reflect your mood</div>
-    <?php
-    date_default_timezone_set('UTC');
-echo date('l jS \of F Y h:i:s A');
-    
-    ?>
-    
-    
+   
 <div class="row">
  
     <div class="col-md-4 col-md-offset-4">

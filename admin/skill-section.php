@@ -21,7 +21,7 @@ session_start();
  <script src="../jquery.nouislider.full.min.js"></script>
       <link rel="stylesheet" href="../jquery.nouislider.css">
     <link rel="stylesheet" href="style.css">
-    
+     <script src="ckeditor.js"></script>
   <script src="../js/bootstrap.min.js"></script>
     <script src="js/isotope.pkgd.js"></script>
 </head>
