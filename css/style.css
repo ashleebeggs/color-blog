@@ -1,17 +1,42 @@
+.MuseoSlab-100 {
+  font-family: MuseoSlab-100;
+  font-weight: normal;
+  font-style: normal; }
+
+.MuseoSlab-700 {
+  font-family: MuseoSlab-700;
+  font-weight: normal;
+  font-style: normal; }
+
+.MuseoSlab-900 {
+  font-family: MuseoSlab-900;
+  font-weight: normal;
+  font-style: normal; }
+
+.MuseoSlab-300 {
+  font-family: MuseoSlab-300;
+  font-weight: normal;
+  font-style: normal; }
+
+.MuseoSlab-500 {
+  font-family: MuseoSlab-500;
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background-color: #fff;
   padding: 0;
   margin: 0;
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   color: #000;
-  font-weight: 500;
+  font-family: MuseoSlab-500;
   font-size: 14px; }
 
 .letter {
   fill: #05baba; }
 
 .logo {
-  margin-left: 0;
+  margin-left: -15px;
   list-style: none; }
   @media only screen and (max-width: 320px) {
     .logo {
@@ -43,6 +68,94 @@ body {
   height: 100%;
   color: #000; }
 
+#skillmain {
+  padding-top: 80px;
+  background-color: #c0c6c9; }
+
+#skillmaincontent {
+  width: 100%;
+  height: 1024px; }
+  @media only screen and (max-width: 320px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10px; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10px; } }
+  @media only screen and (min-width: 641px) and (max-width: 768px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10%; } }
+  @media only screen and (min-width: 768px) {
+    #skillmaincontent {
+      width: 100%;
+      margin: 40px 0 0 10%; } }
+
+.skill {
+  color: #000;
+  position: relative;
+  font-family: MuseoSlab-500;
+  text-decoration: none;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  background-color: #edeff0; }
+  @media only screen and (max-width: 320px) {
+    .skill {
+      width: 90%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 321px) and (max-width: 640px) {
+    .skill {
+      width: 90%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 641px) and (max-width: 768px) {
+    .skill {
+      width: 40%;
+      margin: 10px 0 0 10px; } }
+  @media only screen and (min-width: 768px) {
+    .skill {
+      width: 40%;
+      margin: 10px 0 0 10px; } }
+
+.ip-singleskill {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 0;
+  border-left-style: solid;
+  border-left-width: 20px;
+  border-left-color: #04bab9; }
+
+.dt-singleskill {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 0;
+  border-left-style: solid;
+  border-left-width: 20px;
+  border-left-color: #ed4736; }
+
+.skillcopy {
+  padding: 10px; }
+
+.skilldesc {
+  display: none;
+  white-space: pre-line; }
+
+.catlabel {
+  text-align: left;
+  position: relative;
+  color: #000;
+  height: 30px;
+  left: 15px;
+  font-size: 20px; }
+
+.skilllabel {
+  text-align: left;
+  position: relative;
+  color: #000;
+  left: 15px;
+  font-size: 16px; }
+
 #footer {
   height: 70px;
   background-color: #fff; }
@@ -58,6 +171,12 @@ body {
   height: 1024px; }
 
 #joincont {
+  background-color: #05baba;
+  width: 100%;
+  min-height: 1024px;
+  padding-bottom: 120px; }
+
+#changecont {
   background-color: #05baba;
   width: 100%;
   min-height: 1024px;
@@ -95,9 +214,9 @@ body {
   z-index: 100; }
 
 .navbar-nav {
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   text-transform: uppercase;
-  font-weight: 500; }
+  font-family: MuseoSlab-500; }
 
 .nav-btn {
   height: 40px;
@@ -110,6 +229,10 @@ body {
 .profilepic {
   border-radius: 50%;
   margin-top: 2px; }
+
+.profilepicform {
+  border-radius: 50%;
+  margin: 2px 0 0 36%; }
 
 .newday {
   position: fixed;
@@ -213,7 +336,7 @@ body {
 .day {
   width: 100%;
   height: 500px;
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   text-decoration: none;
   text-align: center;
   position: relative;
@@ -225,10 +348,10 @@ body {
   padding: 30px 0 0 0;
   position: absolute;
   left: 4%;
-  font-weight: 300; }
+  font-family: MuseoSlab-300; }
   .dow a {
     color: #ffffff;
-    font-weight: 300;
+    font-family: MuseoSlab-300;
     text-decoration: none; }
   @media only screen and (max-width: 320px) {
     .dow {
@@ -246,7 +369,7 @@ body {
 .desc {
   margin: 30px 0 0 0;
   font-size: 16px;
-  font-weight: 300;
+  font-family: MuseoSlab-300;
   position: absolute;
   width: 400px; }
   @media only screen and (max-width: 320px) {
@@ -280,7 +403,7 @@ body {
   text-align: center;
   color: #fff;
   margin: 40px 0 80px 0;
-  font-weight: 700; }
+  font-family: MuseoSlab-700; }
 
 .trackSI {
   position: relative;
@@ -436,6 +559,9 @@ select {
 #descarea::-webkit-input-placeholder {
   color: #037070; }
 
+#skillarea::-webkit-input-placeholder {
+  color: #037070; }
+
 #newform::-webkit-input {
   color: #037070; }
 
@@ -447,28 +573,35 @@ select {
   margin-top: 30px; }
 
 #loginform {
+  height: 1024px;
   text-align: center;
   text-decoration: none; }
 
 .headspadding {
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   font-size: 36px;
   text-align: center;
   color: #fff;
   padding: 80px 0 50px 0;
-  font-weight: 700; }
+  font-family: MuseoSlab-700; }
 
 .loginsub {
   color: #048888;
-  font-weight: 500;
+  font-family: MuseoSlab-500;
   font-size: 14px; }
 
 #descarea {
   background-color: #04a1a1;
   width: 100%;
   border: none;
-  color: #fff;
   height: 55px; }
+
+#skillarea {
+  background-color: #04a1a1;
+  width: 100%;
+  border: none;
+  color: #fff;
+  height: 300px; }
 
 .skillcont {
   background-color: #04a1a1;
@@ -521,12 +654,12 @@ select {
     margin: 0 0 0 40px; } }
 
 .heads {
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   font-size: 36px;
   text-align: center;
   color: #fff;
   margin: 80px 0 50px 0;
-  font-weight: 700; }
+  font-family: MuseoSlab-700; }
 
 .jtext {
   text-align: center;

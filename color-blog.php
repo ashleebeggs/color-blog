@@ -15,9 +15,8 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A day in the life with color</title>
-   <script type="text/javascript" src="//use.typekit.net/nvl5jzc.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <title>Huuue</title>
+   <link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
     
  <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
@@ -98,31 +97,87 @@ function myday() {
     
      
 daywidth.play();
-TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
-    TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
-    TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
-TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
-TweenLite.to(bars, 1,  {left:"4%"});
-    TweenLite.to(days, 1,  {left:"4%"});
- $(days).css('font-size', '30px');
-        
-    checkwidth();
+     checkwidth();
+    if (currwidth > 321 && currwidth < 641){
+        TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
+            TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"4%"});
+            TweenLite.to(days, 1,  {left:"4%"});
+         $(days).css('font-size', '20px');
+     }else if (currwidth > 640 && currwidth < 769){
+         TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
+            TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"4%"});
+            TweenLite.to(days, 1,  {left:"4%"});
+         $(days).css('font-size', '26px');
+     }else if (currwidth > 768){
+         TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
+            TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"4%"});
+            TweenLite.to(days, 1,  {left:"4%"});
+         $(days).css('font-size', '30px');
+     }else{
+      TweenLite.to(elems, .5, {width:"100%", ease:Power2.easeOut}, 0.5);
+            TweenLite.to(descriptions, .5, {opacity:1, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:1, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"block", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"4%"});
+            TweenLite.to(days, 1,  {left:"4%"});
+         $(days).css('font-size', '16px');   
+     }
+   
 }
         
 
     
 function myweek() { 
-    
+    checkwidth();
+
      daywidth.play();
-daywidth.staggerTo(elems, 1, {width:"14.28%", ease:Power2.easeOut}, 0.2);
-TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
-    TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
-TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
-TweenLite.to(bars, 1,  {left:"0%"});
-TweenLite.to(days, 1,  {left:"5%"});
-    TweenLite.to(elems, 1,  {marginLeft:"-4px"});
- $(days).css('font-size', '18px');    
-    
+    if (currwidth > 321 && currwidth < 641){
+        daywidth.staggerTo(elems, 1, {width:"33.3%", ease:Power2.easeOut}, 0.2);
+        TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"0%"});
+        TweenLite.to(days, 1,  {left:"5%"});
+            TweenLite.to(elems, 1,  {marginLeft:"-4px"});
+         $(days).css('font-size', '14px');    
+    }else if (currwidth > 640 && currwidth < 769){
+        daywidth.staggerTo(elems, 1, {width:"25%", ease:Power2.easeOut}, 0.2);
+        TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"0%"});
+        TweenLite.to(days, 1,  {left:"5%"});
+            TweenLite.to(elems, 1,  {marginLeft:"-4px"});
+         $(days).css('font-size', '18px');
+    }
+    else if (currwidth > 768){
+        daywidth.staggerTo(elems, 1, {width:"14.28%", ease:Power2.easeOut}, 0.2);
+        TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"0%"});
+        TweenLite.to(days, 1,  {left:"5%"});
+            TweenLite.to(elems, 1,  {marginLeft:"-4px"});
+         $(days).css('font-size', '18px');    
+    }else{
+         daywidth.staggerTo(elems, 1, {width:"50%", ease:Power2.easeOut}, 0.2);
+        TweenLite.to(descriptions, .5, {opacity:0, ease:Power2.easeOut});
+            TweenLite.to(dot, .5, {opacity:0, ease:Power2.easeOut});
+        TweenLite.to(elems, 1, {display:"inline-table", ease:Power2.easeOut});
+        TweenLite.to(bars, 1,  {left:"0%"});
+        TweenLite.to(days, 1,  {left:"5%"});
+            TweenLite.to(elems, 1,  {marginLeft:"-4px"});
+         $(days).css('font-size', '14px');    
+    }
   
 }
 
@@ -231,3 +286,52 @@ var prevWidth = $('.day').width();
 
 </body>
 </html>
+<!--<?php
+
+
+    $userid = $_SESSION['valid_admin'];
+    
+
+        $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
+           
+            
+        mysql_select_db("moods", $con) or die('Sorry, could not connect to database');
+ 
+          $query = "SELECT skillid, skillname, skilldesc, skillcat from skills order by skillid desc";
+        
+           $result = mysql_query($query) or die('Could not retrieve comments: ' . mysql_error());
+
+ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+   {
+      $skillid = $row['skillid'];
+      $skillname = $row['skillname'];
+      $skilldesc = $row['skilldesc'];
+       $skillcat = $row['skillcat'];   
+?> 
+  <div class="skill modals" id="myModals">
+    <div class="skillcontent" >
+        <div class="catlabel element-item"><p class="incat name"><?php echo "$skillcat"?></p></div>
+  <?php if ($skillcat == "Interpersonal effectivness"){?>
+       
+        <div class="ip-singleskill">
+           <div class="skillcopy">
+                <div class="skillnames"><?php echo "$skillname"?></div>
+                <div class="skilldesc"><?php echo "$skilldesc"?></div>
+               </div>
+        </div>
+<?php }?>
+        <?php if ($skillcat == "Distress tolerance"){?>
+       
+        <div class="dt-singleskill">
+            <div class="skillcopy">
+                <div class="skillnames"><?php echo "$skillname"?></div>
+                <div class="skilldesc"><?php echo "$skilldesc"?></div>
+                </div>
+        </div>
+<?php }?>
+    </div>
+
+  </div>
+        <?php
+} 
+            ?>-->

@@ -880,7 +880,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "museo slab", sans-serif;
+  font-family: MuseoSlab-500;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -2246,7 +2246,6 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
   background-image: none; }
   .form-control:focus {
     border-color: #66afe9;

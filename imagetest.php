@@ -3,7 +3,7 @@
 <title>Image Test</title>
 <body>
 <?php
-$con = mysql_connect("localhost", "root", "") or die('');
+$con = mysql_connect("huuuecom.ipowermysql.com", "ashleebeggs", "ayso13") or die('');
    mysql_select_db("moods", $con);
 $query = "SELECT userid, password from users";
 $result = mysql_query($query) or die(mysql_error());

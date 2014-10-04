@@ -13,16 +13,42 @@
   }
 }
 
+.MuseoSlab-100 { 
+	font-family: MuseoSlab-100;
+	font-weight: normal;
+	font-style: normal;
+}
+.MuseoSlab-700 { 
+	font-family: MuseoSlab-700;
+	font-weight: normal;
+	font-style: normal;
+}
+.MuseoSlab-900 { 
+	font-family: MuseoSlab-900;
+	font-weight: normal;
+	font-style: normal;
+}
+.MuseoSlab-300 { 
+	font-family: MuseoSlab-300;
+	font-weight: normal;
+	font-style: normal;
+}
+.MuseoSlab-500 { 
+	font-family: MuseoSlab-500;
+	font-weight: normal;
+	font-style: normal;
+}
+
 $primary-color: #05baba;
 $ltgrey-color: #e1e1e1;
 $op-black: RGBA(0, 0, 0, .05);
 $button: #05384f;
 
-$font-stack: 'museo slab', sans-serif;
-$font-light: 300;
-$font-regular: 500;
-$font-semi: 700;
-$font-bold: 900;
+$font-stack: MuseoSlab-500;
+$font-light: MuseoSlab-300;
+$font-regular: MuseoSlab-500;
+$font-semi: MuseoSlab-700;
+$font-bold: MuseoSlab-900;
 
 $text-med: 24px;
 $text-body: 14px;
@@ -38,7 +64,7 @@ body{
     margin:0;
     font-family: $font-stack;
     color:#000;
-    font-weight: $font-regular;
+    font-family: $font-regular;
     font-size: $text-body;
 }
 
@@ -47,7 +73,7 @@ body{
 }
 
 .logo{
-   margin-left:0;
+   margin-left:-15px;
     list-style:none;
     @include respond-to(handhelds) { width:100px; height:25px;  margin-top:15px;}
 @include respond-to(small-screens) { width:100px; height:25px;  margin-top:15px;}
@@ -63,8 +89,80 @@ body{
     width:100%;
     height:100%;
     color:#000;
+    
     }
+#skillmain{
+    padding-top:80px;
+    background-color:#c0c6c9;
+}
+#skillmaincontent{ 
+    width:100%;
+    height:1024px;;
+   @include respond-to(handhelds) {width:100%; margin:40px 0 0 10px;}
+@include respond-to(small-screens) {width:100%; margin:40px 0 0 10px;}
+    @include respond-to(medium-screens) {width:100%; margin:40px 0 0 10%;}
+    @include respond-to(wide-screens) { width:100%; margin:40px 0 0 10%;}
+}
+.skill{
+    color: #000; 
+    position: relative;
+    font-family: $font-stack;
+    text-decoration:none;
+    text-align:left;
+    position:relative;
+    
+    display:inline-block;
+    background-color:#edeff0;
+    @include respond-to(handhelds) {width:90%; margin:10px 0 0 10px;}
+@include respond-to(small-screens) {width:90%; margin:10px 0 0 10px;}
+    @include respond-to(medium-screens) {width:40%; margin:10px 0 0 10px;}
+    @include respond-to(wide-screens) { width:40%; margin:10px 0 0 10px;}
+    
+   
+}
 
+.ip-singleskill{
+    position:relative;
+	
+	height: 100%;
+    margin: 0 0 0 0;
+    border-left-style:solid;
+    border-left-width:20px;
+    border-left-color:#04bab9;
+}
+
+.dt-singleskill{
+    position:relative;
+	height: 100%;
+    margin: 0 0 0 0;
+    border-left-style:solid;
+    border-left-width:20px;
+    border-left-color:#ed4736;
+}
+
+.skillcopy{
+padding:10px;
+}
+.skilldesc{
+ display:none;   
+    white-space:pre-line;
+}
+
+.catlabel{
+    text-align:left;   
+    position:relative;
+    color:#000;
+    height:30px;
+    left:15px;
+    font-size:20px;
+}
+.skilllabel{
+    text-align:left;   
+    position:relative;
+    color:#000;
+    left:15px;
+    font-size:16px;
+}
 #footer{
     height:70px;
     background-color:#fff;
@@ -82,6 +180,13 @@ body{
     height:1024px;
 }
 #joincont{
+    background-color: $primary-color;  
+    width:100%;
+    min-height:1024px;
+    padding-bottom:120px;
+}
+
+#changecont{
     background-color: $primary-color;  
     width:100%;
     min-height:1024px;
@@ -115,7 +220,7 @@ body{
 .navbar-nav{
     font-family: $font-stack;
     text-transform: uppercase;
-    font-weight: $font-regular;
+    font-family: $font-regular;
 }
 
 .nav-btn{
@@ -131,6 +236,10 @@ body{
 .profilepic{
  border-radius:50%;
     margin-top:2px;
+}
+.profilepicform{
+ border-radius:50%;
+    margin:2px 0 0 36%;
 }
 .newday{
 
@@ -253,15 +362,15 @@ body{
     padding: 30px 0 0 0;
     position:absolute;
     left: 4%;
-    font-weight: $font-light;
+    font-family: $font-light;
 a   {
     color:#ffffff;
-    font-weight: $font-light;
+    font-family: $font-light;
     text-decoration:none;
     }
 
     @include respond-to(handhelds) { font-size: 18px ;}
- @include respond-to(small-screens) { font-size: 20px; }
+    @include respond-to(small-screens) { font-size: 20px; }
     @include respond-to(medium-screens) { font-size: 26px; }
     @include respond-to(wide-screens) { font-size: $text-h1; }
 
@@ -270,7 +379,7 @@ a   {
 .desc{
     margin: 30px 0 0 0; 
     font-size: $text-lgbody;
-    font-weight: $font-light;
+    font-family: $font-light;
     position:absolute;
     width:400px;
     @include respond-to(handhelds) { width:95%; margin: 60px 0 0 0; text-align:left ; left: 4%;}
@@ -289,7 +398,7 @@ a   {
     text-align:center;
     color:#fff;
     margin:40px 0 80px 0;
-    font-weight: $font-semi;
+    font-family: $font-semi;
 }
 
 .trackSI {
@@ -477,6 +586,9 @@ background-color: darken( $primary-color, 5% );
 #descarea::-webkit-input-placeholder {
     color: darken( $primary-color, 15% );
 }
+#skillarea::-webkit-input-placeholder {
+    color: darken( $primary-color, 15% );
+}
 
 #newform::-webkit-input {
     color: darken( $primary-color, 15% );
@@ -492,7 +604,7 @@ background-color: darken( $primary-color, 5% );
 }
 
 #loginform{
- 
+ height:1024px;
     text-align:center;
     text-decoration:none;
 }
@@ -503,12 +615,12 @@ background-color: darken( $primary-color, 5% );
     text-align:center;
     color:#fff;
     padding:80px 0 50px 0;
-    font-weight: $font-semi;
+    font-family: $font-semi;
 }
 
 .loginsub{
    color: darken( $primary-color, 10% );
-    font-weight: $font-regular;
+    font-family: $font-regular;
     font-size: $text-body;
 }
 
@@ -516,8 +628,15 @@ background-color: darken( $primary-color, 5% );
    background-color: darken( $primary-color, 5% ); 
     width:100%;
     border: none;
-    color:#fff;
+    
     height:55px;
+}
+#skillarea{
+   background-color: darken( $primary-color, 5% ); 
+    width:100%;
+    border: none;
+    color:#fff;
+    height:300px;
 }
 
 .skillcont{
@@ -576,7 +695,7 @@ background-color:$button;
     text-align:center;
     color:#fff;
     margin:80px 0 50px 0;
-    font-weight: $font-semi;
+    font-family: $font-semi;
 }
 
 

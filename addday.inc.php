@@ -1,21 +1,20 @@
 <?php
 
-date_default_timezone_set('America/Los_Angeles');
+//date_default_timezone_set('America/Los_Angeles');
 
-$script_tz = date_default_timezone_get();
+//$script_tz = date_default_timezone_get();
 
-if (strcmp($script_tz, ini_get('date.timezone'))){
-    echo 'Script timezone differs from ini-set timezone.';
-} else {
-    echo 'Script timezone and ini-set timezone match.';
-}
+$mysqli = mysqli_connect("huuuecom.ipowermysql.com", "ashleebeggs", "ayso13", "moods");
+                if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to database: " . mysqli_connect_error();
+                }
 
 $colorhex = $_POST['colorhex'];
 
 
 $shortdesc = htmlspecialchars($_POST['shortdesc']);
 
-$colordate = date('l M jS Y');
+//$colordate = date('Y m d');
 
 $colortext = $_POST['colortext']; 
 $trackSI = $_POST['trackSI'];
@@ -82,14 +81,15 @@ $shortdescval = mysql_real_escape_string($shortdesc);
 $session = $_SESSION['valid_color_user'];    
 $username = "$session";
 
+     
+     
     $query = "INSERT INTO color ( colorhex, shortdesc, colordate, colortext, trackSI, trackSH, trackSD, trackISO, trackANX, trackSAD, trackANG, trackGSH, trackHH, trackINS, trackLON, trackJOY, trackSC, trackNW, trackNB, trackRUM, trackPOW, trackRT, trackOB, username, skillSI, skillSH, skillSD, skillISO, skillANX, skillSAD, skillANG, skillGSH, skillHH, skillINS, skillLON, skillJOY, skillSC, skillNW, skillNB, skillRUM, skillPOW, skillRT, skillOB) " .
 
-" VALUES ('$colorhex', '$shortdescval', '$colordate',  '$colortext', '$trackSI', '$trackSH', '$trackSD', '$trackISO', '$trackANX', '$trackSAD', '$trackANG', '$trackGSH', '$trackHH', '$trackINS', '$trackLON', '$trackJOY', '$trackSC', '$trackNW', '$trackNB', '$trackRUM', '$trackPOW', '$trackRT', '$trackOB', '$username', '$skillSI', '$skillSH', '$skillSD', '$skillISO', '$skillANX', '$skillSAD', '$skillANG', '$skillGSH', '$skillHH', '$skillINS', '$skillLON', '$skillJOY', '$skillSC', '$skillNW', '$skillNB', '$skillRUM', '$skillPOW', '$skillRT', '$skillOB')";
+" VALUES ('$colorhex', '$shortdescval', CURDATE(), '$colortext', '$trackSI', '$trackSH', '$trackSD', '$trackISO', '$trackANX', '$trackSAD', '$trackANG', '$trackGSH', '$trackHH', '$trackINS', '$trackLON', '$trackJOY', '$trackSC', '$trackNW', '$trackNB', '$trackRUM', '$trackPOW', '$trackRT', '$trackOB', '$username', '$skillSI', '$skillSH', '$skillSD', '$skillISO', '$skillANX', '$skillSAD', '$skillANG', '$skillGSH', '$skillHH', '$skillINS', '$skillLON', '$skillJOY', '$skillSC', '$skillNW', '$skillNB', '$skillRUM', '$skillPOW', '$skillRT', '$skillOB')";
 
-
-    $result = mysql_query($query) or die('Sorry, we could not post your day to the database at this time');
-
-
+   
+$result=mysqli_query($mysqli, $query);
+   
     if ($result)
     {
 

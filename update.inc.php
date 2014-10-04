@@ -1,8 +1,10 @@
 <?php
+$mysqli = mysqli_connect("huuuecom.ipowermysql.com", "ashleebeggs", "ayso13", "moods");
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
- $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
-        mysql_select_db("moods", $con) or die('Could not connect to database');
-
+      
 
 $userid = $_POST['userid'];
 
@@ -15,8 +17,6 @@ $password2 = $_POST['password2'];
 $email = $_POST['email'];
 
 
-
- 
 $baduser = 0;
 
 
@@ -43,6 +43,7 @@ if (trim($userid) == '')
 //Check if password was entered
 
 
+/*
 if (trim($password) == '')
 
 
@@ -58,6 +59,7 @@ if (trim($password) == '')
 
 
 }
+*/
 
 
 //Check if password and confirm password match
@@ -89,19 +91,18 @@ if ($password != $password2)
 
 
 {
-  $query = "SELECT userid from users where userid = '$userid' and email = '$email'";
+     $res = mysqli_query($mysqli, "SELECT userid from users where userid = '$userid' and email = '$email'");
+$result = mysqli_fetch_assoc($res);
+  
+ 
 
-
-$result = mysql_query($query);
-
-
-if (mysql_num_rows($result) == 0)
+if ($result == 0)
 
 
 {
 
 
-    echo "<h2 class='centermessage'>Sorry, your user account was not validated.</h2><br>\n";
+    echo "<h2 class='centermessage'>Sorry, your user credentials couldn't be validated.</h2><br>\n";
 
 
     echo "<a href=\"color-blog.php?content=login\">Try again</a><br>\n";
@@ -111,21 +112,42 @@ if (mysql_num_rows($result) == 0)
 } else
 
 {
-    $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
-    $result = mysql_query($query);
+    $PictName = $_FILES['picture']['name'];
 
+      if ($PictName && $password != '' && $password2 != '')
+      {
+        $thumbnail = getThumb($_FILES['picture']);
+         $thumbnail = mysql_real_escape_string($thumbnail); 
+       
+        $query = "UPDATE users SET password = PASSWORD('$password'), picture = '$thumbnail' WHERE userid = '$userid' and email = '$email'";
    
-?>
-
-
-
-<script>
-  console.log("working after session");  
-    window.location.reload()
-
+    }
+    else if($password != '' && $password2 != ''){
+       
+        $query = "UPDATE users SET password = PASSWORD('$password') WHERE userid = '$userid' and email = '$email'";
+    }
+    else{
+        $thumbnail = getThumb($_FILES['picture']);
+         $thumbnail = mysql_real_escape_string($thumbnail); 
+         
+        $query = "UPDATE users SET picture = '$thumbnail' WHERE userid = '$userid' and email = '$email'";
+    }
     
-</script>
+  $result = mysqli_query($mysqli, "UPDATE users SET password = PASSWORD('$password'), picture = '$thumbnail' WHERE userid = '$userid' and email = '$email'");
+    
+      if ($result)
+      {
+       ?>
+
+<script>  window.location.reload('color-blog');</script>
+
 <?php
+      }
+      else
+      {
+         echo "<h2>Sorry, your profile was not changed</h2>\n";
+      }
+
  }
 }
 

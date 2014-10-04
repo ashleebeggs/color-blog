@@ -29,7 +29,7 @@
         </div>
      
         <div class="col-md-4 form-group">
-     <div  class="loginsub">Confirm</div>
+     <div  class="loginsub">Confirm password</div>
     <input type="password" style="width:100%;" name="password2" class="form-control">
         </div>
         </div>
@@ -47,10 +47,6 @@
     <input type="text" style="width:100%;" size="50" name="email" class="form-control">
         </div>
         </div>
-    
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-star"></span> Forgot Password?
-    </button>
     
      <div class="row navbar-fixed-bottom hidden-sm hidden-md hidden-lg" id="navbottom">
           <div class="col-xs-12">                

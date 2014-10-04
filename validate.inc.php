@@ -1,20 +1,19 @@
 <?php
- $con = mysql_connect("localhost", "root", "") or die('Could not connect to server'.mysql_error());
-     mysql_select_db("moods", $con) or die('Could not connect to database');
+$mysqli = mysqli_connect("huuuecom.ipowermysql.com", "ashleebeggs", "ayso13", "moods");
+                if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to database: " . mysqli_connect_error();
+                }
 
 $userid = $_POST['userid'];
 
 
 $password = $_POST['password'];
 
-
-$query = "SELECT userid from users where userid = '$userid' and password = PASSWORD('$password')";
-
-
-$result = mysql_query($query);
+$res = mysqli_query($mysqli, "SELECT userid from users where userid = '$userid' and password = PASSWORD('$password')");
+$row = mysqli_fetch_assoc($res);
 
 
-if (mysql_num_rows($result) == 0)
+if ($row == 0)
 
 
 {
@@ -45,9 +44,7 @@ console.log("working before session");
 
 <script>
   console.log("working after session");  
-    window.location.reload()
-
-    
+    window.location.reload('color-blog');  
 </script>
 <?php
 

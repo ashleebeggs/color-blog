@@ -26,6 +26,7 @@ console.log("logged in");
 <div class="container-fluid">
 <div class="heads">How was your day?</div>
     <div class="subheads3">Pick a hue to reflect your mood</div>
+   
 <div class="row">
  
     <div class="col-md-4 col-md-offset-4">
@@ -48,7 +49,7 @@ console.log("logged in");
 <div class="col-md-5">
          <div class="slider-step changecol" id="INSval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
          <div class="skillcont"><div class="title slidertitle">Insecure: <div class="num" id="numINS"></div></div>
-        <select class="form-control newform" name="skillINS">
+        <select class="form-control newform slidertitle" name="skillINS">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -99,7 +100,7 @@ console.log("logged in");
     <div class="col-md-5 col-md-offset-1">       
         <div class="slider-step changecol"  id="SIval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
         <div class="skillcont"><div class="title slidertitle">Suicidal Ideation: <div class="num" id="numSI"></div></div>
-            <select class="form-control newform" name="skillSI">
+            <select class="form-control newform slidertitle" name="skillSI">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -147,7 +148,7 @@ console.log("logged in");
     <div class="col-md-5">
         <div class="slider-step changecol" id="SHval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
        <div class="skillcont"> <div class="title slidertitle">Self Harm: <div class="num" id="numSH"></div></div>
-    <select class="form-control newform" name="skillSH">
+    <select class="form-control newform slidertitle" name="skillSH">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -198,7 +199,7 @@ console.log("logged in");
 <div class="col-md-5 col-md-offset-1">
         <div class="slider-step changecol" id="SDval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
          <div class="skillcont"><div class="title slidertitle">Self Destruction: <div class="num" id="numSD"></div></div>
-    <select class="form-control newform" name="skillSD">
+    <select class="form-control newform slidertitle" name="skillSD">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -247,7 +248,7 @@ console.log("logged in");
     <div class="col-md-5">
             <div class="slider-step changecol" id="ISOval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
          <div class="skillcont"><div class="title slidertitle">Isolation: <div class="num" id="numISO"></div></div>
-    <select class="form-control newform" name="skillISO">
+    <select class="form-control newform slidertitle" name="skillISO">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -298,7 +299,7 @@ console.log("logged in");
 <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="ANXval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Anxiety/Fear: <div class="num" id="numANX"></div></div>
-    <select class="form-control newform" name="skillANX">
+    <select class="form-control newform slidertitle" name="skillANX">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -347,7 +348,7 @@ console.log("logged in");
 <div class="col-md-5">
             <div class="slider-step changecol" id="SADval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Sadness: <div class="num" id="numSAD"></div></div>
-        <select class="form-control newform" name="skillSAD">
+        <select class="form-control newform slidertitle" name="skillSAD">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -398,7 +399,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="ANGval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Anger: <div class="num" id="numANG"></div></div>
-            <select class="form-control newform" name="skillANG">
+            <select class="form-control newform slidertitle" name="skillANG">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -447,7 +448,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="GSHval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Guilt/Shame: <div class="num" id="numGSH"></div></div>
-    <select class="form-control newform" name="skillGSH">
+    <select class="form-control newform slidertitle" name="skillGSH">
        <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -498,7 +499,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="HHval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Hopeless/Helpless: <div class="num" id="numHH"></div></div>
-    <select  class="form-control newform" name="skillHH">
+    <select  class="form-control newform slidertitle" name="skillHH">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -547,7 +548,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="LONval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Lonely: <div class="num" id="numLON"></div></div>
-        <select class="form-control newform" name="skillLON">
+        <select class="form-control newform slidertitle" name="skillLON">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -598,7 +599,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="JOYval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Joy: <div class="num" id="numJOY"></div></div>
-    <select class="form-control newform" name="skillJOY">
+    <select class="form-control newform slidertitle" name="skillJOY">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -647,7 +648,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="SCval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Self Critical: <div class="num" id="numSC"></div></div>
-    <select class="form-control newform" name="skillSC">
+    <select class="form-control newform slidertitle" name="skillSC">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -698,7 +699,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="NWval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Not Worthy: <div class="num" id="numNW"></div></div>
-    <select class="form-control newform" name="skillNW">
+    <select class="form-control newform slidertitle" name="skillNW">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -747,7 +748,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="NBval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Negative Beliefs: <div class="num" id="numNB"></div></div>
-    <select class="form-control newform" name="skillNB">
+    <select class="form-control newform slidertitle" name="skillNB">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -798,7 +799,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="RUMval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
              <div class="skillcont"><div class="title slidertitle">Ruminating: <div class="num" id="numRUM"></div></div>
-    <select class="form-control newform" name="skillRUM">
+    <select class="form-control newform slidertitle" name="skillRUM">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -847,7 +848,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="POWval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Powerless: <div class="num" id="numPOW"></div></div>
-    <select class="form-control newform" name="skillPOW">
+    <select class="form-control newform slidertitle" name="skillPOW">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -898,7 +899,7 @@ console.log("logged in");
         <div class="col-md-5 col-md-offset-1">
             <div class="slider-step changecol" id="RTval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Racing Thoughts: <div class="num" id="numRT"></div></div>
-    <select class="form-control newform" name="skillRT">
+    <select class="form-control newform slidertitle" name="skillRT">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -947,7 +948,7 @@ console.log("logged in");
         <div class="col-md-5">
             <div class="slider-step changecol" id="OBval" style="height:6px; background-color:rgba(255, 255, 255, 1);"></div>
             <div class="skillcont"><div class="title slidertitle">Obsessions: <div class="num" id="numOB"></div></div>
-    <select class="form-control newform" name="skillOB">
+    <select class="form-control newform slidertitle" name="skillOB">
         <option value="">Select...</option>
         <option value="Opposite Action">Opposite Action</option>
         <option value="Check the Facts">Check the Facts</option>
@@ -1061,10 +1062,14 @@ function setColor(){
     var thirdcolor = ColorLuminance(hex, -.5);
     
      $("#descarea").css({
-		backgroundColor: firstcolor
+		backgroundColor: firstcolor,
+         color: thirdcolor
 	   });
     $(".skillcont").css({
 		backgroundColor: firstcolor
+	   });
+    $(".form-control").css({
+		color: firstcolor
 	   });
     $(".changecol .noUi-background").css({
 		backgroundColor: firstcolor

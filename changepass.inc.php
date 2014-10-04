@@ -1,34 +1,34 @@
 <div id="changecont">
 
 <div id="changeform">
-<div class="headspadding">Change password</div>
+<div class="headspadding">Change your password</div>
 
 
-<form id="changepass" action="color-blog.php" method="post" target="_self">
-
-<div class="row" style="padding-bottom:30px">
+<form id="changepass" action="color-blog.php" method="post" role="form">
+    
+<div class="row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-<div class="loginsub">User Name:</div>
-<input style="width:100%;" type="text" size="20" name="userid"><br>
+<label for="un" class="loginsub">User Name:</label>
+<input style="width:100%;" type="text" size="20" name="userid" class="form-control" id="un"><br>
 </div>
     </div>
     
-    <div class="row" style="padding-bottom:30px">
-<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-<div class="loginsub">Email</div>
-    <input style="width:100%;" type="email" size="20" name="email"><br>
+    <div class="row">
+<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 form-group">
+<label for="em" class="loginsub">Email</label>
+    <input style="width:100%;" type="email" size="20" class="form-control" name="email" id="em"><br>
 </div>
 </div>
 
     <div class="row">
-    <div class="col-md-4 col-md-offset-2 form-group">
-     <div  class="loginsub">Password</div>
-    <input type="password" style="width:100%;" name="password" class="form-control">  
+    <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-2 form-group">
+     <label for="newpass" class="loginsub">New password</label>
+    <input type="password" style="width:100%;" name="password" class="form-control" id="newpass">  
         </div>
      
-        <div class="col-md-4 form-group">
-     <div  class="loginsub">Confirm</div>
-    <input type="password" style="width:100%;" name="password2" class="form-control">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-0 form-group">
+     <label for="rtpass" class="loginsub">Retype password</label>
+    <input type="password" style="width:100%;" name="password2" class="form-control" id="rtpass">
         </div>
         </div>
 
